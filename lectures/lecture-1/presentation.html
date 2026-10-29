@@ -621,6 +621,41 @@ button.ch:hover{background:var(--coral);color:#fff}
 @media print{#bar,#menu,#gloss,#drawer,#toast{display:none!important}html,body{overflow:visible;height:auto;background:#fff}.stage{position:static;transform:none;width:auto;height:auto;box-shadow:none}.slide{position:relative;visibility:visible;opacity:1;transform:none;page-break-after:always;height:720px;width:1280px}#glossprint{display:block;padding:40px}}
 #lvlist .ev{padding:5px 10px;font-size:15.5px}#lvlist .ev .k{width:24px;height:24px;font-size:13px}
 .five5{font-size:25px;line-height:1.9}
+
+/* course map */
+.chleg{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.cc{position:relative;background:#fff;border-radius:14px;padding:10px 12px 12px;text-align:right;min-height:104px;box-shadow:0 2px 0 var(--line);border-top:6px solid var(--c);transition:transform .15s,box-shadow .2s}
+.cc:hover{transform:translateY(-3px)}
+.cc.on{box-shadow:0 0 0 3px var(--c),0 10px 24px rgba(22,33,58,.14)}
+.cc small{display:block;color:var(--c);font-weight:800;font-size:13px}
+.cc b{display:block;font-size:16.5px;line-height:1.3;margin-top:2px}
+.cc i{position:absolute;left:8px;top:8px;background:var(--coral);color:#fff;font-style:normal;font-size:12px;font-weight:800;border-radius:99px;padding:1px 8px}
+.outg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.oc{background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 2px 0 var(--line),0 12px 28px rgba(22,33,58,.07);animation:rise .6s both}
+.oi{font-size:38px}.oc b{display:block;font-size:24px;color:var(--coral);margin:4px 0}.oc span{font-size:17.5px;line-height:1.5;color:var(--ink2)}
+.wowg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.wc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:20px;color:#fff}
+.wc b{display:block;font-size:21px;margin:8px 0 6px;color:#ffd2c6}.wc span{font-size:16.5px;line-height:1.55;color:#c8d4f2}
+/* story flow */
+.story{display:flex;align-items:center;margin-top:22px}
+.sn{flex:none;width:136px;text-align:center;opacity:.45;transition:opacity .4s,transform .4s}
+.sn .si{width:78px;height:78px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;font-size:34px;background:#fff;box-shadow:0 0 0 4px var(--c),0 8px 20px rgba(22,33,58,.12);transition:background .4s}
+.sn b{display:block;font-size:15px;line-height:1.25}.sn small{display:block;color:var(--c);font-weight:800;font-size:12.5px;margin-top:3px}
+.sn.on{opacity:1}.sn.cur{transform:translateY(-6px) scale(1.07)}.sn.cur .si{background:var(--c)}
+.sa{flex:1;height:5px;background:#e4dccd;border-radius:5px;position:relative;margin-bottom:46px;overflow:hidden}
+.sa i{position:absolute;inset:0;width:0;background:var(--coral);transition:width .7s;right:0;left:auto}
+.sa.on i{width:100%}
+/* TED openers */
+.slide.ted{background:radial-gradient(900px 600px at 50% 40%,#1e2f58 0%,#0b1324 70%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
+.tedin{max-width:980px}
+.tbig{font-size:92px;animation:rise .8s both}
+.tedin h1{font-size:60px;font-weight:800;line-height:1.15;margin-top:10px;animation:rise .8s .15s both}
+.tedin h1 span{color:#7fe3d6}
+.tedin p{font-size:25px;color:#b8c6e8;line-height:1.5;margin-top:22px;animation:rise .8s .3s both}
+.tgo{margin-top:34px;background:var(--coral);color:#fff;border-radius:99px;padding:13px 30px;font-size:21px;font-weight:800;box-shadow:0 10px 30px rgba(255,106,77,.4);animation:rise .8s .45s both;transition:transform .2s}
+.tgo:hover{transform:translateY(-3px)}
+.story{margin-top:46px}.sn{width:150px}.sn .si{width:100px;height:100px;font-size:46px}.sn b{font-size:16.5px}.sn small{font-size:14px}#storybox{font-size:20px;min-height:150px}
 </style>
 </head>
 <body>
@@ -655,18 +690,59 @@ button.ch:hover{background:var(--coral);color:#fff}
   </div>
 </section>
 
+
+<!-- COURSE MAP -->
+<section class="slide" id="s-course" data-title="מפת הקורס">
+  <div class="kick">מפת הקורס</div>
+  <h2>12 שיעורים, חמישה עולמות. לחצו על שיעור</h2>
+  <div class="chleg" id="chleg"></div>
+  <div class="row" style="margin-top:10px;gap:18px;align-items:flex-start">
+    <div class="cgrid" id="cgrid" style="flex:1.25"></div>
+    <div class="card" id="cbox" style="flex:.75;min-height:390px;font-size:18px;line-height:1.55"></div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="slide" id="s-out" data-title="תוצרי הלמידה">
+  <div class="kick">תוצרי הלמידה</div>
+  <h2>בסוף הקורס תדעו</h2>
+  <div class="outg" id="outg"></div>
+</section>
+
+<!-- WHY FASCINATING -->
+<section class="slide dark" id="s-wow" data-title="למה זה מרתק">
+  <div class="kick" style="color:#ffb199">למה זה מרתק</div>
+  <h2 style="color:#fff">מערכות מידע הן המקום שבו<br><span style="color:#7fe3d6">טכנולוגיה פוגשת החלטות</span></h2>
+  <div class="wowg" id="wowg"></div>
+</section>
+
+<!-- STORY FLOW -->
+<section class="slide" id="s-story" data-title="המסע של לחיצה אחת">
+  <div class="kick">הקורס בתרשים אחד</div>
+  <h2>המסע של לחיצה אחת</h2>
+  <p class="sub" style="font-size:18px">לקוחה קונה באתר. עקבו אחרי המידע, וראו איך כל שיעור בקורס הוא תחנה בדרך.</p>
+  <div class="story" id="story"></div>
+  <div class="row" style="gap:16px;align-items:stretch;margin-top:14px">
+    <div class="card" id="storybox" style="flex:1;min-height:96px;font-size:18.5px;line-height:1.55"></div>
+    <div class="col" style="gap:8px;justify-content:center"><button class="btn" id="storyplay">▶ הפעלה</button><button class="btn ghost" id="storyre">↺ מהתחלה</button></div>
+  </div>
+</section>
+
 <!-- 3 ROUTE -->
 <section class="slide" id="s-route" data-title="מסלול השיעור">
   <div class="kick">מסלול השיעור</div>
   <h2>ארבע תחנות. לחצו על תחנה כדי לקפוץ אליה</h2>
   <div class="route" style="grid-template-columns:repeat(4,1fr)">
-    <button class="rcard" data-go="s-day"><div class="n">1</div><b>מה זה מידע</b><span>יום בחיים שלכם, נתונים מול מידע, ומה זו מערכת מידע</span></button>
+    <button class="rcard" data-go="s-t-day"><div class="n">1</div><b>מה זה מידע</b><span>יום בחיים שלכם, נתונים מול מידע, ומה זו מערכת מידע</span></button>
     <button class="rcard" data-go="s-pyr"><div class="n">2</div><b>הפירמידה הארגונית</b><span>שלושה דרגים, שלוש מערכות: TPS, MIS, ESS</span></button>
-    <button class="rcard" data-go="s-cls"><div class="n">3</div><b>מתנסים</b><span>משחקי סיווג, מקרה פיצרייה, ומתכננים מערכת לארגון</span></button>
+    <button class="rcard" data-go="s-t-cls"><div class="n">3</div><b>מתנסים</b><span>משחקי סיווג, מקרה פיצרייה, ומתכננים מערכת לארגון</span></button>
     <button class="rcard" data-go="s-howq"><div class="n">4</div><b>תרגול בסגנון מבחן</b><span>24 שאלות, נכון או לא נכון, ושאלות פתוחות</span></button>
   </div>
   <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55"><b>שאלת המפתח של השיעור:</b> מי בארגון צריך איזה מידע, כדי לקבל איזו החלטה, ואיזו מערכת מספקת לו אותו?</div>
 </section>
+
+<!-- TED day -->
+<section class="slide ted" id="s-t-day" data-title="פתיח: מי רשם אתכם?"><div class="tedin" data-ted="day"></div></section>
 
 <!-- 4 DAY IN THE LIFE -->
 <section class="slide" id="s-day" data-title="יום אחד, הרבה מערכות">
@@ -682,6 +758,9 @@ button.ch:hover{background:var(--coral);color:#fff}
     </div>
   </div>
 </section>
+
+<!-- TED dik -->
+<section class="slide ted" id="s-t-dik" data-title="פתיח: לנתון אין דעה"><div class="tedin" data-ted="dik"></div></section>
 
 <!-- 5 DATA TO INFORMATION -->
 <section class="slide" id="s-dik" data-title="נתונים, מידע, החלטה">
@@ -765,6 +844,9 @@ button.ch:hover{background:var(--coral);color:#fff}
   </div>
 </section>
 
+<!-- TED pos -->
+<section class="slide ted" id="s-t-pos" data-title="פתיח: הצפצוף הקטן"><div class="tedin" data-ted="pos"></div></section>
+
 <!-- 11 POS SIMULATION -->
 <section class="slide" id="s-pos" data-title="סימולציה: אתם הקופה">
   <div class="kick">תחנה 2 · התנסות</div>
@@ -796,6 +878,9 @@ button.ch:hover{background:var(--coral);color:#fff}
     </div>
   </div>
 </section>
+
+<!-- TED ess -->
+<section class="slide ted" id="s-t-ess" data-title="פתיח: מה שבפנים לא מספיק"><div class="tedin" data-ted="ess"></div></section>
 
 <!-- 13 ESS -->
 <section class="slide" id="s-ess" data-title="ESS">
@@ -872,6 +957,9 @@ button.ch:hover{background:var(--coral);color:#fff}
   </ol>
 </section>
 
+<!-- TED cls -->
+<section class="slide ted" id="s-t-cls" data-title="פתיח: שלוש שאלות"><div class="tedin" data-ted="cls"></div></section>
+
 <!-- 18 CLASSIFICATION GAME -->
 <section class="slide" id="s-cls" data-title="משחק: איזו מערכת?">
   <div class="kick">תחנה 3 · משחק</div>
@@ -890,6 +978,9 @@ button.ch:hover{background:var(--coral);color:#fff}
   </div>
 </section>
 
+<!-- TED lv -->
+<section class="slide ted" id="s-t-lv" data-title="פתיח: מי מחליט?"><div class="tedin" data-ted="lv"></div></section>
+
 <!-- 19 WHO DECIDES -->
 <section class="slide" id="s-lv" data-title="משחק: מי מחליט?">
   <div class="kick">תחנה 3 · משחק</div>
@@ -906,6 +997,9 @@ button.ch:hover{background:var(--coral);color:#fff}
   </div>
 </section>
 
+<!-- TED case -->
+<section class="slide ted" id="s-t-case" data-title="פתיח: אותה פיצה"><div class="tedin" data-ted="case"></div></section>
+
 <!-- 20 CASE -->
 <section class="slide" id="s-case" data-title="מקרה: הפיצרייה שגדלה">
   <div class="kick">תחנה 3 · מקרה מתגלגל</div>
@@ -915,6 +1009,9 @@ button.ch:hover{background:var(--coral);color:#fff}
     <div style="flex:1.45" class="card" id="casebox" style="min-height:380px"></div>
   </div>
 </section>
+
+<!-- TED design -->
+<section class="slide ted" id="s-t-design" data-title="פתיח: אתם המתכננים"><div class="tedin" data-ted="design"></div></section>
 
 <!-- 21 DESIGN TASK -->
 <section class="slide" id="s-design" data-title="משימה: תכננו מערכת">
@@ -949,6 +1046,9 @@ button.ch:hover{background:var(--coral);color:#fff}
     <div style="flex:.75" class="card" id="pexp" style="min-height:420px;font-size:16.5px;line-height:1.5"></div>
   </div>
 </section>
+
+<!-- TED tf -->
+<section class="slide ted" id="s-t-tf" data-title="פתיח: שמונה שניות"><div class="tedin" data-ted="tf"></div></section>
 
 <!-- 24 TRUE FALSE -->
 <section class="slide" id="s-tf" data-title="נכון או לא נכון">
@@ -1016,7 +1116,7 @@ button.ch:hover{background:var(--coral);color:#fff}
 <div id="bar" class="noprint">
   <button id="bNext" title="הבא">← הבא</button>
   <div id="prog"><i id="progi"></i></div>
-  <div id="cnt">1 / 29</div>
+  <div id="cnt">1 / 42</div>
   <button id="bPrev" title="הקודם">הקודם →</button>
   <button id="bMenu">☰ תוכן</button>
   <button id="bGloss">📖 מושגים</button>
@@ -1266,6 +1366,59 @@ const PQ=[
 ];
 /* spread the correct answers across א to ה (options and their explanations move together) */
 [[0,3],[6,3],[9,3],[14,3],[1,4],[7,4],[12,4],[18,4]].forEach(([i,t])=>{const q=PQ[i],a=q.a;[q.o[a],q.o[t]]=[q.o[t],q.o[a]];[q.ex[a],q.ex[t]]=[q.ex[t],q.ex[a]];q.a=t;});
+
+/* ---------- course map ---------- */
+const CH={base:['יסודות','#0f9d90'],core:['מערכות ליבה','#6d4df2'],ecom:['מסחר אלקטרוני','#e8960c'],hw:['חומרה ותשתיות','#3f6fe0'],intel:['בינה עסקית ומלאכותית','#ff6a4d']};
+const COURSE=[
+ {n:1,ch:'base',t:'מבוא: TPS, MIS ו-ESS',w:'מה זו מערכת מידע, ומי בארגון צריך איזה מידע.',ex:'למה הקופה בסופר, דוח המנהלת והמסך של המנכ״לית הם שלוש מערכות שונות.'},
+ {n:2,ch:'core',t:'מערכות ליבה: CRM',w:'איך ארגון מנהל את הקשר עם הלקוחות: מכירות, שיווק ושירות.',ex:'איך החברה ״זוכרת״ אתכם בכל שיחה, ולמה מציעים לכם בדיוק את המבצע הזה.'},
+ {n:3,ch:'core',t:'CRM: המשך ומקרה מעשי',w:'יישום ה-CRM במקרה עסקי, ומטלת הגשה.',ex:'מועדון לקוחות, נאמנות ושימור: מה המערכת יודעת ומה היא עושה עם זה.'},
+ {n:4,ch:'core',t:'מערכות ליבה: ERP',w:'מערכת אחת שמחברת רכש, מלאי, ייצור, כספים ומשאבי אנוש.',ex:'איך מכירה אחת בקופה מעדכנת מלאי, הנהלת חשבונות והזמנה מהספק.'},
+ {n:5,ch:'ecom',t:'מסחר אלקטרוני ויישומיו',w:'מודלים עסקיים ברשת והמערכות שמאחורי חנות מקוונת.',ex:'מה קורה מהרגע שלחצתם ״לקנייה״ ועד שהחבילה בדלת.'},
+ {n:6,ch:'hw',t:'חומרת מחשב, חלק א',w:'מה יש בתוך המחשב: מעבד, זיכרון ואחסון.',ex:'למה טלפון חדש מהיר יותר, ומה זה בכלל ״זיכרון״.'},
+ {n:7,ch:'hw',t:'חומרת מחשב, חלק ב',w:'יחידות מידה, ביצועים, והשוואה בין רכיבים.',ex:'איך בוחרים מחשב לארגון בלי לשלם על מה שלא צריך.'},
+ {n:8,ch:'hw',t:'חומרת מחשב, חלק ג',w:'השלמת נושא החומרה ותרגול.',ex:'מקרה בוחן מהתעשייה: מה הופך שבב לחדשני.'},
+ {n:9,ch:'base',t:'חזרה ותרגול',w:'תרגול ממוקד מקובץ התרגולים.',ex:'שאלות בסגנון מבחן מכל הנושאים עד כה.'},
+ {n:10,ch:'intel',t:'בינה מלאכותית, חלק א',w:'מה זה AI, איך מודלים לומדים, ואיפה הם בארגון.',ex:'צ׳אטבוטים, המלצות וזיהוי הונאות: מה עובד ואיפה הסיכונים.'},
+ {n:11,ch:'intel',t:'בינה מלאכותית, חלק ב',w:'יישומים עסקיים, אתיקה ואחריות.',ex:'מי אחראי כשהאלגוריתם טועה?'},
+ {n:12,ch:'intel',t:'בינה עסקית (BI) ותרגול לבחינה',w:'מנתונים ללוחות מחוונים ולהחלטות, וסיכום הקורס.',ex:'איך מנהלת רואה את כל העסק במסך אחד.'}
+];
+const OUT=[
+ ['🧭','לזהות','איזו מערכת מידע משרתת כל דרג בארגון, ואיזו החלטה היא תומכת.'],
+ ['🤝','להסביר','איך מערכות CRM ו-ERP מנהלות לקוחות ומשאבים, ולמה ארגונים משקיעים בהן.'],
+ ['🛒','לנתח','מודל עסקי של מסחר אלקטרוני, ואת המערכות שמאפשרות אותו.'],
+ ['🖥️','להבין','את רכיבי החומרה והתשתית שעליהם כל המערכות רצות.'],
+ ['🤖','להבחין','בין בינה עסקית לבינה מלאכותית, ולהעריך מתי כל אחת מועילה ומה הסיכונים.'],
+ ['📝','לפתור','מקרים עסקיים ושאלות בסגנון מבחן, עם נימוק לכל טענה.']
+];
+const STORY=[
+ {ic:'👆',t:'לקוחה לוחצת ״לקנייה״',l:'שיעור 5',ch:'ecom',d:'אתר המסחר האלקטרוני קולט את ההזמנה: מוצר, מחיר, תשלום, כתובת. זה רישום בזמן אמת, כלומר TPS.'},
+ {ic:'🤝',t:'CRM: מי הלקוחה?',l:'שיעורים 2 ו-3',ch:'core',d:'המערכת מזהה אותה: קניות קודמות, העדפות, פניות לשירות. היא מקבלת הצעה מותאמת, ונציג השירות יראה את כל ההיסטוריה.'},
+ {ic:'🏭',t:'ERP: מלאי, כספים, משלוח',l:'שיעור 4',ch:'core',d:'המלאי מתעדכן, החשבונית נרשמת בהנהלת החשבונות, והמחסן מקבל הוראת ליקוט. הכול במערכת אחת.'},
+ {ic:'🖥️',t:'חומרה, ענן ורשת',l:'שיעורים 6 עד 8',ch:'hw',d:'כל זה רץ על שרתים, אחסון ותקשורת. כשהתשתית נופלת, הכול נעצר.'},
+ {ic:'📊',t:'BI: מה קורה בעסק?',l:'שיעור 12',ch:'intel',d:'אלפי הזמנות מסוכמות לדוחות ולוחות מחוונים: מה נמכר, איפה, ולמי. זה המידע של המנהלים (MIS) וההנהלה (ESS).'},
+ {ic:'🤖',t:'AI: מה יקרה מחר?',l:'שיעורים 10 ו-11',ch:'intel',d:'מודלים חוזים ביקוש, ממליצים על מוצרים ומזהים הונאות. אבל מישהו צריך להבין מה הם עושים.'},
+ {ic:'🧭',t:'החלטה',l:'שיעור 1, והקורס כולו',ch:'base',d:'מנהלת מחליטה להגדיל מלאי, ההנהלה מחליטה להיכנס לשוק חדש. והמעגל מתחיל שוב בלחיצה הבאה.'}
+];
+const WHY=[
+ ['📱','כל אפליקציה שאתם אוהבים','היא מערכת מידע עם ממשק יפה. בקורס הזה רואים מה יש מאחורי המסך.'],
+ ['💡','ההחלטות הגדולות','בעסקים מתקבלות היום על בסיס נתונים. מי שמבין איך הם נאספים ומעובדים, מבין איך החלטות נוצרות.'],
+ ['🤖','בינה מלאכותית','לא מחליפה הבנה עסקית. היא מחייבת אותה: מה לשאול, מה לבדוק, ומתי לא לסמוך.'],
+ ['🗣️','שפה משותפת','מי שמבין מערכות מידע מדבר גם עם המנכ״לית וגם עם המפתחים. זו אחת היכולות המבוקשות בכל ארגון.']
+];
+
+/* ---------- TED openers before each activity ---------- */
+const TED={
+ 'day':['📱','כמה פעמים נרשמתם היום,','עוד לפני שהגעתם לכאן?','כל קנייה, נסיעה ולחיצה משאירה עקבה. השאלה היא לא אם רושמים אתכם, אלא מי, ולמה.','בואו נספור'],
+ 'dik':['🔎','לנתון אין דעה.','','אלפי שורות בקופה לא אומרות כלום, עד שמישהו שואל את השאלה הנכונה.','מנתונים להחלטה'],
+ 'pos':['🧾','כל החלטה גדולה','מתחילה בצפצוף קטן.','לכמה דקות אתם הקופה. נראה מה בדיוק נרשם, ומה המערכת תסרב לרשום.','לסימולציה'],
+ 'ess':['🧭','מה שקורה בתוך הארגון','לא מספיק כדי להחליט על העתיד שלו.','המכירות עולות. אז למה המנכ״לית עדיין מהססת?','ללוח המחוונים'],
+ 'cls':['🎯','שלוש שאלות.','כל מערכת בעולם.','רושמת? מסכמת? או רואה את התמונה הגדולה? אחרי 16 מקרים תזהו את זה בשנייה.','למשחק'],
+ 'lv':['🪜','מי מחליט,','ובאיזה גובה?','אותו ארגון, החלטות בגדלים שונים לגמרי: משמרת אחת, או עשור שלם.','לשבץ החלטות'],
+ 'case':['🍕','אותה הזמנת פיצה.','שלוש מערכות שונות.','מה קורה למידע כשעסק שכונתי הופך לרשת עולמית?','למקרה'],
+ 'design':['🛠️','עכשיו אתם','המתכננים.','בחרו ארגון ובנו לו מערכות מידע. אין תשובה אחת נכונה. יש תשובה מנומקת.','למשימה'],
+ 'tf':['⏱️','שמונה שניות.','טענה אחת.','מבחן אינטואיציה: האם המושגים כבר יושבים לכם בראש?','לסבב המהיר']
+};
 
 /* ---------- helpers ---------- */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -1519,8 +1672,38 @@ $('#openwrap').onclick=e=>{const b=e.target.closest('[data-oa]');if(b)$('#oa'+b.
 /* ---------- discussion ---------- */
 $('#disc').innerHTML=DISC.map((d,i)=>`<div class="dq"><span>${['💬','📱','🧭','⚠️','🤖'][i]}</span>${d}</div>`).join('');
 
+
+/* ---------- course map ---------- */
+(function(){
+ $('#chleg').innerHTML=Object.values(CH).map(c=>`<span class="pill" style="background:${c[1]}22;color:${c[1]}">● ${c[0]}</span>`).join('');
+ $('#cgrid').innerHTML=COURSE.map((c,i)=>`<button class="cc${c.n===1?' here':''}" data-i="${i}" style="--c:${CH[c.ch][1]}"><small>שיעור ${c.n}</small><b>${c.t}</b>${c.n===1?'<i>אנחנו כאן</i>':''}</button>`).join('');
+ function open(i){const c=COURSE[i];$$('#cgrid .cc').forEach((b,j)=>b.classList.toggle('on',j===i));
+  $('#cbox').innerHTML=`<span class="pill" style="background:${CH[c.ch][1]}22;color:${CH[c.ch][1]}">${CH[c.ch][0]}</span><div style="font-size:15px;color:var(--mut);margin-top:10px">שיעור ${c.n}</div><b style="font-size:24px;line-height:1.25;display:block">${c.t}</b><p style="margin-top:10px"><b>מה לומדים:</b> ${c.w}</p><p style="margin-top:8px"><b>השאלה המעניינת:</b> ${c.ex}</p>`;}
+ $('#cgrid').onclick=e=>{const b=e.target.closest('.cc');if(b)open(+b.dataset.i);};open(0);
+})();
+
+/* ---------- outcomes and why ---------- */
+$('#outg').innerHTML=OUT.map((o,i)=>`<div class="oc" style="animation-delay:${i*.08}s"><div class="oi">${o[0]}</div><b>${o[1]}</b><span>${o[2]}</span></div>`).join('');
+$('#wowg').innerHTML=WHY.map(w=>`<div class="wc"><div style="font-size:40px">${w[0]}</div><b>${w[1]}</b><span>${w[2]}</span></div>`).join('');
+
+/* ---------- story flow ---------- */
+(function(){let k=-1,tm=null;
+ $('#story').innerHTML=STORY.map((s,i)=>`${i?'<div class="sa"><i></i></div>':''}<button class="sn" data-i="${i}" style="--c:${CH[s.ch][1]}"><div class="si">${s.ic}</div><b>${s.t}</b><small>${s.l}</small></button>`).join('');
+ function step(i){k=i;$$('#story .sn').forEach((b,j)=>{b.classList.toggle('on',j<=k);b.classList.toggle('cur',j===k);});$$('#story .sa').forEach((a,j)=>a.classList.toggle('on',j<k));
+  $('#storybox').innerHTML=k<0?'<span class="hint">לחצו ״הפעלה״, או על כל תחנה.</span>':`<b style="color:${CH[STORY[k].ch][1]}">${STORY[k].ic} ${STORY[k].t}</b> <span class="hint">(${STORY[k].l})</span><br>${STORY[k].d}`;}
+ function stop(){clearInterval(tm);tm=null;$('#storyplay').textContent='▶ הפעלה';}
+ $('#story').onclick=e=>{const b=e.target.closest('.sn');if(b){stop();step(+b.dataset.i);}};
+ $('#storyplay').onclick=()=>{if(tm){stop();return;}if(k>=STORY.length-1)step(-1);$('#storyplay').textContent='⏸ עצירה';tm=setInterval(()=>{if(k>=STORY.length-1){stop();return;}step(k+1);},2600);step(k+1);};
+ $('#storyre').onclick=()=>{stop();step(-1);};step(-1);
+ hooks['s-story']=()=>{};
+})();
+
+/* ---------- TED openers ---------- */
+$$('.tedin').forEach(el=>{const k=el.dataset.ted,t=TED[k];const sl=el.closest('.slide');const nx=sl.nextElementSibling;while(nx&&!nx.classList.contains('slide'))nx=nx.nextElementSibling;
+ el.innerHTML=`<div class="tbig">${t[0]}</div><h1>${t[1]}${t[2]?'<br><span>'+t[2]+'</span>':''}</h1><p>${t[3]}</p>${nx?`<button class="tgo" data-go="${nx.id}">${t[4]} ←</button>`:''}`;});
+
 /* ---------- footers and boot ---------- */
-slides.forEach((s,i)=>{if(s.id==='s-title'||s.id==='s-end')return;const f=document.createElement('div');f.className='ft';f.innerHTML='<span>מבוא למערכות מידע וניהול נתונים · שיעור 1</span><span><b>ד״ר שי צבאן</b> · '+(i+1)+'</span>';s.appendChild(f);});
+slides.forEach((s,i)=>{if(s.id==='s-title'||s.id==='s-end'||s.classList.contains('ted'))return;const f=document.createElement('div');f.className='ft';f.innerHTML='<span>מבוא למערכות מידע וניהול נתונים · שיעור 1</span><span><b>ד״ר שי צבאן</b> · '+(i+1)+'</span>';s.appendChild(f);});
 (function(){const h=location.hash.slice(1);const hi=slides.findIndex(s=>s.id===h);show(hi>=0?hi:0);})();
 
 })();
