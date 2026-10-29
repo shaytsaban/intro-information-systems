@@ -83,6 +83,20 @@ h2.sec:before{content:"";width:34px;height:5px;border-radius:5px;background:var(
 .recph .big{font-size:46px}
 .recph b{display:block;color:#fff;font-size:20px;margin:6px 0 4px}
 
+/* assignments */
+.secsub{color:var(--mut);font-size:16.5px;margin-top:6px;max-width:760px}
+.asg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px}
+.ac{background:#fff;border-radius:20px;padding:20px 22px;box-shadow:0 2px 0 var(--line),0 10px 30px rgba(22,33,58,.07);border-top:6px solid var(--liab);display:flex;flex-direction:column;gap:6px}
+.ac .top{display:flex;justify-content:space-between;align-items:center}
+.ac .no{font-weight:800;color:var(--liab);font-size:15px}
+.ac .st{font-size:13px;font-weight:800;border-radius:99px;padding:2px 12px}
+.ac .st.wait{background:#f1ece0;color:#7a6a4a}.ac .st.open{background:#dff5f2;color:#087469}
+.ac h3{font-size:20px;line-height:1.3;font-weight:800}
+.ac p{font-size:15px;color:var(--ink2)}
+.ac a.go{margin-top:6px;align-self:flex-start;background:var(--liab);color:#fff;font-weight:800;border-radius:12px;padding:9px 18px;font-size:15px}
+.ac.pend{border-top-color:#d3c9b4;background:repeating-linear-gradient(135deg,#fff 0 14px,#fbf8f2 14px 28px)}
+.ac.pend h3{color:var(--mut)}
+
 /* upcoming */
 .soon{margin-top:16px;border:2px dashed #d3c9b4;border-radius:18px;padding:20px 26px;color:var(--mut);font-size:16px;display:flex;gap:14px;align-items:center}
 
@@ -125,9 +139,9 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
     <div>
       <span class="tag">מלווה את כל הקורס</span>
       <h2>חוברת התרגילים, לפי שיעורים</h2>
-      <p>שאלות אמריקאיות ברמת המבחן (חמש אפשרויות, א עד ה) ושאלות פתוחות להעמקה, פרק לכל שיעור. החוברת מתעדכנת אחרי כל שיעור.</p>
+      <p>שאלות אמריקאיות ברמת המבחן (חמש אפשרויות, א עד ה), פרק לכל שיעור: שאלות בסגנון הבחינה ומקרים להעמקה. החוברת מתעדכנת אחרי כל שיעור.</p>
     </div>
-    <span class="btn">פתיחת החוברת<small>PDF · 15 עמודים · שיעור 1</small></span>
+    <span class="btn">פתיחת החוברת<small>PDF · 18 עמודים · שיעור 1</small></span>
   </a>
 
   <div class="solutions">
@@ -135,11 +149,17 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
     <div>
       <span class="rec-tag">מומלץ לגשת רק אחרי שפותרים לבד</span>
       <h3>חוברת הפתרונות המפורטים, לפי שיעורים</h3>
-      <p>לכל שאלה בחוברת התרגילים: התשובה הנכונה, הסבר לכל אחת מחמש האפשרויות וטיפ לבחינה, ותשובות מוצעות לשאלות הפתוחות. כדי ללמוד מהפתרון, כדאי לנסות לפתור בעצמכם קודם.</p>
+      <p>לכל שאלה בחוברת התרגילים: התשובה הנכונה, הסבר לכל אחת מחמש האפשרויות וטיפ לבחינה, גם במקרים להעמקה. כדי ללמוד מהפתרון, כדאי לנסות לפתור בעצמכם קודם.</p>
       <div class="warn">למרות הבקרה, מדי פעם עלולה להיות טעות הקלדה. כשמשהו נראה לא נכון, אפשר לפנות עם צילום מסך אל <a href="mailto:Shay.tsaban@gmail.com">Shay.tsaban@gmail.com</a>.</div>
     </div>
-    <a class="btn2" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">פתיחת הפתרונות<small>PDF · 22 עמודים · שיעור 1</small></a>
+    <a class="btn2" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">פתיחת הפתרונות<small>PDF · 30 עמודים · שיעור 1</small></a>
   </div>
+
+  <section class="block" id="assignments">
+    <h2 class="sec">תרגילי הגשה</h2>
+    <p class="secsub">תרגילי ההגשה של הקורס יפורסמו כאן במהלך הסמסטר. לכל תרגיל יופיעו דף הנחיות, מועד הגשה ואופן ההגשה. כדאי לבדוק את הדף אחרי כל שיעור.</p>
+    <div class="asg" id="asglist"></div>
+  </section>
 
   <section class="block" id="lectures">
     <h2 class="sec">השיעורים</h2>
@@ -161,7 +181,8 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
             <li><b>הארגון כפירמידה.</b> דרג תפעולי, דרג ביניים ודרג ניהולי בכיר, ולכל אחד החלטות וצרכי מידע אחרים.</li>
             <li><b>שלושה סוגי מערכות.</b> <span dir="ltr">TPS</span> רושמת כל תנועה בזמן אמת, <span dir="ltr">MIS</span> מסכמת לדוחות למנהלי ביניים, ו-<span dir="ltr">ESS</span> משלבת מידע פנימי וחיצוני להחלטות אסטרטגיות.</li>
             <li><b>זרימת המידע ומערכות משולבות.</b> מהרישום לדוח ולהחלטה, ולמה מסווגים לפי התפקיד ולא לפי הטכנולוגיה.</li>
-            <li><b>התנסות ותרגול.</b> סימולציית קופה, משחקי סיווג, מקרה פיצרייה מתגלגל, תכנון מערכת לארגון, ו-24 שאלות בסגנון מבחן.</li>
+            <li><b>הגדרות מהתעשייה ומהעיתונות.</b> לכל מושג מרכזי: הגדרה בשורה אחת, דוגמה מחברה אמיתית, וכתבה שממחישה אותו, מ-Visa ו-Zara ועד בית החולים הלל יפה ו-Netflix.</li>
+            <li><b>התנסות ותרגול.</b> סימולציית קופה, משחק ״נתון או מידע״, כותרות מהעיתונות, פירמידה לגרירה, בניית מערכות לארגון, חדר בריחה, ו-37 שאלות אמריקאיות.</li>
           </ul>
         </div>
         <div>
@@ -169,17 +190,17 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
           <div class="links">
             <a class="lk p" href="lectures/lecture-1/presentation.html" target="_blank" rel="noopener">
               <div class="e">🎞️</div>
-              <div><b>המצגת האינטראקטיבית</b><span class="d">מפת הקורס, תוצרי הלמידה, תרשים ״המסע של לחיצה אחת״, סימולציות, משחקים, מקרים ו-24 שאלות תרגול</span></div>
+              <div><b>המצגת האינטראקטיבית</b><span class="d">מפת הקורס, שקפי הגדרה עם דוגמאות מהתעשייה ומהעיתונות, סימולציות, משחקים, חדר בריחה ושאלות תרגול</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk s" href="lectures/lecture-1/summary.pdf" target="_blank" rel="noopener">
               <div class="e">📄</div>
-              <div><b>סיכום כתוב (PDF)</b><span class="d">מפת הקורס ותוצרי הלמידה, וכל מה שנלמד, עם הגדרה ודוגמה לכל מושג</span></div>
+              <div><b>סיכום כתוב (PDF)</b><span class="d">מפת הקורס, וכל מה שנלמד: הגדרה, דוגמה מהתעשייה וכתבה מהעיתונות לכל מושג</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk r" href="materials/exercise-booklet.pdf#page=4" target="_blank" rel="noopener">
               <div class="e">✍️</div>
-              <div><b>תרגילי שיעור 1 בחוברת</b><span class="d">24 שאלות אמריקאיות ו-6 שאלות פתוחות, ובחוברת הפתרונות הפתרון המלא</span></div>
+              <div><b>תרגילי שיעור 1 בחוברת</b><span class="d">37 שאלות אמריקאיות: 24 בסגנון הבחינה ו-13 מקרים להעמקה, ובחוברת הפתרונות הסבר לכל אפשרות</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk r" href="#recording-1">
@@ -220,6 +241,17 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
 var RECORDINGS = {
   "recbox1": ""   // הקלטת שיעור 1, 30.10.2026: להדביק כאן את הקישור
 };
+/* תרגילי הגשה: כשתרגיל מתפרסם, ממלאים title, due ו-link (קישור לדף ההנחיות). */
+var ASSIGNMENTS = [
+  {n:1, title:"", topic:"", due:"", link:""}
+];
+(function(){
+  var box=document.getElementById('asglist'); if(!box) return;
+  box.innerHTML=ASSIGNMENTS.map(function(a){
+    if(!a.link) return '<div class="ac pend"><div class="top"><span class="no">תרגיל הגשה '+a.n+'</span><span class="st wait">⏳ יפורסם בהמשך</span></div><h3>'+(a.title||'הפרטים יעודכנו כאן')+'</h3><p>'+(a.topic||'דף ההנחיות ומועד ההגשה יפורסמו בדף הזה במהלך הסמסטר.')+'</p></div>';
+    return '<div class="ac"><div class="top"><span class="no">תרגיל הגשה '+a.n+'</span><span class="st open">פתוח להגשה</span></div><h3>'+a.title+'</h3><p>'+(a.topic||'')+'</p>'+(a.due?'<p><b>מועד הגשה:</b> '+a.due+'</p>':'')+'<a class="go" href="'+a.link+'" target="_blank" rel="noopener">לדף ההנחיות ←</a></div>';
+  }).join('')+'<div class="ac pend"><div class="top"><span class="no">תרגילים נוספים</span><span class="st wait">⏳</span></div><h3>יתווספו במהלך הסמסטר</h3><p>כל תרגיל חדש יופיע כאן, עם הודעה בשיעור.</p></div>';
+})();
 function toEmbed(u){
   try{
     var x=new URL(u), h=x.hostname.replace(/^www\./,'');
