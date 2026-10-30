@@ -75,6 +75,12 @@ h2.sec:before{content:"";width:34px;height:5px;border-radius:5px;background:var(
 
 /* recording */
 .rec{padding:0 30px 30px}
+.rec a.yt{display:inline-block;margin-top:10px;font-weight:700;color:var(--navy2);text-decoration:underline}
+.todo{margin:0 30px 26px;background:#fff7e0;border:2px solid #f0b429;border-radius:18px;padding:18px 22px}
+.todo h4{font-size:18px;color:var(--navy2);margin-bottom:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.todo .nosub{background:var(--navy2);color:#fff;border-radius:99px;padding:3px 12px;font-size:13.5px}
+.todo ol{padding-inline-start:22px;font-weight:700;font-size:16px;line-height:1.6;color:var(--ink)}
+.todo li{margin-bottom:4px}
 .rec h4{font-size:18px;margin-bottom:10px;color:var(--navy2)}
 .recbox{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0c1426}
 .recbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -115,7 +121,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
   .booklet{flex-direction:column;align-items:flex-start;padding:24px}
   .booklet .btn{margin-right:0;width:100%;text-align:center}
   .lec-body{grid-template-columns:1fr}
-  .lec-head{padding:22px 22px 4px}.lec-body{padding:12px 22px 24px}.rec{padding:0 22px 24px}
+  .lec-head{padding:22px 22px 4px}.lec-body{padding:12px 22px 24px}.rec{padding:0 22px 24px}.todo{margin:0 22px 22px;padding:16px 18px}
 }
 </style>
 </head>
@@ -155,12 +161,6 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
     <a class="btn2" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">פתיחת הפתרונות<small>PDF · 30 עמודים · שיעור 1</small></a>
   </div>
 
-  <section class="block" id="assignments">
-    <h2 class="sec">תרגילי הגשה</h2>
-    <p class="secsub">תרגילי ההגשה של הקורס יפורסמו כאן במהלך הסמסטר. לכל תרגיל יופיעו דף הנחיות, מועד הגשה ואופן ההגשה. כדאי לבדוק את הדף אחרי כל שיעור.</p>
-    <div class="asg" id="asglist"></div>
-  </section>
-
   <section class="block" id="lectures">
     <h2 class="sec">השיעורים</h2>
 
@@ -195,7 +195,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
             </a>
             <a class="lk s" href="lectures/lecture-1/summary.pdf" target="_blank" rel="noopener">
               <div class="e">📄</div>
-              <div><b>סיכום כתוב (PDF)</b><span class="d">מפת הקורס, וכל מה שנלמד: הגדרה, דוגמה מהתעשייה וכתבה מהעיתונות לכל מושג</span></div>
+              <div><b>סיכום כתוב (PDF)</b><span class="d">כל מה שבמצגת, לפי הסדר: הגדרות, הסברים, דוגמאות, כל המשחקים עם התשובות, סיכום לכל חלק ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk r" href="materials/exercise-booklet.pdf#page=4" target="_blank" rel="noopener">
@@ -205,16 +205,27 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
             </a>
             <a class="lk r" href="#recording-1">
               <div class="e">🎥</div>
-              <div><b>הקלטת השיעור</b><span class="d">30.10.2026 · מופיעה מיד מתחת</span></div>
+              <div><b>הקלטת השיעור</b><span class="d">30.10.2026 · לצפייה מיד מתחת, או ב-YouTube</span></div>
               <span class="ar">↓</span>
             </a>
           </div>
         </div>
       </div>
+      <div class="todo">
+        <h4>📝 תרגול מומלץ לשבוע הזה <span class="nosub">השבוע אין הגשה</span></h4>
+        <ol>
+          <li>במצגת, משחקי הזיהוי: ״איזו מערכת זו?״ (שקף 46), כותרות מהעיתונות (שקף 48), ״מי מחליט?״ (שקף 50), בניית שלוש המערכות לחמישה ארגונים (שקף 54) וסבב ״נכון או לא נכון״ (שקף 61).</li>
+          <li>בחוברת התרגילים, חלק א: שאלות 1.1 עד 1.24 (עמודים 4 עד 11), בסגנון הבחינה. אלה גם 24 שאלות התרגול שבשקף 59.</li>
+          <li>בחוברת התרגילים, חלק ב: שאלות 1.25 עד 1.37 (עמודים 12 עד 16): הפיצרייה שגדלה (שקף 52), חדר הבריחה (שקף 63) והסקר (שקף 64).</li>
+          <li>רק אחרי שפותרים: בודקים בחוברת הפתרונות, וקוראים את ההסבר לכל אפשרות, גם לשגויות.</li>
+        </ol>
+      </div>
       <div class="rec" id="recording-1">
+        <h4>הקלטת השיעור</h4>
         <div class="recbox" id="recbox1">
-          <div class="recph"><div><div class="big">🎥</div><b>ההקלטה תתווסף כאן</b>הקישור להקלטת שיעור 1 יוזן בקרוב.</div></div>
+          <div class="recph"><div><div class="big">🎥</div><b>הקלטת שיעור 1</b>אם הנגן לא נטען, אפשר לצפות ישירות ב-YouTube.</div></div>
         </div>
+        <a class="yt" href="https://youtu.be/U6GRqTnTlbM" target="_blank" rel="noopener">לצפייה ב-YouTube ←</a>
       </div>
     </article>
 
@@ -239,9 +250,9 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
 <script>
 /* הקלטות: מזינים כאן את הקישור לכל שיעור. נתמכים קישורי YouTube, Vimeo, Google Drive וקישור הטמעה ישיר. */
 var RECORDINGS = {
-  "recbox1": ""   // הקלטת שיעור 1, 30.10.2026: להדביק כאן את הקישור
+  "recbox1": "https://youtu.be/U6GRqTnTlbM"   // הקלטת שיעור 1, 30.10.2026
 };
-/* תרגילי הגשה: כשתרגיל מתפרסם, ממלאים title, due ו-link (קישור לדף ההנחיות). */
+/* תרגילי הגשה: הפרק הוסר מהדף כל עוד אין הגשה. כשתרגיל מתפרסם, מחזירים את section#assignments עם div#asglist, וממלאים title, due ו-link. */
 var ASSIGNMENTS = [
   {n:1, title:"", topic:"", due:"", link:""}
 ];

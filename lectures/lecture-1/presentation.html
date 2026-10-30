@@ -930,6 +930,28 @@ button.ch:hover{background:var(--coral);color:#fff}
 .xs-chk.open .xs-ans{display:block}.xs-chk.open .xs-rev{display:none}
 .xs-next{margin-top:12px;font-size:17px;color:var(--mut);font-weight:700}
 @media print{.xs-chk .xs-ans{display:block}.xs-chk .xs-rev{display:none}}
+
+
+/* ===== v4: the three systems up front, the information funnel, the integration note ===== */
+.ab-wrap{display:flex;gap:24px;margin-top:12px;align-items:stretch}
+.ab-list{flex:1.3;display:flex;flex-direction:column;gap:10px}
+.ab-c{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:16px;padding:12px 18px;box-shadow:0 2px 0 var(--line);border-right:8px solid var(--c)}
+.ab-k{flex:none;width:136px}
+.ab-k b{display:block;font-size:34px;font-weight:900;color:var(--c);line-height:1}
+.ab-k small{display:block;direction:ltr;text-align:right;font-size:13px;color:var(--mut);margin-top:6px;line-height:1.3}
+.ab-t{font-size:16.5px;line-height:1.45}
+.ab-ex{display:block;font-style:normal;color:var(--mut);font-size:15px;margin-top:3px}
+.ab-fun{flex:.8;display:flex;flex-direction:column;align-items:center;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 2px 0 var(--line)}
+.ab-fh{font-size:17px;color:var(--ink2);margin-bottom:8px}
+.ab-band{width:var(--w);background:var(--c);color:#fff;text-align:center;padding:8px 0 10px;margin-top:4px;clip-path:polygon(0 0,100% 0,calc(100% - var(--i)) 100%,var(--i) 100%)}
+.ab-band b{display:block;font-size:18px;line-height:1.2}
+.ab-band span{font-size:14px;opacity:.95}
+.ab-ext{font-size:14px;color:var(--ink2);background:#fff7e0;border:1px dashed #e8b64c;border-radius:10px;padding:4px 10px;margin:6px 0 2px}
+.ab-drop{font-size:28px;line-height:1;margin-top:4px}
+.ab-cap{font-size:13.5px;color:var(--mut);line-height:1.45;margin-top:6px;text-align:center}
+.int-note{margin-top:10px;font-size:14px;line-height:1.45;color:var(--mut);border-top:1px dashed var(--line);padding-top:7px}
+.fl-sub{font-size:17px!important;margin-top:2px}
+.fl-q{display:inline-block;margin-top:6px;font-style:normal;font-size:13px;font-weight:700;color:var(--ink2);background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:1px 10px}
 </style>
 </head>
 <body>
@@ -967,6 +989,29 @@ button.ch:hover{background:var(--coral);color:#fff}
 
 
 <!-- COURSE MAP -->
+<!-- THE THREE SYSTEMS UP FRONT -->
+<section class="slide" id="s-abc" data-title="שלוש המערכות בקצרה">
+  <div class="kick">לפני שמתחילים · שלושה מושגים</div>
+  <h2>שלוש מערכות שילוו אותנו לאורך כל השיעור*</h2>
+  <div class="ab-wrap">
+    <div class="ab-list">
+      <div class="ab-c" style="--c:#0f9d90"><div class="ab-k"><b>TPS</b><small>Transaction Processing System</small></div><div class="ab-t"><b>מערכת עיבוד תנועות.</b> רושמת כל פעולה, עסקה או אירוע, בפירוט ובזמן אמת. משרתת את הדרג התפעולי: העובדים שמבצעים את העבודה היומיומית.<i class="ab-ex">דוגמה: הקופה בסופר רושמת כל מוצר שנסרק, את המחיר ואת אמצעי התשלום.</i></div></div>
+      <div class="ab-c" style="--c:#6d4df2"><div class="ab-k"><b>MIS</b><small>Management Information System</small></div><div class="ab-t"><b>מערכת מידע ניהולית.</b> מסכמת את מה שה-TPS רשמה לדוחות. משרתת את דרג הביניים: המנהלים של סניף, מחלקה או תחום.<i class="ab-ex">דוגמה: דוח יומי למנהלת הסניף: מכירות לפי מחלקה, ושלושה מוצרים במלאי נמוך.</i></div></div>
+      <div class="ab-c" style="--c:#e8960c"><div class="ab-k"><b>ESS</b><small>Executive Support System</small></div><div class="ab-t"><b>מערכת תומכת החלטות להנהלה בכירה.</b> משלבת מידע פנימי מסוכם עם מידע מחוץ לארגון, להחלטות ארוכות טווח על הארגון כולו.<i class="ab-ex">דוגמה: ההנהלה בודקת אם לפתוח 10 סניפים, לפי המכירות, המתחרים והריבית.</i></div></div>
+    </div>
+    <div class="ab-fun">
+      <b class="ab-fh">משפך המידע: מרישום להחלטה</b>
+      <div class="ab-band" style="--w:100%;--i:7%;--c:#0f9d90"><b>TPS · רישום</b><span>4,812 תנועות ביום, כל אחת בפירוט</span></div>
+      <div class="ab-band" style="--w:84%;--i:8.5%;--c:#6d4df2"><b>MIS · סיכום</b><span>דוח יומי אחד, 3 חריגים</span></div>
+      <div class="ab-ext">🌍 כאן נכנס מידע חיצוני: מתחרים, ריבית, אוכלוסייה</div>
+      <div class="ab-band" style="--w:64%;--i:13%;--c:#e8960c"><b>ESS · החלטה</b><span>האם לפתוח 10 סניפים?</span></div>
+      <div class="ab-drop">🧭</div>
+      <p class="ab-cap">הרבה רשומות נכנסות למעלה, ומעט מידע מזוקק יוצא למטה, אל ההחלטה. בהמשך נעקוב אחרי המסלול הזה בארגון עצמו: הוא מתחיל בדרג התפעולי ומסתיים בהנהלה הבכירה.</p>
+    </div>
+  </div>
+  <p class="int-note">* בפועל, מערכות רבות היום הן משולבות: תוכנה אחת כוללת רכיבים לרישום, לדוחות ולתמיכה בהחלטות, ומטפלת במידע מא׳ ועד ת׳. יחד עם זאת, עדיין קיימות גם מערכות נפרדות. אנו מפרידים בין שלושת הסוגים בכל מקרה, כדי להסביר טוב יותר את ההבדלים ביניהם ואת השלבים ב<span class="term" data-t="life">מחזור החיים של המידע</span>: רישום, סיכום והחלטה.</p>
+</section>
+
 <section class="slide" id="s-course" data-title="מפת הקורס">
   <div class="kick">מפת הקורס</div>
   <h2>12 שיעורים, חמישה עולמות. לחצו על שיעור</h2>
@@ -1224,12 +1269,13 @@ button.ch:hover{background:var(--coral);color:#fff}
   <div class="kick">חלק 2 · החיבור</div>
   <h2>לכל דרג, המערכת שלו</h2>
   <table class="lvmap" id="lvmap">
-    <tr><th>דרג</th><th>איזה החלטות</th><th>סוג המערכת</th><th>השם המלא</th></tr>
+    <tr><th>דרג</th><th>איזה החלטות</th><th>סוג המערכת*</th><th>השם המלא</th></tr>
     <tr data-r="0"><td><b>ניהולי בכיר</b></td><td>החלטות על הארגון כולו, משמעותיות וארוכות טווח</td><td><button class="rev" data-r="0">?</button><span class="rv">ESS</span></td><td><span class="rv"><span class="ltr">Executive Support System</span><br>מערכת תומכת החלטות להנהלה בכירה</span></td></tr>
     <tr data-r="1"><td><b>ביניים</b></td><td>החלטות ניהוליות שוטפות בתחום מסוים</td><td><button class="rev" data-r="1">?</button><span class="rv">MIS</span></td><td><span class="rv"><span class="ltr">Management Information System</span><br>מערכת מידע ניהולית</span></td></tr>
     <tr data-r="2"><td><b>תפעולי</b></td><td>ביצוע הפעולות ורישומן</td><td><button class="rev" data-r="2">?</button><span class="rv">TPS</span></td><td><span class="rv"><span class="ltr">Transaction Processing System</span><br>מערכת עיבוד תנועות</span></td></tr>
   </table>
   <div class="row" style="margin-top:16px;gap:12px"><button class="btn" id="mapall">חשיפת הכול</button><span class="hint" style="font-size:17px;align-self:center">בבחינה צריך להכיר את השמות באנגלית ואת המונחים בעברית.</span></div>
+  <p class="int-note">* בפועל, מערכות רבות היום הן משולבות: תוכנה אחת כוללת רכיבים לרישום, לדוחות ולתמיכה בהחלטות, ומטפלת במידע מא׳ ועד ת׳. יחד עם זאת, עדיין קיימות גם מערכות נפרדות. אנו מפרידים בין שלושת הסוגים בכל מקרה, כדי להסביר טוב יותר את ההבדלים ביניהם ואת השלבים ב<span class="term" data-t="life">מחזור החיים של המידע</span>: רישום, סיכום והחלטה.</p>
 </section>
 
 <!-- DEF tps -->
@@ -1370,7 +1416,7 @@ button.ch:hover{background:var(--coral);color:#fff}
 <!-- 14 COMPARE -->
 <section class="slide" id="s-cmp" data-title="השוואה">
   <div class="kick">חלק 2 · מבט אחד</div>
-  <h2>שלוש המערכות, זו לצד זו</h2>
+  <h2>שלוש המערכות, זו לצד זו*</h2>
   <table class="cmp3">
     <tr><th></th><th>TPS</th><th>MIS</th><th>ESS</th></tr>
     <tr><td>מי משתמש</td><td>הדרג התפעולי</td><td>מנהלי ביניים</td><td>הנהלה בכירה</td></tr>
@@ -1381,20 +1427,22 @@ button.ch:hover{background:var(--coral);color:#fff}
     <tr><td>דוגמה</td><td>קופה רושמת</td><td>דוח מלאי נמוך</td><td>האם להתרחב לחו״ל</td></tr>
   </table>
   <div class="hint" style="margin-top:10px;font-size:17px">ככל שעולים בפירמידה, המידע פחות מפורט ויותר רחב.</div>
+  <p class="int-note">* בפועל, מערכות רבות היום הן משולבות: תוכנה אחת כוללת רכיבים לרישום, לדוחות ולתמיכה בהחלטות, ומטפלת במידע מא׳ ועד ת׳. יחד עם זאת, עדיין קיימות גם מערכות נפרדות. אנו מפרידים בין שלושת הסוגים בכל מקרה, כדי להסביר טוב יותר את ההבדלים ביניהם ואת השלבים ב<span class="term" data-t="life">מחזור החיים של המידע</span>: רישום, סיכום והחלטה.</p>
 </section>
 
 <!-- 15 FLOW -->
 <section class="slide" id="s-flow" data-title="זרימת המידע">
   <div class="kick">חלק 2 · איך זה מתחבר</div>
   <h2>המידע זורם מלמטה למעלה</h2>
-  <div class="pipe" style="margin-top:14px">
+  <p class="sub fl-sub">זה משפך המידע מתחילת השיעור, צעד אחר צעד: אלפי שורות בקופה, דוח אחד למנהלת, ומידע חיצוני שמצטרף להחלטה של ההנהלה.</p>
+  <div class="pipe" style="margin-top:6px">
     <div class="pline"><i id="flowline"></i></div>
-    <div class="pstage" data-i="0"><div class="pnode">🧾</div><b>TPS</b><span>רושמת 4,812 תנועות היום</span></div>
-    <div class="pstage" data-i="1"><div class="pnode">📊</div><b>MIS</b><span>דוח יומי: מכירות לפי מחלקה, 3 חריגים</span></div>
-    <div class="pstage" data-i="2"><div class="pnode">🌍</div><b>מידע חיצוני</b><span>מתחרים, ריבית, דמוגרפיה</span></div>
-    <div class="pstage" data-i="3"><div class="pnode">🧭</div><b>ESS</b><span>החלטה: לאן הרשת הולכת</span></div>
+    <div class="pstage" data-i="0"><div class="pnode">🧾</div><b>TPS</b><span>רושמת 4,812 תנועות היום</span><em class="fl-q">4,812 שורות</em></div>
+    <div class="pstage" data-i="1"><div class="pnode">📊</div><b>MIS</b><span>דוח יומי: מכירות לפי מחלקה, 3 חריגים</span><em class="fl-q">דוח אחד</em></div>
+    <div class="pstage" data-i="2"><div class="pnode">🌍</div><b>מידע חיצוני</b><span>מתחרים, ריבית, דמוגרפיה</span><em class="fl-q">נכנס מבחוץ</em></div>
+    <div class="pstage" data-i="3"><div class="pnode">🧭</div><b>ESS</b><span>החלטה: לאן הרשת הולכת</span><em class="fl-q">החלטה אחת</em></div>
   </div>
-  <div class="pbox" id="flowbox">לחצו ״הבא״ בתוך השקף (או על כל עיגול) כדי לעקוב אחרי המידע.</div>
+  <div class="pbox" id="flowbox">לחצו ״השלב הבא״ (או על כל עיגול) כדי לעקוב אחרי המידע.</div>
   <div class="row" style="margin-top:14px;gap:10px"><button class="btn" id="flownext">▶ השלב הבא</button><button class="btn ghost" id="flowreset">↺ מהתחלה</button></div>
   <div class="clip wide" data-clip="flow" style="margin-top:12px"></div>
 </section>
@@ -1705,9 +1753,9 @@ button.ch:hover{background:var(--coral);color:#fff}
   <h2>ארבעה דברים לשבוע הקרוב</h2>
   <div class="route" style="grid-template-columns:repeat(4,1fr)">
     <div class="rcard"><div class="n">1</div><b>לקרוא</b><span>את סיכום שיעור 1 (PDF באתר), ולוודא שכל מושג במילון ברור.</span></div>
-    <div class="rcard"><div class="n">2</div><b>לפתור</b><span>את שאלות שיעור 1 בחוברת התרגילים, ורק אז לבדוק בחוברת הפתרונות.</span></div>
+    <div class="rcard"><div class="n">2</div><b>לפתור</b><span>בחוברת התרגילים את שאלות 1.1 עד 1.37 (עמודים 4 עד 16), ורק אז לבדוק בחוברת הפתרונות.</span></div>
     <div class="rcard"><div class="n">3</div><b>לשים לב</b><span>לשלוש מערכות שרשמו אתכם השבוע, ולחשוב: מי משתמש בנתונים, ולאיזו החלטה?</span></div>
-    <div class="rcard" style="border:2px dashed var(--coral)"><div class="n">4</div><b>תרגילי הגשה</b><span>יפורסמו באתר הקורס, בפרק ״תרגילי הגשה״, עם דף הנחיות ומועד הגשה. שימו לב לעדכונים.</span></div>
+    <div class="rcard" style="border:2px dashed var(--coral)"><div class="n">4</div><b>השבוע אין הגשה</b><span>לתרגול נוסף במצגת: ״איזו מערכת זו?״ (שקף 46), הכותרות מהעיתונות (שקף 48), ״מי מחליט?״ (שקף 50) וחדר הבריחה (שקף 63).</span></div>
   </div>
   <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55;background:var(--navy2);color:#fff">👋 <b>בשיעור הבא:</b> מערכות ליבה עסקיות. מתחילים ב-CRM: איך ארגון מנהל את הקשר עם הלקוחות שלו.</div>
 </section>
@@ -1764,7 +1812,18 @@ exc:{h:'דוח חריגים',en:'Exception report',p:'דוח שמראה רק א�
 strat:{h:'החלטה אסטרטגית',en:'Strategic decision',p:'החלטה גדולה שמשפיעה על כל הארגון לאורך זמן.',f:'החלטה הנוגעת לכיוון הארגון, לשווקים, למוצרים או להשקעות מהותיות, שהשלכותיה ארוכות טווח וקשות להפיכה.',ex:'כניסה לשוק חדש, השקת קטגוריית מוצר חדשה, מיזוג.',tr:'אם ההחלטה משנה את מה שהארגון הוא או איפה הוא פועל, היא אסטרטגית.',rel:['ess','lvl_top']},
 ext:{h:'מידע חיצוני',en:'External information',p:'מידע שמגיע מחוץ לארגון: על השוק, המתחרים, הכלכלה והלקוחות.',f:'נתונים על הסביבה העסקית: מגמות ענפיות, מחירי מתחרים, נתוני מאקרו (ריבית, אינפלציה, שער חליפין), רגולציה ודמוגרפיה.',ex:'מדד המחירים לצרכן, מחירי המתחרים, מספר הצעירים בעיר שבה שוקלים לפתוח סניף.',tr:'מידע חיצוני הוא סימן מזהה מרכזי של ESS.',rel:['ess']},
 dash:{h:'לוח מחוונים',en:'Dashboard',p:'מסך אחד שמציג את המספרים החשובים בגרפים ובמדדים, במבט אחד.',f:'ממשק חזותי שמרכז מדדי ביצוע מרכזיים (KPI) ומגמות, לרוב עם אפשרות להתעמק בפרטים.',ex:'מסך המנכ״ל: נתח שוק, מכירות מול יעד, מגמת הריבית, מחירי מתחרים.',tr:'גרפים הם דגש חשוב של ESS, כי המידע רחב מדי לטבלאות.',rel:['ess']},
-integ:{h:'אינטגרציה',en:'Integration',p:'חיבור בין מערכות, כך שהנתון נרשם פעם אחת ומשמש את כולם.',f:'שילוב של רכיבי מערכת ומאגרי נתונים, כך שמידע זורם בין תחומים ודרגים בלי הקלדה כפולה.',ex:'במערכת ERP אחת, מכירה שנרשמה בקופה מעדכנת מלאי, הנהלת חשבונות ודוח המנהל.',tr:'גם כשמערכת אחת משלבת את שלושת הסוגים, במבחן מזהים כל רכיב לפי התפקיד שלו.',rel:['tps','mis','ess']}
+integ:{h:'אינטגרציה',en:'Integration',p:'חיבור בין מערכות, כך שהנתון נרשם פעם אחת ומשמש את כולם.',f:'שילוב של רכיבי מערכת ומאגרי נתונים, כך שמידע זורם בין תחומים ודרגים בלי הקלדה כפולה.',ex:'במערכת ERP אחת, מכירה שנרשמה בקופה מעדכנת מלאי, הנהלת חשבונות ודוח המנהל.',tr:'גם כשמערכת אחת משלבת את שלושת הסוגים, במבחן מזהים כל רכיב לפי התפקיד שלו.',rel:['tps','mis','ess']},
+crm:{h:'CRM: ניהול קשרי לקוחות',en:'Customer Relationship Management',p:'מערכת שמרכזת את כל מה שהארגון יודע על כל לקוח: קניות, פניות ושיחות.',f:'מערכת לניהול הקשר עם הלקוחות לאורך כל התקופה שבה הם לקוחות של הארגון: שיווק, מכירות ושירות, על בסיס תיק לקוח אחד ומשותף.',ex:'נציגת שירות בחברת סלולר רואה על המסך את השיחות הקודמות שלכם ואת המסלול שלכם, עוד לפני שאמרתם מילה.',tr:'CRM הוא שם של סוג תוכנה לפי תחום, לא סוג מערכת לפי דרג. נלמד לעומק בשיעורים 2 ו-3.',rel:['erp','integ']},
+erp:{h:'ERP: תכנון משאבי הארגון',en:'Enterprise Resource Planning',p:'מערכת אחת שמחברת את כל המחלקות: רכש, מלאי, ייצור, כספים ומשאבי אנוש.',f:'מערכת ארגונית משולבת, הפועלת על מאגר נתונים משותף, ומנהלת את התהליכים העסקיים המרכזיים של הארגון בין המחלקות.',ex:'מכירה בקופה מעדכנת מיד את המלאי, את הנהלת החשבונות ואת ההזמנה הבאה מהספק.',tr:'ERP היא שם של סוג תוכנה, לא סוג מערכת לפי דרג. בתוכה יש רכיבים של TPS, MIS ו-ESS. נלמד לעומק בשיעור 4.',rel:['integ','sap','crm']},
+bi:{h:'BI: בינה עסקית',en:'Business Intelligence',p:'כלים שהופכים נתונים רבים לדוחות, לגרפים וללוחות מחוונים, כדי להבין מה קורה בעסק.',f:'מכלול של כלים ושיטות לאיסוף, ארגון, ניתוח והצגה של נתונים עסקיים, לתמיכה בקבלת החלטות ברמות הניהול השונות.',ex:'מנהלת שיווק רואה במסך אחד מכירות לפי אזור, מוצר וחודש, ויכולה ללחוץ על כל עמודה כדי להתעמק.',tr:'כלי BI משמשים גם ב-MIS וגם ב-ESS. נלמד בשיעור 12.',rel:['dash','mis','ess']},
+ai:{h:'AI: בינה מלאכותית',en:'Artificial Intelligence',p:'תוכנה שלומדת מדוגמאות ומבצעת משימות שבדרך כלל דורשות שיקול דעת אנושי: לזהות, לחזות, לנסח.',f:'תחום במדעי המחשב העוסק במערכות שמבצעות משימות קוגניטיביות, כמו זיהוי דפוסים, חיזוי, הבנת שפה וקבלת החלטות, לרוב על בסיס למידה מנתונים.',ex:'חברת אשראי מזהה עסקה חשודה כהונאה תוך שנייה, לפי דפוסים שלמדה ממיליוני עסקאות קודמות.',tr:'טכנולוגיה מתקדמת לא קובעת את סוג המערכת. AI שמסכם דוח שוטף למנהל הוא עדיין MIS. נלמד בשיעורים 10 ו-11.',rel:['bi','mis']},
+gis:{h:'GIS: מערכת מידע גיאוגרפית',en:'Geographic Information System',p:'תוכנה שמציגה נתונים על גבי מפה.',f:'מערכת לאיסוף, ניהול, ניתוח והצגה של נתונים שיש להם מיקום גיאוגרפי, בשכבות על גבי מפה.',ex:'רשת קפה מציגה על מפה את הסניפים שלה, את צפיפות האוכלוסייה ואת המתחרים, כדי לבחור מיקום לסניף חדש.',tr:'GIS היא טכנולוגיה. כשהיא משמשת להחלטה אסטרטגית על בסיס מידע חיצוני, היא חלק מ-ESS.',rel:['ess','ext']},
+gps:{h:'GPS: מערכת איתור לוויינית',en:'Global Positioning System',p:'שירות לוויינים שמאפשר לטלפון או לרכב לדעת בדיוק איפה הם נמצאים.',f:'מערכת ניווט לוויינית שמחשבת מיקום לפי אותות מלוויינים, ומשמשת מקור קלט של מיקום למערכות מידע.',ex:'אפליקציית המשלוחים יודעת איפה השליח נמצא, ומחשבת מתי הוא יגיע.',tr:'GPS הוא מקור קלט. המערכת שמשתמשת בו קובעת מה עושים עם המיקום.',rel:['ipo']},
+sap:{h:'SAP',en:'SAP SE',p:'חברת תוכנה גרמנית, מהיצרניות הגדולות בעולם של מערכות ERP.',f:'חברת תוכנה בינלאומית שמפתחת מערכות ארגוניות משולבות, בעיקר ERP, לניהול כספים, רכש, מלאי, ייצור ומשאבי אנוש.',ex:'רשתות קמעונאות, חברות תעשייה ומשרדי ממשלה רבים מנהלים את הכספים והמלאי שלהם בתוכנה של SAP.',tr:'SAP הוא שם של חברה ושל מוצר, לא סוג מערכת. הסיווג נקבע לפי התפקיד.',rel:['erp','integ']},
+crowd:{h:'CrowdStrike',en:'CrowdStrike',p:'חברת אבטחת מידע אמריקאית, שהתוכנה שלה מגינה על מחשבים ושרתים בארגונים.',f:'ספקית של תוכנת אבטחה למחשבים ולשרתים, שמותקנת עמוק בתוך מערכת ההפעלה.',ex:'ביולי 2024 עדכון פגום של התוכנה שלה הקריס מיליוני מחשבי Windows, ושיבש טיסות, בנקים ובתי חולים בעולם.',tr:'הדוגמה מראה שתקלה ברכיב אחד, התוכנה, עוצרת את כל השרשרת של מערכת המידע.',rel:['is','tps']},
+cloud:{h:'ענן',en:'Cloud computing',p:'שרתים ותוכנות שנמצאים אצל ספק חיצוני ונגישים דרך האינטרנט, במקום על מחשב בארגון.',f:'מודל שבו משאבי מחשוב (אחסון, עיבוד ותוכנה) מסופקים כשירות דרך הרשת, לפי הצורך ובתשלום לפי שימוש.',ex:'החנות לא מחזיקה שרת במחסן. התוכנה והנתונים שלה נמצאים בשרתים של ספק ענן, ונגישים מכל מחשב.',tr:'ענן הוא המקום שבו המערכת רצה, לא סוג מערכת. נרחיב בשיעורי החומרה והתשתיות.',rel:['is','erp']},
+ransom:{h:'מתקפת כופרה',en:'Ransomware attack',p:'פריצה שבה התוקפים נועלים את המחשבים והנתונים של הארגון, ודורשים כסף כדי לשחרר אותם.',f:'מתקפת סייבר שבה תוכנה זדונית מצפינה את נתוני הארגון ומשביתה את מערכותיו, לצורך סחיטה. לעיתים התוקפים מאיימים גם לפרסם את הנתונים.',ex:'באוקטובר 2021 מתקפה כזו השביתה את מערכות בית החולים הלל יפה, והצוות עבר לרשום בעט ונייר.',tr:'גיבוי מנותק, שהתוקפים לא יכולים להגיע אליו, הוא ההגנה המרכזית מפני אובדן הנתונים.',rel:['backup','tps']},
+life:{h:'מחזור החיים של המידע',en:'Information life cycle',p:'הדרך שהמידע עובר בארגון: נרשם, מסוכם, ומשמש להחלטה.',f:'השלבים שהמידע עובר מרגע יצירתו ועד השימוש בו: קליטה ורישום, עיבוד וסיכום, הצגה, שימוש בהחלטה, ולבסוף שמירה או מחיקה.',ex:'מכירת חלב נרשמת בקופה (TPS), מסוכמת בדוח השבועי (MIS), ומשתלבת בהחלטה על פתיחת סניפים (ESS).',tr:'בשיעור הזה מתמקדים בשלושה שלבים: רישום, סיכום והחלטה. לכל שלב סוג מערכת אחר.',rel:['tps','mis','ess']}
 };
 
 /* ---------- day in the life (hook) ---------- */
@@ -1773,7 +1832,7 @@ const DAY=[
  {t:'07:40',ic:'🚌',ev:'מתקפים רב קו באוטובוס',sys:'כל עלייה נרשמת: קו, תחנה, שעה, סוג כרטיס.',k:'tps',who:'מפעיל התחבורה'},
  {t:'08:30',ic:'🎓',ev:'נכנסים למודל של פרס ומגישים מטלה',sys:'נרשם מועד ההגשה, הקובץ והסטודנט.',k:'tps',who:'המכללה'},
  {t:'12:15',ic:'🛵',ev:'מזמינים אוכל בוולט',sys:'ההזמנה, המסעדה, השליח וזמן ההגעה נרשמים בזמן אמת.',k:'tps',who:'וולט והמסעדה'},
- {t:'17:20',ic:'🛒',ev:'קונים בסופר עם כרטיס מועדון',sys:'כל מוצר נסרק: מק״ט, מחיר, כמות, ומי הלקוח.',k:'tps',who:'רשת השיווק'},
+ {t:'17:20',ic:'🛒',ev:'קונים בסופר עם כרטיס מועדון',sys:'כל מוצר נסרק: מק״ט (מספר קטלוגי), מחיר, כמות, ומי הלקוח.',k:'tps',who:'רשת השיווק'},
  {t:'19:00',ic:'📊',ev:'(מאחורי הקלעים) מנהלת הסניף מקבלת דוח מכירות יומי',sys:'הרכישה שלכם הפכה לשורה אחת בסיכום: מכירות לפי מחלקה, חריגים במלאי.',k:'mis',who:'מנהלת הסניף'},
  {t:'21:30',ic:'🎬',ev:'צופים בסדרה בסטרימינג',sys:'נרשם מה צפיתם, כמה זמן, ואיפה עצרתם.',k:'tps',who:'שירות הסטרימינג'},
  {t:'לפני שנה',ic:'🧭',ev:'(בהנהלה) הוחלט להשקיע בסדרה מקומית חדשה',sys:'שילוב של נתוני צפייה מסוכמים עם מגמות שוק ומתחרים, להחלטה של מאות מיליונים.',k:'ess',who:'ההנהלה הבכירה של שירות הסטרימינג'}
@@ -1896,7 +1955,7 @@ const PQ=[
  ex:['זה מאפיין של TPS.','זה מאפיין של TPS.','זה מאפיין של TPS.','זה מאפיין של TPS.','נכונה. ניתוח מגמות ענפיות הוא עניין של ESS.'],
  tip:'שאלות ״אינו״ דורשות לבדוק כל אפשרות. סמנו לעצמכם ליד כל אחת: מאפיין או לא.'},
 {lv:2,topic:'נתונים ומידע',stem:'איזה מהבאים הוא מידע, ולא נתון גולמי?',claims:[],ask:'',
- o:['״קופה 3, 10:42, חלב 3%, 6.90 ש״ח״','״מכירות החלב בסניפי הצפון ירדו ב-12% השבוע לעומת השבוע הקודם״','מספר תעודת זהות של לקוח','שעת כניסה של עובד: 08:03','מק״ט של מוצר'],a:1,
+ o:['״קופה 3, 10:42, חלב 3%, 6.90 ש״ח״','״מכירות החלב בסניפי הצפון ירדו ב-12% השבוע לעומת השבוע הקודם״','מספר תעודת זהות של לקוח','שעת כניסה של עובד: 08:03','מק״ט (מספר קטלוגי) של מוצר'],a:1,
  ex:['זו שורה גולמית אחת מהקופה.','נכונה. נתונים שסוכמו, הושוו וקיבלו הקשר.','מזהה בודד, ללא עיבוד.','רישום בודד, ללא עיבוד.','מזהה בודד, ללא עיבוד.'],
  tip:'מידע עונה על שאלה (״מה קרה למכירות?״). נתון רק מתעד.'},
 {lv:2,topic:'אינטגרציה',stem:'לפניכם מספר טענות:',claims:['מערכת מידע מודרנית אחת יכולה לשרת כמה דרגים בארגון','מערכות TPS קיימות רק בחברות ייצור, ולא בחברות שירות','מערכות MIS מפיקות דוחות על בסיס נתונים שנרשמו ב-TPS'],ask:CL,
@@ -2556,6 +2615,32 @@ document.addEventListener('click',e=>{const b=e.target.closest('.xs-rev');if(b)b
  s.addEventListener('click',e=>{const x=e.target.closest('[data-path]');if(!x)return;const n=x.dataset.path.length;
   s.querySelectorAll('[data-path]').forEach(y=>y.classList.toggle('pick',y===x));
   s.querySelectorAll('.ez-q').forEach((q,i)=>{q.classList.toggle('qno',i<n-1);q.classList.toggle('qyes',i===n-1);q.classList.toggle('qoff',i>=n);});});})();
+
+
+/* ---------- terms: the first mention of each term on a slide opens its definition ---------- */
+(function(){
+ const HB='(?<![א-ת])(?:[ובהלמכש]|וה|שה|מה|כש|וב|ול|שב)?';
+ const AUTO=[['tps','TPS'],['mis','MIS'],['ess','ESS'],['crm','CRM'],['erp','ERP'],['bi','BI'],['ai','AI'],['gis','GIS'],['gps','GPS'],['sap','SAP'],['crowd','CrowdStrike'],
+  ['life','מחזור החיים של המידע'],['exc','דוח(?:ות)? (?:ה)?חריגים'],['realtime','זמן אמת'],['dash','לוח(?:ות)? (?:ה)?מחוונים'],['ext','מידע חיצוני'],
+  ['strat','החלט(?:ה|ות) (?:ה)?אסטרטגי(?:ת|ות)'],['integ','אינטגרציה'],['backup','גיבוי(?:ים)?'],['controls','בקרות'],['ransom','מתקפ(?:ת|ות) (?:ה)?כופר(?:ה)?'],
+  ['cloud','ענן'],['ipo','קלט, עיבוד,? ו?פלט'],['is','מערכ(?:ת|ות) (?:ה)?מידע(?! ניהולית)'],
+  ['lvl_op','דרג (?:ה)?תפעולי'],['lvl_mid','דרג (?:ה)?ביניים'],['lvl_top','דרג (?:ה)?(?:ניהולי )?(?:ה)?בכיר']
+ ].map(([k,p])=>[k,/^[A-Za-z]/.test(p)?new RegExp('(?<![A-Za-z])'+p+'(?![A-Za-z])'):new RegExp(HB+p+'(?![א-ת])')]);
+ const NOLINK='.ab-k,.ab-band,.dfl,.bslot,[data-path],[data-o],[data-p],button,a,input,select,textarea,svg,.term,.ft,.kick,.dch,.bcard,.swdeck,.swc,.xs-ans,.rv,.opt,#poslog';
+ function link(root){
+  const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>(!n.nodeValue.trim()||n.parentElement.closest(NOLINK)||/flex|grid/.test(getComputedStyle(n.parentElement).display))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+  const nodes=[];while(tw.nextNode())nodes.push(tw.currentNode);
+  AUTO.forEach(([k,re])=>{
+   if(root.querySelector('.term[data-t="'+k+'"]'))return;
+   for(let i=0;i<nodes.length;i++){const n=nodes[i];const m=re.exec(n.nodeValue);if(!m)continue;
+    const t=n.splitText(m.index),rest=t.splitText(m[0].length),s=document.createElement('is-term');
+    s.className='term';s.dataset.t=k;t.parentNode.replaceChild(s,t);s.appendChild(t);nodes.splice(i+1,0,rest);break;}
+  });
+ }
+ slides.forEach(link);
+ let busy=false;const mo=new MutationObserver(()=>{if(busy)return;busy=true;setTimeout(()=>{link(slides[cur]);mo.takeRecords();busy=false;},0);});
+ mo.observe(stage,{childList:true,subtree:true});
+})();
 
 /* ---------- footers and boot ---------- */
 slides.forEach((s,i)=>{if(s.id==='s-title'||s.id==='s-end'||s.classList.contains('ted'))return;const f=document.createElement('div');f.className='ft';f.innerHTML='<span>מבוא למערכות מידע וניהול נתונים · שיעור 1</span><span><b>ד״ר שי צבאן</b> · '+(i+1)+'</span>';s.appendChild(f);});
