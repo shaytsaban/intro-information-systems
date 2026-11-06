@@ -161,6 +161,12 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
     <a class="btn2" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">פתיחת הפתרונות<small>PDF · 30 עמודים · שיעור 1</small></a>
   </div>
 
+  <section class="block" id="assignments">
+    <h2 class="sec">תרגילי הגשה</h2>
+    <p class="secsub">לכל תרגיל: קובץ השאלות, מועד ההגשה ואופן ההגשה. ההגשה עצמה נעשית דרך האתר הרשמי (ידיעון המכללה).</p>
+    <div class="asg" id="asglist"></div>
+  </section>
+
   <section class="block" id="lectures">
     <h2 class="sec">השיעורים</h2>
 
@@ -272,8 +278,9 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
         </div>
       </div>
       <div class="todo">
-        <h4>📝 תרגול מומלץ לשבוע הזה <span class="nosub">השבוע אין הגשה</span></h4>
+        <h4>📝 מה עושים השבוע <span class="nosub">תרגיל הגשה 1 · עד 13.11.2026, 8:00</span></h4>
         <ol>
+          <li><b>להגיש את <a href="materials/assignments/assignment-1.pdf" target="_blank" rel="noopener">תרגיל הגשה 1</a></b> (PDF, 20 שאלות) דרך האתר הרשמי (ידיעון המכללה), עד 13.11.2026 בשעה 8:00 בבוקר. הגשה מוקדמת מומלצת!</li>
           <li>לקרוא את סיכום שיעור 2, ולוודא שכל מושג במילון ברור.</li>
           <li>במצגת, משחקי הזיהוי: ״איזו זרוע?״ (שקף 33), ״חם או קר?״ (שקף 42), ״איזה סוג?״ (שקף 53) וסבב ״נכון או לא נכון״ (שקף 69).</li>
           <li>במצגת: 24 שאלות התרגול (שקף 67), חדר הבריחה (שקף 71) והסקר (שקף 72). הפתרון לכל אפשרות מופיע גם בסיכום.</li>
@@ -288,7 +295,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
       </div>
     </article>
 
-    <div class="soon">⏳ <span>שיעורים נוספים יתווספו כאן במהלך הסמסטר, כל אחד עם מצגת, סיכום, תרגילים והקלטה. בשיעור הבא: <span dir="ltr">CRM</span> במקרה עסקי מלא, ומטלת הגשה.</span></div>
+    <div class="soon">⏳ <span>שיעורים נוספים יתווספו כאן במהלך הסמסטר, כל אחד עם מצגת, סיכום, תרגילים והקלטה. בשיעור הבא: <span dir="ltr">CRM</span> במקרה עסקי מלא.</span></div>
   </section>
 </main>
 
@@ -313,13 +320,13 @@ var RECORDINGS = {
 };
 /* תרגילי הגשה: הפרק הוסר מהדף כל עוד אין הגשה. כשתרגיל מתפרסם, מחזירים את section#assignments עם div#asglist, וממלאים title, due ו-link. */
 var ASSIGNMENTS = [
-  {n:1, title:"", topic:"", due:"", link:""}
+  {n:1, title:"תרגיל הגשה 1, לאחר מפגש 2", topic:"20 שאלות אמריקאיות על מערכות CRM, מהקל אל הכבד, ושאלת הסקה אחת. הגשה דרך האתר הרשמי (ידיעון המכללה). הגשה מוקדמת מומלצת!", due:"13.11.2026 בשעה 8:00 בבוקר", link:"materials/assignments/assignment-1.pdf"}
 ];
 (function(){
   var box=document.getElementById('asglist'); if(!box) return;
   box.innerHTML=ASSIGNMENTS.map(function(a){
     if(!a.link) return '<div class="ac pend"><div class="top"><span class="no">תרגיל הגשה '+a.n+'</span><span class="st wait">⏳ יפורסם בהמשך</span></div><h3>'+(a.title||'הפרטים יעודכנו כאן')+'</h3><p>'+(a.topic||'דף ההנחיות ומועד ההגשה יפורסמו בדף הזה במהלך הסמסטר.')+'</p></div>';
-    return '<div class="ac"><div class="top"><span class="no">תרגיל הגשה '+a.n+'</span><span class="st open">פתוח להגשה</span></div><h3>'+a.title+'</h3><p>'+(a.topic||'')+'</p>'+(a.due?'<p><b>מועד הגשה:</b> '+a.due+'</p>':'')+'<a class="go" href="'+a.link+'" target="_blank" rel="noopener">לדף ההנחיות ←</a></div>';
+    return '<div class="ac"><div class="top"><span class="no">תרגיל הגשה '+a.n+'</span><span class="st open">פתוח להגשה</span></div><h3>'+a.title+'</h3><p>'+(a.topic||'')+'</p>'+(a.due?'<p><b>מועד הגשה:</b> '+a.due+'</p>':'')+'<a class="go" href="'+a.link+'" target="_blank" rel="noopener">לקובץ השאלות (PDF) ←</a></div>';
   }).join('')+'<div class="ac pend"><div class="top"><span class="no">תרגילים נוספים</span><span class="st wait">⏳</span></div><h3>יתווספו במהלך הסמסטר</h3><p>כל תרגיל חדש יופיע כאן, עם הודעה בשיעור.</p></div>';
 })();
 function toEmbed(u){
