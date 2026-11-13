@@ -1502,6 +1502,20 @@ tr.st{transform:none}
 .qz-nav{margin-bottom:6px}.qz-nav button{width:32px;height:30px}
 .qz-q.short .qz-stem{font-size:19px;line-height:1.4}.qz-q.short .opt{font-size:17.5px;padding:8px 13px}.qz-q.short .qz-pic{font-size:46px}
 .qz-q:not(.short) .claims{font-size:18.5px;line-height:1.5;margin-top:8px}.qz-q:not(.short) .claims li{margin-bottom:6px}.qz-q:not(.short) .opt{font-size:18px;padding:11px 13px}.qz-q:not(.short) .qz-ask{margin-top:8px}
+
+/* press clippings */
+.l3-news{display:grid;gap:16px;margin-top:12px;align-items:start}.l3-news.one{grid-template-columns:1.25fr .75fr}.l3-news.three{grid-template-columns:repeat(3,1fr)}
+.l3-clip{background:#fffdf6;border:1px solid #d9d2bd;border-radius:6px;padding:16px 20px 14px;box-shadow:0 2px 0 #d9d2bd,0 16px 30px rgba(22,33,58,.16);position:relative}
+.l3-clip.show{rotate:-.6deg}.l3-news.three .l3-clip.show:nth-child(2){rotate:.7deg}.l3-news.three .l3-clip.show:nth-child(3){rotate:-.4deg}
+.l3-clip:before{content:"📌";position:absolute;top:-16px;right:22px;font-size:28px}
+.l3-cm{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double #1b2d55;padding-bottom:5px;margin-bottom:8px}
+.l3-cm b{font-family:Georgia,"Times New Roman",serif;font-size:22px;letter-spacing:.02em}.l3-cm span{font-size:14px;color:var(--mut)}
+.l3-clip h3{font-family:Georgia,"David","Times New Roman",serif;font-size:27px;line-height:1.25;font-weight:800;margin-bottom:8px}
+.l3-news.three .l3-clip h3{font-size:20.5px}.l3-news.three .l3-cm b{font-size:18px}
+.l3-clip p{font-size:17px;line-height:1.5}.l3-news.three .l3-clip p{font-size:15.5px}
+.l3-cl{background:#fff0d2;border-radius:10px;padding:8px 12px;font-size:16px;line-height:1.45;margin-top:10px}.l3-news.three .l3-cl{font-size:14.8px}
+.l3-ca{display:inline-block;margin-top:9px;font-size:14px;font-weight:800;color:#4f33c9;text-decoration:underline}
+.l3-nside{display:flex;flex-direction:column;gap:10px}.l3-nside .card{font-size:17.5px;line-height:1.5}.l3-nside .big{font-size:90px;text-align:center;line-height:1.1}
 </style>
 </head>
 <body>
@@ -1628,6 +1642,17 @@ tr.st{transform:none}
   <div class="l2-pop st left"><span>🤖</span><q>אני שולח תזכורות. לסבתא שלא עונה, שתתקשר המזכירה</q></div>
 </section>
 
+<section class="slide" id="n-air" data-title="מהעיתונות: הצ׳אטבוט טעה, החברה שילמה">
+  <div class="kick">חלק 2 · מהעיתונות</div>
+  <h2>כשהאוטומציה טועה: מי אחראי?</h2>
+  <div class="l3-news one">
+    <div class="l3-clip st l2-nolink" data-news="air"></div>
+    <div class="l3-nside"><div class="big st">🤖⚖️</div>
+      <div class="card l2-chk st"><b>💬 בצ׳אט:</b> מה החברה הייתה צריכה לעשות אחרת? <button class="btn l2-rev" style="margin-inline-start:6px">🔍 חשיפה</button><div class="l2-ans">לבדוק מה הצ׳אטבוט עונה, לקבוע באילו נושאים הוא מעביר לנציג, ולעמוד מאחורי מה שנאמר ללקוח. זה חלק מהנהלים שתומכים בלקוח.</div></div>
+      <div class="card st" style="background:#dff5f2">📏 <b>החיבור לחומר:</b> אוטומציה היא <b>חלק</b> מהתהליכים, <b>לפי שיקול דעת ההנהלה</b>. מי שמחליט הוא גם מי שאחראי.</div></div>
+  </div>
+</section>
+
 <!-- ARMS GAME -->
 <section class="slide" id="s-arms" data-title="משחק: איזו זרוע?">
   <div class="kick">חלק 2, המשך · משחק</div>
@@ -1729,6 +1754,17 @@ tr.st{transform:none}
   <h2>מי עושה מה בתעשייה: מוצרים לכל רכיב</h2>
   <div id="vendbox"></div>
   <div class="card ez-bot st">📝 <b>להעשרה ולקריירה.</b> ספקיות רבות מוכרות את שלושת הרכיבים כמוצרים נפרדים באותה פלטפורמה, והארגון קונה את מה שהוא צריך. בבחינה, הדוגמה שנלמדה ל-CRM היא Salesforce.</div>
+</section>
+
+<section class="slide" id="n-nice" data-title="מהעיתונות: רכישה ישראלית בשוק המוקדים">
+  <div class="kick">חלק 3 · מהעיתונות</div>
+  <h2>השוק שמאחורי רכיב שירות הלקוחות</h2>
+  <div class="l3-news one">
+    <div class="l3-clip st l2-nolink" data-news="nice"></div>
+    <div class="l3-nside"><div class="big st">🎧💰</div>
+      <div class="card st">🧩 <b>איפה זה במפה שלנו:</b> מוקד שירות הוא נקודת המגע בין הלקוח לארגון. זה רכיב שירות הלקוחות (Front Office).</div>
+      <div class="card st" style="background:#e3f0ff">💼 <b>למה זה מעניין אתכם:</b> חברות כאלה מעסיקות מיישמים, מנתחי מערכות ומפתחים. חלקן יושבות כאן, בישראל.</div></div>
+  </div>
 </section>
 
 <section class="slide def" id="d-lead" data-title="הגדרה: ליד">
@@ -2130,6 +2166,17 @@ tr.st{transform:none}
   <div class="card ez-bot st">⚖️ <b>שימו לב:</b> הבינה המלאכותית ממליצה ופועלת בגבולות שההנהלה קבעה. היא יכולה לטעות, והיא עובדת על מידע אישי. לכן נשארים נהלים, הרשאות, ואדם שאפשר לעבור אליו. שני התנאים עדיין בתוקף.</div>
 </section>
 
+<section class="slide" id="n-ai" data-title="מהעיתונות: שלוש כותרות על בינה מלאכותית בשירות">
+  <div class="kick">חלק 5 · מהעיתונות</div>
+  <h2>שלוש כותרות, שנה אחת: כמה אוטומציה זה ״חלק״?</h2>
+  <div class="l3-news three">
+    <div class="l3-clip st l2-nolink" data-news="agentforce"></div>
+    <div class="l3-clip st l2-nolink" data-news="sf4000"></div>
+    <div class="l3-clip st l2-nolink" data-news="klarna"></div>
+  </div>
+  <div class="card l2-chk st" style="margin-top:14px"><b>💬 בצ׳אט:</b> שתי חברות, שתי החלטות הפוכות. מה משותף להן? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans">בשתיהן ההנהלה היא שהחליטה כמה מהתהליך יהיה אוטומטי, ובשתיהן נשארו נציגים. זו בדיוק ההגדרה: חלק מהתהליכים, לפי שיקול דעת ההנהלה.</div></div>
+</section>
+
 <section class="slide" id="t-agent" data-title="העבודה של הנציג, לפני ואחרי">
   <div class="kick">חלק 5 · משמעות</div>
   <h2>העבודה של הנציג: לפני ואחרי</h2>
@@ -2256,8 +2303,8 @@ tr.st{transform:none}
   <h2>ארבעה דברים לשבוע הקרוב</h2>
   <div class="route" style="grid-template-columns:repeat(4,1fr)">
     <div class="rcard"><div class="n">1</div><b>לקרוא</b><span>את סיכום שיעור 3 (PDF באתר), ולוודא שכל מושג במילון ברור.</span></div>
-    <div class="rcard"><div class="n">2</div><b>לחזור על ההדמיות</b><span>המסך של נועה (שקף 28) והמסך של עומר (שקף 43). בכל לחיצה: איזה מושג רואים כאן?</span></div>
-    <div class="rcard"><div class="n">3</div><b>לתרגל</b><span>24 שאלות התרגול (שקף 59) ו-14 השאלות החדשות (שקף 65). קוראים את ההסבר לכל אפשרות, גם לשגויות.</span></div>
+    <div class="rcard"><div class="n">2</div><b>לחזור על ההדמיות</b><span>המסך של נועה (שקף 30) והמסך של עומר (שקף 45). בכל לחיצה: איזה מושג רואים כאן?</span></div>
+    <div class="rcard"><div class="n">3</div><b>לתרגל</b><span>24 שאלות התרגול (שקף 62) ו-14 השאלות החדשות (שקף 68). קוראים את ההסבר לכל אפשרות, גם לשגויות.</span></div>
     <div class="rcard"><div class="n">4</div><b>לשים לב</b><span>בפעם הבאה שתפנו למוקד שירות: מה הנציג ידע עליכם בלי לשאול, ומאיזה ערוץ זה הגיע?</span></div>
   </div>
   <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55;background:var(--navy2);color:#fff">👋 <b>בשיעור הבא:</b> מערכות ליבה. ERP, מערכת אחת שמחברת רכש, מלאי, ייצור, כספים ומשאבי אנוש.</div>
@@ -2858,6 +2905,25 @@ aiagent:{h:'סוכן בינה מלאכותית',en:'AI agent',p:'תוכנה שע
 segment:{h:'פילוח',en:'Segment',p:'קבוצת לקוחות שנבחרה לפי תנאים, מתוך כלל הלקוחות.',f:'תת קבוצה של לקוחות שמוגדרת בשאילתא על נתוני ה-CRM, לצורך ניתוח או פנייה שיווקית.',ex:'מי שקנו מצלמה ברבעון האחרון, לא קנו עדשה, ואישרו קבלת דיוור: 1,015 לקוחות מתוך 48,200.',tr:'הפילוח הוא הבסיס לטירגוט. בלי פילוח שולחים לכולם.',rel:['target','camp','sql']},
 sql:{h:'שפת שאילתות',en:'SQL, Structured Query Language',p:'שפה שבה שואלים את בסיס הנתונים שאלה, ומקבלים רשימה.',f:'שפה תקנית לשליפה ולעדכון של נתונים בבסיסי נתונים טבלאיים.',ex:'״הצג את כל הלקוחות שקנו מצלמה ולא קנו עדשה״ נכתב כשאילתא עם SELECT, FROM ו-WHERE.',tr:'הכפתורים במסך הפילוח רק כותבים את השאילתא בשבילכם.',rel:['segment']}
 });
+
+/* ---------- press items (verified 13.11.2026): our own Hebrew summary of each report, with a link to the original ---------- */
+const NEWS={
+ air:{src:'CBS News',date:'19.2.2024',flag:'🇨🇦',h:'בית דין בקנדה: Air Canada אחראית למידע שגוי שמסר הצ׳אטבוט שלה',
+  d:'נוסע שאל את הצ׳אטבוט של החברה על הנחת אבל, קיבל תשובה שגויה, וקנה כרטיס במחיר מלא. החברה טענה שהצ׳אטבוט אחראי למעשיו. בית הדין דחה את הטענה, וחייב אותה לפצות את הנוסע בכ-800 דולר קנדי.',
+  l:'אוטומציה לא מעבירה את האחריות לתוכנה. הארגון אחראי לכל תגובה שלו, גם כשהיא רצה לבד. לכן ההנהלה מחליטה מה יהיה אוטומטי, ובודקת מה התוכנה עונה.',url:'https://www.cbsnews.com/news/aircanada-chatbot-discount-customer/'},
+ nice:{src:'גלובס',date:'28.7.2025',flag:'🇮🇱',h:'NICE הישראלית רוכשת את חברת הבינה המלאכותית Cognigy בכ-955 מיליון דולר',
+  d:'Cognigy הגרמנית מפתחת סוכני שיחה למוקדי שירות. זו הרכישה הגדולה בתולדות NICE, שמוכרת תוכנה למוקדי שירות בכל העולם.',
+  l:'רכיב שירות הלקוחות הוא שוק של מיליארדים, וחלק ממנו מפותח בישראל. אלה מקומות עבודה אפשריים לבוגרי מערכות מידע.',url:'https://en.globes.co.il/en/article-nice-acquires-ai-co-cognigy-1001517302'},
+ agentforce:{src:'Salesforce, הודעת החברה',date:'13.9.2024',flag:'🇺🇸',h:'Salesforce משיקה את Agentforce: סוכני בינה מלאכותית לשירות, למכירות ולשיווק',
+  d:'הסוכנים עונים ללקוחות ומבצעים פעולות במערכת, בלי נציג בכל שלב.',
+  l:'זרוע האוטומציה מתרחבת: מהודעה מוכנה מראש לסוכן שמנהל שיחה.',url:'https://www.salesforce.com/ap/news/press-releases/2024/09/13/salesforce-unveils-agentforce-what-ai-was-meant-to-be/'},
+ sf4000:{src:'TechRadar',date:'2.9.2025',flag:'🇺🇸',h:'מנכ״ל Salesforce: צמצמנו כ-4,000 משרות תמיכה, וסוכני בינה מלאכותית מטפלים בכמחצית מהשיחות',
+  d:'לדברי המנכ״ל, מספר אנשי התמיכה ירד מכ-9,000 לכ-5,000. הנתונים נמסרו על ידי החברה עצמה.',
+  l:'ההנהלה החליטה כמה מהתהליך יהיה אוטומטי. כמחצית מהשיחות נשארו אצל נציגים.',url:'https://www.techradar.com/pro/salesforce-says-it-cuts-4-000-support-jobs-and-replaced-them-with-ai'},
+ klarna:{src:'Entrepreneur',date:'9.5.2025',flag:'🇸🇪',h:'Klarna חוזרת לגייס נציגי שירות, אחרי שהסתמכה על בינה מלאכותית',
+  d:'ב-2024 החברה הודיעה שהעוזר הדיגיטלי שלה עושה עבודה של 700 נציגים. ב-2025 המנכ״ל אמר שהמהלך הלך רחוק מדי, ושאיכות השירות נפגעה.',
+  l:'כשהאוטומציה הולכת רחוק מדי, איכות השירות נפגעת, וההנהלה מתקנת. זה ״שיקול דעת ההנהלה״ בפעולה.',url:'https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396'}
+};
 /* ---------- helpers ---------- */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -3144,6 +3210,10 @@ clsGame('s-cond',COND,6);
  b.innerHTML=AIC.map(a=>`<div class="l3-ai st"><div class="l3-aih"><span>${a.ic}</span><div><b>${a.t}</b><small>${a.en}</small></div></div><p>${a.d}</p><div class="l3-ui l2-nolink">${a.ui}</div><em>${a.arm}</em></div>`).join('');})();
 (function(){const b=$('#jobbox');if(!b)return;
  b.innerHTML=JOBS.map(j=>`<div class="l3-job st"><span>${j.ic}</span><b>${j.t}</b><small>${j.en}</small><p>${j.d}</p></div>`).join('');})();
+
+/* ---------- press clippings: our summary of a real report, with a link to the original ---------- */
+$$('[data-news]').forEach(el=>{const n=NEWS[el.dataset.news];
+ el.innerHTML=`<div class="l3-cm"><b>${n.src}</b><span>${n.flag} ${n.date}</span></div><h3>${n.h}</h3><p>${n.d}</p><div class="l3-cl">💡 <b>מה זה מלמד:</b> ${n.l}</div><a class="l3-ca" href="${n.url}" target="_blank" rel="noopener">לכתבה המקורית ↗</a>`;});
 
 /* ---------- simulators: every "next" moves the cursor, clicks, and changes the screen ---------- */
 function simWin(app,who,body){return `<div class="mk sim-win"><div class="mk-bar"><i></i><i></i><i></i><b>${app}</b><span>הדמיה · ${who}</span></div><div class="sim-body">${body}</div><div class="sim-cur">🖱️</div></div>`;}
