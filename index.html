@@ -37,6 +37,13 @@ h1 em{font-style:normal;color:#7fe3d6}
 .subm .btn{margin-right:auto;flex:none;background:#fff;color:#4f33c9;font-weight:800;font-size:18px;padding:14px 26px;border-radius:14px;box-shadow:0 6px 0 rgba(0,0,0,.14)}
 .subm .btn small{display:block;font-weight:500;font-size:13px;color:#6b5aa8}
 @media(max-width:760px){.subm{flex-direction:column;align-items:flex-start;padding:22px}}
+/* "new" notice at the top */
+.newbox{position:relative;margin-top:-100px;background:#fff;border:3px solid #6d4df2;border-radius:22px;padding:20px 26px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 18px 40px rgba(22,33,58,.18)}
+.newbox .ic{font-size:44px;flex:none;line-height:1}
+.newbox .tag{display:inline-block;background:#6d4df2;color:#fff;border-radius:99px;padding:2px 14px;font-weight:800;font-size:15px}
+.newbox h2{font-size:clamp(19px,2.6vw,24px);line-height:1.25;margin:6px 0 4px;font-weight:800}
+.newbox p{font-size:16.5px;line-height:1.6}
+.newbox+.booklet{margin-top:18px}
 /* booklet banner */
 .booklet{position:relative;margin-top:-100px;background:linear-gradient(135deg,var(--coral),#e8960c);color:#fff;border-radius:22px;padding:28px 32px;display:flex;gap:26px;align-items:center;box-shadow:0 18px 50px rgba(255,106,77,.35)}
 .booklet .ic{font-size:60px;flex:none}
@@ -152,6 +159,15 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
   </div>
 </header>
 <main class="wrap">
+
+  <div class="newbox" id="news">
+    <div class="ic">📺</div>
+    <div>
+      <span class="tag">חדש!</span>
+      <h2>צפייה בהקלטות ללא פרסומות במהלך ההרצאה</h2>
+      <p>התקבלה הערה שלפיה פרסומות שהופיעו במהלך ההרצאות המוקלטות הקשו על הריכוז. הבעיה טופלה באמצעות שינוי הגדרה. מעתה, מלבד פרסומת קצרה שעשויה להופיע בתחילת הצפייה, לא אמורות להופיע פרסומות במהלך ההרצאה. אם הבעיה נמשכת, פנו אליי: <a href="mailto:Shay.tsaban@gmail.com" dir="ltr">Shay.tsaban@gmail.com</a>. חשוב לי שהצפייה תהיה נוחה ורציפה.</p>
+    </div>
+  </div>
 
   <a class="booklet" href="materials/exercise-booklet.pdf" target="_blank" rel="noopener" aria-label="פתיחת חוברת התרגילים">
     <div class="ic">📘</div>
@@ -316,7 +332,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
         <div class="lec-n">3</div>
         <div>
           <h3>להכיר את הלקוח, חלק ב׳: מה <span dir="ltr">CRM</span> עושה עם המידע</h3>
-          <div class="sub">13.11.2026 · שלוש זרועות, רכיבים וסוגים, המסך של הנציגה, בינה מלאכותית, ומה המערכת לא יכולה להבטיח</div>
+          <div class="sub">13.11.2026 · שלוש זרועות, שלושה רכיבים, לידים חמים וקרים, והמסך של נציגת השירות</div>
         </div>
       </div>
       <div class="lec-body">
@@ -325,31 +341,29 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
           <ul class="learn">
             <li><b>רענון מונפש של שיעור 2.</b> מהמכולת של משה לתיק של 360 מעלות, ארבעת סוגי המידע, הסקר והנאמנות.</li>
             <li><b>שלוש זרועות.</b> שירות שוטף, ניתוח מידע מתקדם ואוטומציה, על תלונה אחת.</li>
-            <li><b>שלושה רכיבים, ומי מוכר אותם.</b> שירות לקוחות (<span dir="ltr">Front Office</span>), אוטומציית מכירה עם לידים חמים וקרים, וניהול קמפיינים, עם מוצרים מהתעשייה לכל רכיב.</li>
-            <li><b>המסך, לחיצה אחר לחיצה.</b> שתי הדמיות: נציגת שירות שמטפלת בשיחה אחת, ואנליסט שבונה פילוח ושולח קמפיין.</li>
-            <li><b>ארבעה סוגים.</b> אנליטית, תפעולית, תקשורתית ושיתופית, והאם זו חלוקה שקיימת גם בתעשייה.</li>
-            <li><b>תועלות ותנאים.</b> טירגוט ומסע הלקוח, ושני תנאים מצטברים: מערכת אמינה, ונהלים ותרבות ארגונית שתומכים בלקוח.</li>
-            <li><b><span dir="ltr">CRM</span> בעולם האמיתי.</b> ארבעים שנה של טכנולוגיה, שש יכולות של בינה מלאכותית, סקטורים במשק, ותפקידים של בוגרי מערכות מידע.</li>
-            <li><b>מהעיתונות.</b> חמש כתבות אמיתיות על בינה מלאכותית בשירות לקוחות, ומה כל אחת מלמדת על החומר.</li>
-            <li><b>תרגול.</b> 41 שאלות אמריקאיות עם הסבר לכל אפשרות, סבב נכון או לא נכון, חדר בריחה והפסקות מם.</li>
+            <li><b>אוטומציה.</b> פעילות המתבצעת באופן אוטומטי, ללא מעורבות אנושית. היא חלה על חלק מהתהליכים, לפי שיקול דעת ההנהלה.</li>
+            <li><b>שלושה רכיבים, והמוצרים שמממשים אותם.</b> שירות הלקוחות (<span dir="ltr">Front Office</span>), אוטומציית מכירה עם לידים חמים וקרים, וניהול קמפיינים.</li>
+            <li><b>המסך, לחיצה אחר לחיצה.</b> נציגת שירות מטפלת בשיחה אחת: זיהוי הלקוחה, שאילתא, נוהל, תגובה והודעה אוטומטית.</li>
+            <li><b>מהעיתונות.</b> שתי כתבות אמיתיות: מי אחראי כשצ׳אטבוט טועה, והשוק שמאחורי מוקדי השירות.</li>
           </ul>
+          <p style="margin-top:10px;color:var(--mut);font-size:15px">השיעור הסתיים במשחק הרכיבים. ההמשך (ארבעה סוגים, תועלות ותנאים) עבר לשיעור 4.</p>
         </div>
         <div>
           <h4>חומרי השיעור</h4>
           <div class="links">
             <a class="lk p" href="lectures/lecture-3/presentation.html" target="_blank" rel="noopener">
               <div class="e">🎞️</div>
-              <div><b>המצגת האינטראקטיבית</b><span class="d">71 שקפים: רענון מונפש, שתי הדמיות מערכת בלחיצות, גזירי עיתונות, מסכי <span dir="ltr">CRM</span>, משחקים, ממים ושאלות עם משוב מפורט</span></div>
+              <div><b>המצגת האינטראקטיבית</b><span class="d">36 שקפים, לפי מה שנלמד בפועל: רענון מונפש, הדמיית מערכת בלחיצות, גזירי עיתונות, מסכי <span dir="ltr">CRM</span>, משחקים וממים</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk s" href="lectures/lecture-3/summary.pdf" target="_blank" rel="noopener">
               <div class="e">📄</div>
-              <div><b>סיכום כתוב (PDF)</b><span class="d">38 עמודים: כל מה שבמצגת, לפי הסדר, כולל כל השאלות עם התשובות והסבר לכל אפשרות, ומילון מושגים</span></div>
+              <div><b>סיכום כתוב (PDF)</b><span class="d">14 עמודים: כל מה שנלמד, לפי הסדר, כולל המשחקים עם התשובות ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
             <a class="lk r" href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">
               <div class="e">📝</div>
-              <div><b>תרגיל הגשה 2 (PDF)</b><span class="d">20 שאלות אמריקאיות על שיעורים 2 ו-3, מהקל אל הכבד · להגשה עד 20.11.2026 בשעה 8:00 בבוקר, דרך ידיעון המכללה</span></div>
+              <div><b>תרגיל הגשה 2 (PDF)</b><span class="d">10 שאלות אמריקאיות על מה שנלמד בשיעורים 2 ו-3 בלבד, מהקל אל הכבד · להגשה עד 20.11.2026 בשעה 8:00 בבוקר, דרך ידיעון המכללה</span></div>
               <span class="ar">←</span>
             </a>
           </div>
@@ -358,16 +372,52 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
       <div class="todo">
         <h4>📝 מה עושים השבוע <span class="nosub">תרגיל הגשה 2 · עד 20.11.2026, 8:00</span></h4>
         <ol>
-          <li><b>להגיש את <a href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">תרגיל הגשה 2</a></b> (PDF, 20 שאלות על שיעורים 2 ו-3). מגישים רק את טבלת התשובות שבעמוד האחרון, דרך האתר הרשמי (ידיעון המכללה), עד 20.11.2026 בשעה 8:00 בבוקר. הגשה מוקדמת מומלצת!</li>
+          <li><b>להגיש את <a href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">תרגיל הגשה 2</a></b> (PDF, 10 שאלות על מה שנלמד בשיעורים 2 ו-3). מגישים רק את טבלת התשובות שבעמוד האחרון, דרך האתר הרשמי (ידיעון המכללה), עד 20.11.2026 בשעה 8:00 בבוקר. הגשה מוקדמת מומלצת!</li>
           <li>לקרוא את סיכום שיעור 3, ולוודא שכל מושג במילון ברור.</li>
-          <li>לחזור במצגת על שתי ההדמיות: המסך של נועה (שקף 30) והמסך של עומר (שקף 45). בכל לחיצה: איזה מושג רואים כאן?</li>
-          <li>לתרגל: 24 שאלות התרגול (שקף 62) ו-14 השאלות החדשות (שקף 68), ולקרוא את ההסבר לכל אפשרות, גם לשגויות.</li>
-          <li>בפעם הבאה שתפנו למוקד שירות: מה הנציג ידע עליכם בלי לשאול, ומאיזה ערוץ זה הגיע?</li>
+          <li>לחזור במצגת על ההדמיה: המסך של נועה (שקף 30). בכל לחיצה: איזה מושג מהשיעור מוצג כאן?</li>
+          <li>בפנייה הבאה שלכם למוקד שירות: מה הנציג ידע עליכם בלי לשאול, ומאיזה ערוץ המידע הגיע?</li>
         </ol>
       </div>
     </article>
 
-    <div class="soon">⏳ <span>שיעורים נוספים יתווספו כאן במהלך הסמסטר, כל אחד עם מצגת, סיכום, תרגילים והקלטה. בשיעור 4: מערכות ליבה, <span dir="ltr">ERP</span>.</span></div>
+    <article class="lec" id="lecture-4">
+      <div class="lec-head">
+        <div class="lec-n">4</div>
+        <div>
+          <h3>להכיר את הלקוח, חלק ג׳: סוגים, תועלות ותנאים <span style="display:inline-block;background:#ff6a4d;color:#fff;border-radius:99px;padding:2px 12px;font-size:14px;font-weight:800;vertical-align:middle">טיוטה, בשינויים מתחייבים</span></h3>
+          <div class="sub">20.11.2026 · ארבעה סוגים של <span dir="ltr">CRM</span>, טירגוט ומסע הלקוח, שני תנאים מצטברים, ובינה מלאכותית במערכת</div>
+        </div>
+      </div>
+      <div class="lec-body">
+        <div>
+          <h4>מה מתוכנן לשיעור</h4>
+          <ul class="learn">
+            <li><b>רענון מונפש של שיעור 3,</b> ושני מסכים חדשים בלחיצות: איש המכירות, ומנהלת השיווק.</li>
+            <li><b>ארבעה סוגים.</b> אנליטית, תפעולית, תקשורתית ושיתופית, והאם החלוקה קיימת גם בתעשייה.</li>
+            <li><b>תועלות ותנאים.</b> טירגוט, המסך של האנליסט, מסע הלקוח, ושני תנאים מצטברים.</li>
+            <li><b><span dir="ltr">CRM</span> בעולם האמיתי.</b> בינה מלאכותית, סוכן תוכנה שמעביר שיחה לנציגה, סקטורים ותפקידים.</li>
+            <li><b>תרגול מסכם.</b> שאלות אמריקאיות עם הסבר לכל אפשרות, סבב מהיר וחדר בריחה.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>חומרי השיעור (טיוטה)</h4>
+          <div class="links">
+            <a class="lk p" href="lectures/lecture-4/presentation.html" target="_blank" rel="noopener">
+              <div class="e">🎞️</div>
+              <div><b>המצגת האינטראקטיבית (טיוטה)</b><span class="d">46 שקפים: רענון מונפש, ארבע הדמיות מערכת בלחיצות, גזירי עיתונות, משחקים ושאלות עם משוב מפורט</span></div>
+              <span class="ar">←</span>
+            </a>
+            <a class="lk s" href="lectures/lecture-4/summary.pdf" target="_blank" rel="noopener">
+              <div class="e">📄</div>
+              <div><b>סיכום כתוב (טיוטה, PDF)</b><span class="d">31 עמודים: כל מה שבמצגת, לפי הסדר, כולל כל השאלות עם התשובות ומילון מושגים</span></div>
+              <span class="ar">←</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="soon">⏳ <span>שיעורים נוספים יתווספו כאן במהלך הסמסטר, כל אחד עם מצגת, סיכום, תרגילים והקלטה. אחרי השלמת נושא ה-<span dir="ltr">CRM</span>: מערכות ליבה, <span dir="ltr">ERP</span>.</span></div>
   </section>
 </main>
 
