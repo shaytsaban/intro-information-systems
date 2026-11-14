@@ -91,6 +91,11 @@ h2.sec:before{content:"";width:34px;height:5px;border-radius:5px;background:var(
 .lk b{display:block;font-size:17px;line-height:1.25}
 .lk span.d{font-size:14px;color:var(--mut)}
 .lk .ar{margin-right:auto;color:var(--coral);font-weight:800;font-size:20px}
+.grp{align-self:flex-start;font-size:14px;font-weight:800;border-radius:99px;padding:3px 14px;margin-top:6px}
+.grp:first-child{margin-top:0}.grp.mat{background:#e3e8f6;color:#1b2d55}.grp.self{background:#dff5f2;color:#087469}.grp.sub{background:#ff6a4d;color:#fff}
+.recprac{margin-top:16px;background:#f2fbf9;border:2px solid #9fdcd3;border-radius:18px;padding:16px 18px}
+.recprac h5{font-size:16.5px;color:#087469;margin-bottom:10px}.recprac .links{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.recprac .links{grid-template-columns:1fr}}
 .lk.p .e{background:#ffe3dc}.lk.s .e{background:#dff5f2}.lk.r .e{background:#ece8ff}
 
 /* recording */
@@ -172,7 +177,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
   <a class="booklet" href="materials/exercise-booklet.pdf" target="_blank" rel="noopener" aria-label="פתיחת חוברת התרגילים">
     <div class="ic">📘</div>
     <div>
-      <span class="tag">מלווה את כל הקורס</span>
+      <span class="tag">לתרגול עצמי · לא להגשה</span>
       <h2>חוברת התרגילים, לפי שיעורים</h2>
       <p>שאלות אמריקאיות ברמת המבחן (חמש אפשרויות, א עד ה), פרק לכל שיעור: שאלות בסגנון הבחינה ומקרים להעמקה. החוברת מתעדכנת אחרי כל שיעור.</p>
     </div>
@@ -227,21 +232,27 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
               <div><b>סיכום כתוב (PDF)</b><span class="d">כל מה שבמצגת, לפי הסדר: הגדרות, הסברים, דוגמאות, כל המשחקים עם התשובות, סיכום לכל חלק ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
-            <a class="lk r" href="materials/exercise-booklet.pdf#page=4" target="_blank" rel="noopener">
-              <div class="e">✍️</div>
-              <div><b>תרגילי שיעור 1 בחוברת</b><span class="d">37 שאלות אמריקאיות: 24 בסגנון הבחינה ו-13 מקרים להעמקה, ובחוברת הפתרונות הסבר לכל אפשרות</span></div>
-              <span class="ar">←</span>
-            </a>
             <a class="lk r" href="#recording-1">
               <div class="e">🎥</div>
               <div><b>הקלטת השיעור</b><span class="d">30.10.2026 · לצפייה מיד מתחת, או ב-YouTube</span></div>
               <span class="ar">↓</span>
             </a>
+            <div class="grp self">✍️ לתרגול עצמי · לא להגשה</div>
+            <a class="lk r" href="materials/exercise-booklet.pdf#page=4" target="_blank" rel="noopener">
+              <div class="e">✍️</div>
+              <div><b>תרגילי שיעור 1 בחוברת</b><span class="d">37 שאלות אמריקאיות: 24 בסגנון הבחינה ו-13 מקרים להעמקה, לתרגול עצמי</span></div>
+              <span class="ar">←</span>
+            </a>
+            <a class="lk s" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">
+              <div class="e">✅</div>
+              <div><b>פתרונות מפורטים לתרגילי שיעור 1</b><span class="d">התשובה הנכונה, והסבר לכל אחת מחמש האפשרויות. מומלץ לפתור קודם בעצמכם</span></div>
+              <span class="ar">←</span>
+            </a>
           </div>
         </div>
       </div>
       <div class="todo">
-        <h4>📝 תרגול מומלץ לשבוע הזה <span class="nosub">השבוע אין הגשה</span></h4>
+        <h4>✍️ לתרגול עצמי <span class="nosub">לא להגשה</span></h4>
         <ol>
           <li>במצגת, משחקי הזיהוי: ״איזו מערכת זו?״ (שקף 46), כותרות מהעיתונות (שקף 48), ״מי מחליט?״ (שקף 50), בניית שלוש המערכות לחמישה ארגונים (שקף 54) וסבב ״נכון או לא נכון״ (שקף 61).</li>
           <li>בחוברת התרגילים, חלק א: שאלות 1.1 עד 1.24 (עמודים 4 עד 11), בסגנון הבחינה. אלה גם 24 שאלות התרגול שבשקף 59.</li>
@@ -255,6 +266,18 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
           <div class="recph"><div><div class="big">🎥</div><b>הקלטת שיעור 1</b>אם הנגן לא נטען, אפשר לצפות ישירות ב-YouTube.</div></div>
         </div>
         <a class="yt" href="https://youtu.be/U6GRqTnTlbM" target="_blank" rel="noopener">לצפייה ב-YouTube ←</a>
+        <div class="recprac"><h5>✍️ אחרי הצפייה: תרגול עצמי עם פתרונות (לא להגשה)</h5><div class="links">
+            <a class="lk r" href="materials/exercise-booklet.pdf#page=4" target="_blank" rel="noopener">
+              <div class="e">✍️</div>
+              <div><b>תרגילי שיעור 1 בחוברת</b><span class="d">37 שאלות אמריקאיות: 24 בסגנון הבחינה ו-13 מקרים להעמקה, לתרגול עצמי</span></div>
+              <span class="ar">←</span>
+            </a>
+            <a class="lk s" href="materials/solutions-booklet.pdf" target="_blank" rel="noopener">
+              <div class="e">✅</div>
+              <div><b>פתרונות מפורטים לתרגילי שיעור 1</b><span class="d">התשובה הנכונה, והסבר לכל אחת מחמש האפשרויות. מומלץ לפתור קודם בעצמכם</span></div>
+              <span class="ar">←</span>
+            </a>
+        </div></div>
       </div>
     </article>
 
@@ -291,26 +314,27 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
               <div><b>סיכום כתוב (PDF)</b><span class="d">כל מה שבמצגת של שיעור 2, לפי הסדר, כולל המשחקים עם התשובות, ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
-            <a class="lk r" href="materials/assignments/assignment-1.pdf" target="_blank" rel="noopener">
-              <div class="e">📝</div>
-              <div><b>תרגיל הגשה 1 (PDF)</b><span class="d">10 שאלות אמריקאיות על שיעור 2, מהקל אל הכבד · מועד ההגשה היה 13.11.2026 בשעה 8:00</span></div>
-              <span class="ar">←</span>
-            </a>
-            <a class="lk s" href="materials/assignments/assignment-1-solution.pdf" target="_blank" rel="noopener">
-              <div class="e">✅</div>
-              <div><b>פתרון מלא לתרגיל הגשה 1 (PDF)</b><span class="d">טבלת התשובות, והסבר לכל אחת מחמש האפשרויות בכל שאלה</span></div>
-              <span class="ar">←</span>
-            </a>
             <a class="lk r" href="#recording-2">
               <div class="e">🎥</div>
               <div><b>הקלטת השיעור</b><span class="d">6.11.2026 · לצפייה מיד מתחת, או ב-YouTube</span></div>
               <span class="ar">↓</span>
             </a>
+            <div class="grp self">✍️ לתרגול עצמי · מועד ההגשה עבר</div>
+            <a class="lk r" href="materials/assignments/assignment-1.pdf" target="_blank" rel="noopener">
+              <div class="e">📝</div>
+              <div><b>תרגיל 1 (PDF)</b><span class="d">10 שאלות אמריקאיות על שיעור 2, מהקל אל הכבד · מועד ההגשה עבר (13.11.2026), וכעת הוא משמש לתרגול עצמי</span></div>
+              <span class="ar">←</span>
+            </a>
+            <a class="lk s" href="materials/assignments/assignment-1-solution.pdf" target="_blank" rel="noopener">
+              <div class="e">✅</div>
+              <div><b>פתרון מלא לתרגיל 1 (PDF)</b><span class="d">טבלת התשובות, והסבר לכל אחת מחמש האפשרויות בכל שאלה</span></div>
+              <span class="ar">←</span>
+            </a>
           </div>
         </div>
       </div>
       <div class="todo">
-        <h4>📝 תרגול מומלץ לשיעור הזה</h4>
+        <h4>✍️ לתרגול עצמי <span class="nosub">לא להגשה</span></h4>
         <ol>
           <li>לעבור על <a href="materials/assignments/assignment-1-solution.pdf" target="_blank" rel="noopener">הפתרון המלא של תרגיל הגשה 1</a>, ולקרוא את ההסבר לכל אפשרות, גם לשגויות.</li>
           <li>לקרוא את סיכום שיעור 2, ולוודא שכל מושג במילון ברור.</li>
@@ -324,6 +348,18 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
           <div class="recph"><div><div class="big">🎥</div><b>הקלטת שיעור 2</b>אם הנגן לא נטען, אפשר לצפות ישירות ב-YouTube.</div></div>
         </div>
         <a class="yt" href="https://youtu.be/q-LnugMDl5g" target="_blank" rel="noopener">לצפייה ב-YouTube ←</a>
+        <div class="recprac"><h5>✍️ אחרי הצפייה: תרגול עצמי עם פתרונות (לא להגשה)</h5><div class="links">
+            <a class="lk r" href="materials/assignments/assignment-1.pdf" target="_blank" rel="noopener">
+              <div class="e">📝</div>
+              <div><b>תרגיל 1 (PDF)</b><span class="d">10 שאלות אמריקאיות על שיעור 2, מהקל אל הכבד · מועד ההגשה עבר (13.11.2026), וכעת הוא משמש לתרגול עצמי</span></div>
+              <span class="ar">←</span>
+            </a>
+            <a class="lk s" href="materials/assignments/assignment-1-solution.pdf" target="_blank" rel="noopener">
+              <div class="e">✅</div>
+              <div><b>פתרון מלא לתרגיל 1 (PDF)</b><span class="d">טבלת התשובות, והסבר לכל אחת מחמש האפשרויות בכל שאלה</span></div>
+              <span class="ar">←</span>
+            </a>
+        </div></div>
       </div>
     </article>
 
@@ -361,6 +397,7 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
               <div><b>סיכום כתוב (PDF)</b><span class="d">14 עמודים: כל מה שנלמד, לפי הסדר, כולל המשחקים עם התשובות ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
+            <div class="grp sub">📮 להגשה</div>
             <a class="lk r" href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">
               <div class="e">📝</div>
               <div><b>תרגיל הגשה 2 (PDF)</b><span class="d">10 שאלות אמריקאיות על מה שנלמד בשיעורים 2 ו-3 בלבד, מהקל אל הכבד · להגשה עד 20.11.2026 בשעה 8:00 בבוקר, דרך ידיעון המכללה</span></div>
@@ -370,10 +407,10 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
         </div>
       </div>
       <div class="todo">
-        <h4>📝 מה עושים השבוע <span class="nosub">תרגיל הגשה 2 · עד 20.11.2026, 8:00</span></h4>
+        <h4>📝 מה עושים השבוע <span class="nosub" style="background:#ff6a4d">📮 להגשה: תרגיל 2 · עד 20.11.2026, 8:00</span></h4>
         <ol>
           <li><b>להגיש את <a href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">תרגיל הגשה 2</a></b> (PDF, 10 שאלות על מה שנלמד בשיעורים 2 ו-3). מגישים רק את טבלת התשובות שבעמוד האחרון, דרך האתר הרשמי (ידיעון המכללה), עד 20.11.2026 בשעה 8:00 בבוקר. הגשה מוקדמת מומלצת!</li>
-          <li>לקרוא את סיכום שיעור 3, ולוודא שכל מושג במילון ברור.</li>
+          <li>לתרגול עצמי, לא להגשה: לקרוא את סיכום שיעור 3, ולוודא שכל מושג במילון ברור.</li>
           <li>לחזור במצגת על ההדמיה: המסך של נועה (שקף 30). בכל לחיצה: איזה מושג מהשיעור מוצג כאן?</li>
           <li>בפנייה הבאה שלכם למוקד שירות: מה הנציג ידע עליכם בלי לשאול, ומאיזה ערוץ המידע הגיע?</li>
         </ol>
