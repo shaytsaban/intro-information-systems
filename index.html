@@ -108,6 +108,10 @@ h2.sec:before{content:"";width:34px;height:5px;border-radius:5px;background:var(
 .todo li{margin-bottom:4px}
 .rec h4{font-size:18px;margin-bottom:10px;color:var(--navy2)}
 .recbox{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0c1426}
+.rec2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.rec2{grid-template-columns:1fr}}
+.rec2 .part{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;color:var(--navy2);margin-bottom:8px}
+.rec2 .part i{font-style:normal;background:#6d4df2;color:#fff;border-radius:99px;padding:2px 12px;font-size:14px}
 .recbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .recph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#b8c6e8;padding:20px}
 .recph div{max-width:420px}
@@ -397,6 +401,11 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
               <div><b>סיכום כתוב (PDF)</b><span class="d">14 עמודים: כל מה שנלמד, לפי הסדר, כולל המשחקים עם התשובות ומילון מושגים</span></div>
               <span class="ar">←</span>
             </a>
+            <a class="lk r" href="#recording-3">
+              <div class="e">🎥</div>
+              <div><b>הקלטת השיעור</b><span class="d">13.11.2026 · שני חלקים, לצפייה מיד מתחת או ב-YouTube</span></div>
+              <span class="ar">↓</span>
+            </a>
             <div class="grp sub">📮 להגשה</div>
             <a class="lk r" href="materials/assignments/assignment-2.pdf" target="_blank" rel="noopener">
               <div class="e">📝</div>
@@ -414,6 +423,25 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
           <li>לחזור במצגת על ההדמיה: המסך של נועה (שקף 30). בכל לחיצה: איזה מושג מהשיעור מוצג כאן?</li>
           <li>בפנייה הבאה שלכם למוקד שירות: מה הנציג ידע עליכם בלי לשאול, ומאיזה ערוץ המידע הגיע?</li>
         </ol>
+      </div>
+      <div class="rec" id="recording-3">
+        <h4>הקלטת השיעור, בשני חלקים</h4>
+        <div class="rec2">
+          <div>
+            <div class="part"><i>חלק א׳</i> חלק 1 מתוך 2</div>
+            <div class="recbox" id="recbox3a">
+              <div class="recph"><div><div class="big">🎥</div><b>הקלטת שיעור 3, חלק א׳</b>אם הנגן לא נטען, אפשר לצפות ישירות ב-YouTube.</div></div>
+            </div>
+            <a class="yt" href="https://youtu.be/UqgFArkTdsU" target="_blank" rel="noopener">חלק א׳ ב-YouTube ←</a>
+          </div>
+          <div>
+            <div class="part"><i>חלק ב׳</i> חלק 2 מתוך 2</div>
+            <div class="recbox" id="recbox3b">
+              <div class="recph"><div><div class="big">🎥</div><b>הקלטת שיעור 3, חלק ב׳</b>אם הנגן לא נטען, אפשר לצפות ישירות ב-YouTube.</div></div>
+            </div>
+            <a class="yt" href="https://youtu.be/KIUkbteV4b0" target="_blank" rel="noopener">חלק ב׳ ב-YouTube ←</a>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -476,7 +504,9 @@ footer{margin-top:60px;background:var(--navy);color:#c8d4f2;padding:40px 0}
 /* הקלטות: מזינים כאן את הקישור לכל שיעור. נתמכים קישורי YouTube, Vimeo, Google Drive וקישור הטמעה ישיר. */
 var RECORDINGS = {
   "recbox1": "https://youtu.be/U6GRqTnTlbM",   // הקלטת שיעור 1, 30.10.2026
-  "recbox2": "https://youtu.be/q-LnugMDl5g"   // הקלטת שיעור 2, 6.11.2026
+  "recbox2": "https://youtu.be/q-LnugMDl5g",   // הקלטת שיעור 2, 6.11.2026
+  "recbox3a": "https://youtu.be/UqgFArkTdsU",   // הקלטת שיעור 3, חלק א׳, 13.11.2026
+  "recbox3b": "https://youtu.be/KIUkbteV4b0"   // הקלטת שיעור 3, חלק ב׳, 13.11.2026
 };
 /* תרגילי הגשה: הפרק הוסר מהדף כל עוד אין הגשה. כשתרגיל מתפרסם, מחזירים את section#assignments עם div#asglist, וממלאים title, due ו-link. */
 var ASSIGNMENTS = [
