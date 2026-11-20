@@ -1638,6 +1638,14 @@ tr.st{transform:none}
 .erp-mods span.now{position:relative}.erp-mods span.now:after{content:"";position:absolute;inset:-3px;border-radius:11px;border:3px solid #e8960c;animation:l3rip .9s .2s 2 both}
 .erp-keys.show i{animation:erppop .4s both}.erp-keys.show i:nth-of-type(2){animation-delay:.1s}.erp-keys.show i:nth-of-type(3){animation-delay:.2s}.erp-keys.show i:nth-of-type(4){animation-delay:.3s}.erp-keys.show i:nth-of-type(5){animation-delay:.4s}
 .tx-f b,.tx-f small{white-space:nowrap}.tx-f.l2 small{font-size:10.5px}.tx-main{grid-template-columns:304px 1fr}
+
+/* CRM inside ERP (20.11.2026) */
+.inc-v{margin-top:8px;border-radius:10px;padding:7px 12px;font-weight:700;font-size:17px;line-height:1.45}
+.inc-ch{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:8px;font-size:15.5px}
+.inc-ch span{background:#f1f4fa;border:1.5px solid #d5dcea;border-radius:9px;padding:3px 8px;white-space:nowrap;animation:erppop .5s both}
+.inc-ch span.hl{background:#dff5f1;border-color:#0f9d90;font-weight:700}
+.inc-ch i{font-style:normal;color:#8a94ab}
+.int-q{font-size:18px;color:#5d6a86;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -2097,7 +2105,7 @@ tr.st{transform:none}
     <h1 class="pd-h">ERP בתעשייה, ומול CRM</h1>
     <p class="pd-q"><b>שאלת החלק:</b> מי מוכר ERP, היכן אתם נכנסים לתמונה, ובמה היא שונה מ-CRM?</p>
     <div class="pd-cols">
-      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>ספקיות ומוצרים, לארגונים גדולים ולעסקים קטנים</li><li>שישים שנה של התפתחות, מהמפעל אל הארגון כולו</li><li>CRM מול ERP, וכיצד הן מתחברות</li><li>תפקידים של בוגרי מערכות מידע, ומלכודות בבחינה</li></ul></div>
+      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>ספקיות ומוצרים, לארגונים גדולים ולעסקים קטנים</li><li>שישים שנה של התפתחות, מהמפעל אל הארגון כולו</li><li>CRM מול ERP, ומדוע CRM נלמד בנפרד</li><li>תפקידים של בוגרי מערכות מידע, ומלכודות בבחינה</li></ul></div>
       <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="saas">תוכנה כשירות</span></div></div>
     </div>
   </div>
@@ -2130,7 +2138,41 @@ tr.st{transform:none}
     <tr class="st"><td><b>דוגמה לספקית</b></td><td>Salesforce</td><td>SAP, Oracle</td></tr>
     <tr class="st"><td><b>סימן בבחינה</b></td><td>״המידע על הלקוחות״, ״ערוצי התקשרות״, ״לידים״</td><td>״כל התהליך הארגוני״, ״מלאי, שכר, תקציב״, ״שילוב בין תהליכים״</td></tr>
   </table>
-  <div class="card ez-bot st">🔗 <b>וכיצד הן מתחברות:</b> איש המכירות סוגר עסקה ב-CRM. ההזמנה עוברת ל-ERP, ושם היא הופכת למלאי, לייצור, למשלוח ולחשבונית. חיבור בין שתי מערכות נקרא ממשק.</div>
+  <div class="card ez-bot st">🔗 <b>וכיצד הן מתחברות:</b> איש המכירות סוגר עסקה ב-CRM. ההזמנה עוברת ל-ERP, ושם היא הופכת למלאי, לייצור, למשלוח ולחשבונית. חיבור בין שתי מערכות נקרא ממשק. <b>ובשקף הבא:</b> האם אלה תמיד שתי מערכות נפרדות?</div>
+</section>
+
+<section class="slide" id="e-crm-in-erp" data-title="הסבר: CRM כמודול בתוך ERP">
+  <div class="kick">ERP · חלק 4 · הערה חשובה</div>
+  <h2>אם ERP יכולה לכלול גם CRM, מדוע למדנו CRM בנפרד?</h2>
+  <p class="sub st" style="font-size:18px">ראינו שמערכת ERP בנויה ממודולים, ושהארגון בוחר אילו מהם להפעיל. אחד המודולים האפשריים הוא <b>מודול לניהול קשרי לקוחות</b>. כלומר, ERP יכולה להקיף גם את התחום של CRM.</p>
+  <div class="row" style="margin-top:10px;gap:14px;align-items:stretch">
+    <div class="card st" style="flex:1;border-top:6px solid #6d4df2"><div style="font-size:40px;line-height:1.1">☎️</div><b style="font-size:20px">חברת שירות: מוקד ״קו פתוח״</b><p style="font-size:17px;line-height:1.5;margin-top:6px">כל העיסוק של החברה הוא שירות ללקוחות: פניות, תלונות ומעקב אחרי הטיפול. אין לה מחסן, קו ייצור או רכש של חומרי גלם.</p><div class="inc-v" style="background:#ece8ff;color:#4f33c9">✓ CRM מספקת את כל צרכיה. מערכת ERP שלמה, על מורכבותה, אינה נדרשת.</div></div>
+    <div class="card st" style="flex:1.25;border-top:6px solid var(--asset)"><div style="font-size:40px;line-height:1.1">🏭</div><b style="font-size:20px">מפעל ״אלון״</b><p style="font-size:17px;line-height:1.5;margin-top:6px">המפעל נדרש לנהל מלאי. אלא שמלאי אינו פועל בחלל ריק: הוא חלק משרשרת לוגיסטית ותהליכית רחבה יותר.</p><div class="inc-ch"><span>🧾 הזמנה</span><i>←</i><span class="hl">📦 מלאי</span><i>←</i><span>🛒 רכש</span><i>←</i><span>⚙️ ייצור</span><i>←</i><span>🚚 משלוח</span><i>←</i><span>💰 חשבונית</span></div><div class="inc-v" style="background:#dff5f1;color:#087469">✓ נדרשת מערכת ERP שלמה. היא יכולה לכלול גם מודול CRM.</div></div>
+  </div>
+  <div class="card st" style="margin-top:10px;font-size:18px;line-height:1.5;background:#fff7e0">📏 <b>הכלל:</b> יש ארגונים שמפעילים CRM בלבד, ללא ERP, ולכן CRM נלמד כנושא נפרד. לעומת זאת, ארגון שדרישותיו חורגות מניהול קשרי הלקוחות יפעיל בדרך כלל מערכת ERP שלמה, שיכולה לכלול גם CRM.</div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> מדוע לא נהוג להפעיל מודול מלאי בלבד, כפי שמפעילים CRM בלבד? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>משום שניהול מלאי תלוי בתהליכים אחרים:</b> הזמנות, רכש, ייצור וכספים. ללא אינטגרציה של מידע עמם, המספר שבמחסן אינו משרת את הארגון. שירות ללקוחות, לעומת זאת, יכול להיות תחום העיסוק כולו.</div></div>
+</section>
+
+<section class="slide" id="x-int" data-title="סיכום אינטגרטיבי: CRM ו-ERP">
+  <div class="kick">📌 סיכום אינטגרטיבי · CRM ו-ERP</div>
+  <h2>CRM ו-ERP בתמונה אחת: מי צריך מה, ומדוע</h2>
+  <div class="card st" style="margin-top:8px;font-size:19px;line-height:1.45;text-align:center;background:var(--navy2);color:#fff">❓ <b>השאלה שהארגון שואל:</b> אילו תהליכים עליי לנהל?</div>
+  <div class="row" style="margin-top:10px;gap:14px;align-items:stretch">
+    <div class="card st" style="flex:1;border-top:6px solid #6d4df2"><div class="int-q">״רק את הקשר עם הלקוחות״</div><b style="font-size:21px;color:#4f33c9">⟵ CRM בלבד</b><p style="font-size:16.5px;line-height:1.5;margin-top:6px"><b>במרכז:</b> הלקוח, בתיק של 360 מעלות.<br><b>דוגמה:</b> מוקד שירות, שכל עיסוקו הוא הקשר עם הלקוחות.<br><b>ספקית שנלמדה:</b> Salesforce.</p></div>
+    <div class="card st" style="flex:1;border-top:6px solid var(--asset)"><div class="int-q">״גם מלאי, ייצור, כספים ושכר״</div><b style="font-size:21px;color:#087469">⟵ ERP שלמה, שיכולה לכלול גם מודול CRM</b><p style="font-size:16.5px;line-height:1.5;margin-top:6px"><b>במרכז:</b> התהליך הארגוני כולו, במערכת אחת.<br><b>הרכיב החיוני ביותר:</b> אינטגרציה של מידע.<br><b>ספקיות שנלמדו:</b> SAP ו-Oracle.</p></div>
+  </div>
+  <div class="row" style="margin-top:10px;gap:10px;align-items:stretch">
+    <div class="card st" style="flex:1;font-size:16px;line-height:1.45"><b>🔗 המשותף 1: מידע מרוכז</b><br>ב-CRM: כל המידע על הלקוח, מכל ערוצי ההתקשרות. ב-ERP: המידע של כל התהליכים העסקיים.</div>
+    <div class="card st" style="flex:1;font-size:16px;line-height:1.45"><b>🤖 המשותף 2: אוטומציה</b><br>בשתיהן: חלק מהתהליכים, לפי שיקול דעת ההנהלה. ב-ERP היא נקראת גם מיכון.</div>
+    <div class="card st" style="flex:1;font-size:16px;line-height:1.45"><b>🧑‍🤝‍🧑 המשותף 3: התוכנה לבדה אינה מספיקה</b><br>ב-CRM: נהלים ו-DNA ארגוני. ב-ERP: אפיון וניהול שינוי.</div>
+  </div>
+  <div class="card ez-bot st">🧠 <b>משפט אחד לזכור:</b> כל מערכת ERP יכולה לכלול CRM, אך לא כל ארגון שמפעיל CRM זקוק ל-ERP.</div>
+</section>
+
+<section class="slide" id="s-prac-int" data-title="תרגול עצמי: CRM בתוך ERP">
+  <div class="kick">ERP · חלק 4 · תרגול עצמי</div>
+  <h2>שש שאלות על היחס בין CRM ל-ERP, עם משוב לכל אפשרות</h2>
+  <div class="qz" id="qi"></div>
 </section>
 
 <section class="slide" id="s-cve" data-title="משחק: CRM, ERP או שתיהן?">
@@ -2184,7 +2226,7 @@ tr.st{transform:none}
   <div class="kick">📌 סיכום חלק 4 · ERP בתעשייה, ומול CRM</div>
   <h2>מה לקחת מחלק 4</h2>
   <div class="xs-grid">
-    <ol class="xs-pts"><li style="--i:0"><div><b>ספקיות:</b> SAP ו-Oracle הן הדוגמאות שנלמדו ל-ERP. Salesforce היא הדוגמה ל-CRM.</div></li><li style="--i:1"><div><b>CRM מול ERP:</b> CRM עוסקת בלקוחות. ERP מקיפה את התהליך הארגוני כולו.</div></li><li style="--i:2"><div><b>המשותף:</b> שתיהן מאפשרות אוטומציה של חלק מהתהליכים, ובשתיהן ההצלחה תלויה גם בארגון עצמו.</div></li><li style="--i:3"><div><b>בבחינה:</b> בודקים אם ההגדרה הוצמדה למערכת הנכונה, ונזהרים ממילים כמו ״מבטיחה״, ״פשוט״ ו״כל״.</div></li></ol>
+    <ol class="xs-pts"><li style="--i:0"><div><b>ספקיות:</b> SAP ו-Oracle הן הדוגמאות שנלמדו ל-ERP. Salesforce היא הדוגמה ל-CRM.</div></li><li style="--i:1"><div><b>CRM מול ERP:</b> CRM עוסקת בלקוחות. ERP מקיפה את התהליך הארגוני כולו.</div></li><li style="--i:2"><div><b>CRM בתוך ERP:</b> ERP יכולה לכלול מודול CRM. יש ארגונים, למשל בתחום השירות, שמפעילים CRM בלבד, ולכן CRM נלמד בנפרד.</div></li><li style="--i:3"><div><b>המשותף:</b> שתיהן מאפשרות אוטומציה של חלק מהתהליכים, ובשתיהן ההצלחה תלויה גם בארגון עצמו.</div></li><li style="--i:4"><div><b>בבחינה:</b> בודקים אם ההגדרה הוצמדה למערכת הנכונה, ונזהרים ממילים כמו ״מבטיחה״, ״פשוט״ ו״כל״.</div></li></ol>
     <div class="xs-side">
       <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="erp">ERP</span><span class="term" data-t="crm">CRM</span></div></div>
       <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״מערכת ERP מיועדת לניהול קשרי לקוחות.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> ניהול קשרי לקוחות הוא CRM. ERP היא מערכת לתכנון משאבי הארגון.</div></div>
@@ -2217,7 +2259,7 @@ tr.st{transform:none}
     <div class="card st" style="flex:1;border-top:6px solid var(--asset)"><b style="font-size:20px;color:#087469">📦 מה היא מאפשרת</b><p style="font-size:18px;line-height:1.55;margin-top:8px">פחות הקלדה ופחות טעויות. יכולה להקטין עלויות ולקצר זמני אספקה. שליטה במלאים, באופן שקוף למחלקות ובזמן אמת.</p></div>
     <div class="card st" style="flex:1;border-top:6px solid var(--coral)"><b style="font-size:20px;color:#c4472d">🧱 מה קשה בה</b><p style="font-size:18px;line-height:1.55;margin-top:8px">מערכת מורכבת, עלויות הקמה, אפיון והטמעה, וניהול שינוי. לפני היישום שואלים: מהם התהליכים, מה מאפיין אותם, וכיצד זורם המידע.</p></div>
   </div>
-  <div class="card st" style="margin-top:12px;font-size:18.5px;line-height:1.55">⚖️ <b>ומול CRM:</b> CRM עוסקת בלקוחות, ו-ERP בתהליך הארגוני כולו. שתיהן מאפשרות אוטומציה, ובשתיהן התוכנה לבדה אינה מספיקה.</div>
+  <div class="card st" style="margin-top:12px;font-size:18.5px;line-height:1.55">⚖️ <b>ומול CRM:</b> CRM עוסקת בלקוחות, ו-ERP בתהליך הארגוני כולו. ERP יכולה לכלול גם מודול CRM, אך יש ארגונים שמפעילים CRM בלבד. שתיהן מאפשרות אוטומציה, ובשתיהן התוכנה לבדה אינה מספיקה.</div>
 </section>
 
 <section class="slide" id="s-hw" data-title="עד השיעור הבא">
@@ -2226,8 +2268,8 @@ tr.st{transform:none}
   <div class="route" style="grid-template-columns:repeat(4,1fr)">
     <div class="rcard"><div class="n">1</div><b>לקרוא</b><span>את סיכום שיעור 4 (PDF באתר), ולוודא שכל מושג במילון ברור.</span></div>
     <div class="rcard"><div class="n">2</div><b>לחזור על ההדמיות</b><span>ההזמנה של תמר (שקף 17), עץ התפריטים (שקף 18) והמלאי בזמן אמת (שקף 26). בכל לחיצה: איזה מושג מוצג כאן?</span></div>
-    <div class="rcard"><div class="n">3</div><b>לתרגל</b><span>שלושת המשחקים (שקפים 19, 35 ו-43) ו-15 שאלות התרגול (שקף 49). קוראים את ההסבר לכל אפשרות.</span></div>
-    <div class="rcard"><div class="n">4</div><b>לשים לב</b><span>בקנייה הבאה שלכם בחנות: כאשר הקופאית סורקת מוצר, אילו מחלקות בארגון מתעדכנות באותו רגע?</span></div>
+    <div class="rcard"><div class="n">3</div><b>לתרגל</b><span>שלושת המשחקים (שקפים 19, 35 ו-46) שש שאלות התרגול העצמי (שקף 45) ו-15 שאלות התרגול (שקף 52). קוראים את ההסבר לכל אפשרות.</span></div>
+    <div class="rcard" style="outline:3px solid var(--coral)"><div class="n">4</div><b>להגיש את תרגיל הגשה 3</b><span>10 שאלות אמריקאיות על ERP, רק על מה שנלמד בשיעור (חלקים 1 ו-2). הקובץ באתר הקורס. ההגשה דרך ידיעון המכללה, עד 27.11.2026 בשעה 8:00 בבוקר.</span></div>
   </div>
   <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55;background:var(--navy2);color:#fff">👋 <b>בשיעור הבא:</b> מסחר אלקטרוני ויישומיו. המודלים העסקיים ברשת, והמערכות שמאחורי חנות מקוונת.</div>
 </section>
@@ -3091,6 +3133,28 @@ const MENU=[
    {id:'pay',t:'חישוב שכר',en:'Payroll Run',code:'ריצה',what:'חישוב המשכורות לפי שעות העבודה שדווחו.',data:'שעות עבודה, שכר לשעה, ניכויים.',who:'חשבות השכר.',upd:['fin'],why:'זהו ״הטיפול בשכר״ שבהגדרת ERP. השעות מגיעות מהייצור בלי הקלדה חוזרת.',
     f:[['חודש','נובמבר 2026'],['שעות שדווחו','160'],['ברוטו לצוות','9,920 ש״ח'],['סטטוס','חושב']]}]}]}
 ];
+
+/* ---------- integrative questions: CRM inside ERP (added 20.11.2026) ---------- */
+const QI=[
+ {lv:1,pic:'🧩',topic:'היחס בין המערכות',stem:'איזה מהמשפטים הבאים מתאר נכון את היחס בין CRM ל-ERP?',claims:[],ask:'',
+  o:['CRM ו-ERP הן שני שמות לאותה מערכת','מערכת ERP יכולה לכלול גם מודול לניהול קשרי לקוחות','מערכת CRM כוללת תמיד מודולים של מלאי, ייצור ושכר','ארגון שמפעיל CRM אינו יכול להפעיל ERP','ERP עוסקת בקשר עם הלקוחות בלבד'],a:1,
+  ex:['אלה שתי מערכות שונות: CRM עוסקת בלקוחות, ו-ERP בתהליך הארגוני כולו.','נכונה. ERP בנויה ממודולים, ואחד מהם יכול להיות מודול CRM.','מלאי, ייצור ושכר הם מודולים של ERP, ולא של CRM.','אין סתירה: ERP יכולה לכלול את ה-CRM, או להתחבר אליה בממשק.','ERP מקיפה את כל התהליך הארגוני, ולא רק את הלקוחות.'],fb:'🧩',tip:'ERP יכולה לכלול CRM. CRM אינה כוללת את יתר המודולים של ERP.'},
+ {lv:1,pic:'📚',topic:'מדוע בנפרד',stem:'מערכת ERP יכולה לכלול מודול CRM. מדוע, בכל זאת, CRM נלמד כנושא נפרד?',claims:[],ask:'',
+  o:['משום ש-CRM אינה מערכת מידע','משום ש-ERP אינה יכולה לטפל בלקוחות','משום ש-CRM מורכבת יותר מ-ERP','משום שיש ארגונים שמפעילים CRM בלבד, ללא ERP','משום ש-CRM מיועדת לארגונים גדולים בלבד'],a:3,
+  ex:['CRM היא מערכת מידע לכל דבר.','ERP יכולה לכלול מודול CRM.','ההפך: ERP שלמה מורכבת יותר.','נכונה. למשל חברות בתחום השירות, שכל עיסוקן הוא הקשר עם הלקוחות.','CRM משמשת גם עסקים קטנים.'],fb:'📚',tip:'CRM יכולה לעמוד לבדה. לכן לומדים אותה בנפרד.'},
+ {lv:2,pic:'☎️',topic:'חברת שירות',stem:'חברה קטנה מפעילה מוקד תמיכה טכנית עבור לקוחות של ספקית אינטרנט. כל העיסוק שלה הוא מענה לפניות, תיעוד תלונות ומעקב אחרי הטיפול. אין לה מחסן, קו ייצור או רכש של חומרי גלם.',claims:[],ask:'איזו מערכת מתאימה לה?',
+  o:['CRM בלבד: היא מספקת את כל צרכיה','ERP שלמה, משום שכל ארגון חייב ERP','מודול מלאי בלבד','ERP ללא מודול CRM','אין לה צורך במערכת מידע'],a:0,
+  ex:['נכונה. כאשר כל העיסוק הוא שירות ללקוחות, CRM מספקת את צורכי החברה. ERP שלמה, על מורכבותה, אינה נדרשת.','לא כל ארגון זקוק ל-ERP. ההחלטה נגזרת מהתהליכים של הארגון.','לחברה אין מלאי.','דווקא הקשר עם הלקוחות הוא עיקר העיסוק שלה.','ניהול פניות ותלונות הוא בדיוק מה ש-CRM נועדה לו.'],fb:'☎️',tip:'כל העיסוק הוא שירות: CRM בלבד עשויה להספיק.'},
+ {lv:2,pic:'📦',topic:'מלאי אינו עומד לבדו',stem:'מנהל של רשת חנויות רהיטים מבקש: ״איננו צריכים מערכת שלמה. מספיק לנו מודול לניהול מלאי, ותו לא.״',claims:[],ask:'מהי התשובה המתאימה ביותר, לפי הנלמד?',
+  o:['הוא צודק: מלאי הוא תחום עצמאי, בדיוק כמו שירות ללקוחות','מודול מלאי אינו קיים במערכת ERP','ניהול מלאי הוא בדרך כלל חלק משרשרת לוגיסטית ותהליכית רחבה יותר: הזמנות, רכש, משלוח וכספים','במקום מודול מלאי, עליו לרכוש CRM','מלאי מנוהל תמיד בגיליון אקסל'],a:2,
+  ex:['מלאי משתנה בעקבות הזמנות, רכש ומשלוחים. הוא אינו פועל בחלל ריק.','קיים. ניהול מלאי הוא אחת הדוגמאות שבהגדרת ERP.','נכונה. לכן ארגון שדרישותיו חורגות מ-CRM יפעיל בדרך כלל ERP שלמה.','CRM עוסקת בלקוחות, ואינה מנהלת מלאי.','זו בדיוק הבעיה שראינו במפעל ״אלון״ לפני ERP.'],fb:'📦',tip:'מלאי תלוי בתהליכים אחרים. מכאן הצורך באינטגרציה של מידע.'},
+ {lv:3,pic:'⚖️',topic:'טענות',stem:'לפניכם מספר טענות על CRM ועל ERP:',claims:['כל ארגון שמפעיל CRM מפעיל בהכרח גם ERP.','מערכת ERP יכולה לכלול גם מודול CRM.','ארגון שדרישותיו חורגות מניהול קשרי לקוחות יפעיל בדרך כלל ERP שלמה.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-2','טענות 2 ו-3','כל הטענות נכונות','טענה 2 בלבד'],a:2,
+  ex:['טענה 1 שגויה.','טענה 1 שגויה: יש ארגונים שמפעילים CRM בלבד.','נכונה. טענה 1 שגויה: ״בהכרח״ היא המילה שהופכת אותה לשגויה.','טענה 1 שגויה.','גם טענה 3 נכונה.'],fb:'⚖️',tip:'״בהכרח״, ״תמיד״ ו״כל״ הופכות טענה לשגויה בדרך כלל.'},
+ {lv:3,pic:'📈',topic:'הסקה',stem:'חברת ״מהיר״ התחילה כמוקד הזמנות טלפוני, ועבדה עם CRM בלבד. השנה היא פתחה מחסן, התחילה לרכוש סחורה מספקים, ומעסיקה 200 שליחים במשמרות.',claims:[],ask:'איזו מסקנה נתמכת בצורה הטובה ביותר?',
+  o:['אין צורך בשינוי, משום ש-CRM מקיפה את כל התהליך הארגוני','מספיק להוסיף משתמשים ל-CRM, משום שהיא מנהלת גם מלאי ושכר','נכון לרכוש מודול מלאי נפרד, ללא קשר ליתר התהליכים','יש לוותר על ה-CRM, משום ש-ERP אינה עוסקת בלקוחות','הדרישות חרגו מניהול קשרי לקוחות, ולכן סביר שתידרש ERP שלמה, שיכולה לכלול גם CRM'],a:4,
+  ex:['זו ההגדרה של ERP, ולא של CRM.','מלאי ושכר הם מודולים של ERP.','מלאי אינו פועל בחלל ריק: הוא תלוי בהזמנות, ברכש ובכספים.','ERP יכולה לכלול מודול CRM, ולכן אין צורך לוותר עליו.','נכונה. מלאי, רכש, הקצאת עובדים ושכר הם תהליכים שמעבר ל-CRM, והם תלויים זה בזה.'],fb:'📈',tip:'כאשר הדרישות חורגות מ-CRM: ERP שלמה, שיכולה לכלול גם CRM.'}
+];
 /* ---------- helpers ---------- */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -3560,7 +3624,7 @@ const S7={
 };
 simInit('sim-6',S6,SIM6,0);simInit('sim-7',S7,SIM7,0);
 clsGame('s-mods',MODS,8);clsGame('s-chal',CHAL,6);clsGame('s-cve',CVE,9);
-quizL3('qe',QE);
+quizL3('qe',QE);quizL3('qi',QI);
 
 /* ---------- ERP menu tree: click a folder to open it, click a transaction to see its screen and what it means ---------- */
 (function(){const root=$('#erpx');if(!root)return;const MN={};MODN.forEach(m=>MN[m[0]]=m);const seen=new Set();let cur=null;const open=new Set(['0']);
