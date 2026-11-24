@@ -1646,6 +1646,166 @@ tr.st{transform:none}
 .inc-ch span.hl{background:#dff5f1;border-color:#0f9d90;font-weight:700}
 .inc-ch i{font-style:normal;color:#8a94ab}
 .int-q{font-size:18px;color:#5d6a86;margin-bottom:4px}
+/* ===== lesson 5: ERP parts 3 to 5 ===== */
+.mk-tag{display:inline-block;background:#fff0d2;color:#7a4c00;border-radius:99px;padding:1px 10px;font-size:13px;font-weight:800;vertical-align:middle;margin-inline-start:6px}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.l5-rail .pd-st{font-size:14.5px;padding:9px 10px}
+.pd-prev{color:#c9d3ee;font-size:18px;margin:-4px 0 12px}
+.l5-rt{display:inline-block;background:#ff6a4d;color:#fff;border-radius:99px;padding:1px 9px;font-size:12.5px;font-weight:800;vertical-align:middle}
+.route .rcard b{font-size:19px}.route .rcard span{font-size:15px}
+
+/* off-the-shelf box with five capability tiles */
+.l5-shelf{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.l5-box{background:linear-gradient(160deg,#fff7e0,#ffe3b0);border-radius:18px;padding:10px 18px;box-shadow:0 2px 0 var(--line);display:grid;grid-template-columns:auto auto 1fr 1fr;gap:16px;align-items:center}
+.l5-lid{font-size:52px;line-height:1;animation:l5lid 2.4s ease-in-out infinite}
+@keyframes l5lid{0%,100%{transform:rotate(0)}10%{transform:rotate(-8deg) translateY(-4px)}20%{transform:rotate(6deg)}30%{transform:none}}
+.l5-box b{font-size:22px;white-space:nowrap}.l5-box p{font-size:17px;line-height:1.45}
+.l5-spec{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:#7a4c00}.l5-spec i{flex:1;height:6px;border-radius:3px;background:linear-gradient(90deg,#ff6a4d,#e8960c)}
+.l5-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.l5-tile{background:#fff;border-radius:16px;padding:12px 12px 10px;box-shadow:0 2px 0 var(--line),0 10px 24px rgba(22,33,58,.08);display:flex;flex-direction:column;gap:5px;border-top:5px solid #e8960c}
+.l5-tile>i{font-style:normal;font-size:40px;line-height:1.1}.l5-tile b{font-size:18.5px;line-height:1.3}.l5-tile p{font-size:15.5px;line-height:1.45;flex:1}
+.l5-eg{background:#f4f6fb;border-radius:10px;padding:6px 9px;font-size:14.5px;line-height:1.4;color:#33415f}
+.l5-tile.show{animation:l5pop .55s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes l5pop{from{opacity:0;transform:scale(.6) translateY(30px)}to{opacity:1;transform:none}}
+
+/* simulator pieces */
+.sim-tb tr.l5-hl td{background:#fff7e0;font-weight:700}.l5-red{color:#c0262f;font-weight:800}
+.l5-cat tr.l5-ok td{background:#e7f7ef}.l5-cat tr.l5-no td{color:#9aa3b8;text-decoration:line-through}
+.l5-calc{display:flex;gap:8px;flex-wrap:wrap}.l5-calc span{background:#1b2d55;color:#fff;border-radius:10px;padding:7px 12px;font-size:15px;animation:rise .4s .2s both}
+.l5-inv{display:grid;grid-template-columns:.9fr 1.3fr;gap:12px;align-items:start}
+.l5-scan{background:#fffdf6;border:1px solid #d9d2bd;border-radius:6px;padding:10px 12px;font-size:13.5px;line-height:1.5;box-shadow:0 8px 18px rgba(22,33,58,.14);rotate:-1.2deg;position:relative;overflow:hidden}
+.l5-scan:after{content:"";position:absolute;left:0;right:0;height:3px;background:#2fa66a;box-shadow:0 0 12px #2fa66a;animation:l5scan 1.6s ease-in-out 2 both}
+@keyframes l5scan{from{top:0}to{top:100%}}
+.l5-scan b{display:block;font-size:15px}.l5-scan small{color:var(--mut)}.l5-x{font-style:normal;background:#fff0a8;outline:2px solid #e8960c;border-radius:4px;padding:0 3px}
+.l5-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.l5-kpi{background:#f6f7fb;border-radius:12px;padding:8px 10px;border-top:5px solid #9aa3b8;animation:rise .4s both}
+.l5-kpi small{display:block;font-size:12.5px;color:var(--mut);font-weight:700;min-height:32px}.l5-kpi b{font-size:30px;font-weight:800;direction:ltr;display:block;text-align:right}
+.l5-kpi u{display:block;height:7px;border-radius:4px;width:var(--w);text-decoration:none;background:#9aa3b8;transition:width .8s}
+.l5-kpi.g{border-color:#2fa66a}.l5-kpi.g u{background:#2fa66a}.l5-kpi.a{border-color:#e8960c}.l5-kpi.a u{background:#e8960c}.l5-kpi.r{border-color:#e0454f}.l5-kpi.r u{background:#e0454f}
+.l5-two{display:grid;grid-template-columns:1fr 70px 1fr;gap:6px;align-items:center}
+.l5-pane{border-radius:14px;padding:10px 12px;font-size:14.5px;line-height:1.55;min-height:180px}
+.l5-pane.crm{background:#ece8ff;border:2px solid #6d4df2}.l5-pane.erp{background:#dff5f2;border:2px solid #0f9d90}
+.l5-ph{font-weight:800;font-size:15px;margin-bottom:4px}.l5-st{color:#4f33c9}.l5-mut{color:var(--mut)}
+.l5-arrow{text-align:center;font-size:32px;line-height:1.1}.l5-arrow small{display:block;font-size:11.5px;font-weight:700;color:#087469}
+.l5-arrow.off{filter:grayscale(1);opacity:.4}.l5-arrow.on{animation:l5zap 1s ease-in-out 3}
+@keyframes l5zap{50%{transform:translateX(-10px) scale(1.15)}}
+
+/* assets and expenses */
+.l5-docs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.l5-doc{background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 2px 0 var(--line),0 12px 28px rgba(22,33,58,.09);display:flex;flex-direction:column;gap:8px}
+.l5-dh{font-weight:800;font-size:17px;border-bottom:2px solid #eef1f8;padding-bottom:6px}
+.l5-doc .sim-tb{font-size:15px}.l5-g{color:#167a43;font-weight:700;font-size:12.5px}
+.l5-links{background:#f4f6fb;border-radius:10px;padding:6px 10px;font-size:14px;color:#33415f}
+.l5-flow{display:flex;flex-wrap:wrap;gap:5px;align-items:center;font-size:13.5px}.l5-flow span{border-radius:9px;padding:4px 8px;font-weight:700}
+.l5-flow .ok{background:#e7f7ef;color:#167a43}.l5-flow .wait{background:#fff0d2;color:#7a4c00;animation:l5blink 1.4s ease-in-out infinite}.l5-flow i{font-style:normal;color:#9aa3b8}
+@keyframes l5blink{50%{opacity:.55}}
+
+/* management dashboard */
+.l5-dash{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:12px;margin-top:6px}
+.l5-w{padding:12px 14px;font-size:15px}.l5-w>b{display:block;font-size:16px;margin-bottom:8px}
+.l5-bar{display:grid;grid-template-columns:78px 1fr 48px;gap:6px;align-items:center;margin-bottom:5px;font-size:14px}
+.l5-bar i{height:14px;border-radius:7px;background:linear-gradient(90deg,#0f9d90,#5fd1c4);width:var(--v);transform-origin:right;animation:l3gx2 .8s both}
+.l5-bar.a i{background:linear-gradient(90deg,#e8960c,#ffc04d)}.l5-bar.r i{background:linear-gradient(90deg,#e0454f,#ff8a8f)}.l5-bar em{font-style:normal;font-weight:800;direction:ltr;text-align:right}
+.l5-bar.r em{color:#c0262f}
+.l5-drill{background:#fff7e0;border-radius:10px;padding:6px 9px;font-size:13.5px;line-height:1.4;margin-top:6px}
+.l5-steps div{display:flex;justify-content:space-between;background:#f4f6fb;border-radius:9px;padding:5px 9px;margin-bottom:4px;font-size:14px}
+.l5-steps div.r{background:#ffe9ea;color:#8f1826;font-weight:800;outline:2px solid #e0454f}.l5-steps em{font-style:normal;font-weight:800}
+.l5-stack{display:flex;height:34px;border-radius:9px;overflow:hidden}.l5-stack i{width:var(--w);background:var(--c);color:#fff;font-style:normal;font-size:12px;font-weight:800;display:grid;place-items:center;white-space:nowrap;overflow:hidden;animation:l3gx2 .8s both;transform-origin:right}
+.l5-stack.sm{height:28px}.l5-sm{font-size:13.5px;line-height:1.45;color:#33415f;margin-top:6px}
+.l5-ben{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.l5-ben span{background:#ece8ff;border-radius:12px;padding:8px 10px;font-size:14.5px;line-height:1.4}
+
+/* role screens */
+.l5-roles{margin-top:6px}
+.rl-tabs{display:flex;gap:8px;margin-bottom:8px}.rl-tabs button{background:#fff;border-radius:12px;padding:8px 16px;font-size:16px;font-weight:800;box-shadow:0 2px 0 var(--line);cursor:pointer}
+.rl-tabs button.on{background:#1b2d55;color:#fff}
+.rl-body{display:grid;grid-template-columns:1.6fr 1fr;gap:12px}
+.rl-screen{background:#eef2f9;border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(22,33,58,.12)}
+.rl-bar{background:#1b2d55;color:#fff;padding:8px 14px;font-size:14.5px}
+.rl-pad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px}
+.rl-tile{background:#fff;border-radius:12px;padding:10px;min-height:118px;display:flex;flex-direction:column;gap:4px;box-shadow:0 2px 0 #d5dcea;animation:l5pop .45s calc(var(--i)*.08s) both}
+.rl-tile i{font-style:normal;font-size:26px}.rl-tile small{font-size:13px;color:var(--mut);font-weight:700;flex:1}.rl-tile b{font-size:24px;color:#1b2d55;unicode-bidi:plaintext;text-align:right}
+.rl-side{background:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 2px 0 var(--line)}.rl-side>b{display:block;font-size:16px;margin-bottom:6px}
+.rl-can{list-style:none;display:flex;flex-direction:column;gap:5px}.rl-can li{display:flex;gap:8px;align-items:center;border-radius:9px;padding:6px 9px;font-size:15px;animation:rise .35s calc(var(--i)*.06s) both}
+.rl-can li i{font-style:normal;font-weight:800;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:13px}
+.rl-can li.y{background:#e7f7ef}.rl-can li.y i{background:#2fa66a}.rl-can li.n{background:#f4f6fb;color:#8590a8}.rl-can li.n i{background:#c3c9d6}
+
+/* swimlane process map */
+.l5-swim{display:grid;grid-template-columns:132px repeat(6,1fr);grid-template-rows:repeat(5,auto);gap:5px 6px;margin-top:4px;position:relative}
+.sw-lab{grid-column:1;background:#1b2d55;color:#fff;border-radius:10px;display:flex;align-items:center;gap:6px;padding:6px 10px;font-size:18px;min-height:74px}.sw-lab b{font-size:16px}
+.sw-bg{grid-column:2/8;background:repeating-linear-gradient(90deg,#f4f6fb 0 2px,transparent 2px 100%);background-color:#fff;border-radius:10px;opacity:.7}
+.sw-step{position:relative;z-index:1;background:#fff;border:2px solid #6d4df2;border-radius:11px;padding:7px 10px;font-size:16.5px;line-height:1.35;box-shadow:0 6px 14px rgba(22,33,58,.1)}
+.sw-step>i{font-style:normal;position:absolute;top:-9px;right:-8px;width:22px;height:22px;border-radius:50%;background:#6d4df2;color:#fff;font-weight:800;font-size:12px;display:grid;place-items:center}
+.sw-step small{display:block;color:#3f6fe0;font-weight:700;font-size:14.5px;margin-top:2px}
+.sw-step em{display:inline-block;font-style:normal;font-size:13px;font-weight:800;border-radius:99px;padding:0 7px;margin-top:3px}
+.sw-step em.w{background:#ffe9ea;color:#8f1826}.sw-step em.g{background:#e7f7ef;color:#167a43}
+.l5-q4row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.l5-q4row div{background:#fff;border-radius:12px;padding:8px 11px;font-size:15.5px;line-height:1.4;box-shadow:0 2px 0 var(--line)}.l5-q4row b{display:block;font-size:16.5px;color:#4f33c9}
+.l5-q4row div.hl{background:#e7f7ef;outline:2px solid #2fa66a}.l5-q4row div.hl b{color:#167a43}
+.l5-q4{margin-top:10px;font-size:17px;line-height:1.5;background:#e7f7ef;border-right:6px solid #2fa66a}
+
+/* TCO iceberg and ROI curve */
+.l5-tco{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;margin-top:4px}
+.l5-ice{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(22,33,58,.12)}
+.l5-ice svg{display:block;width:100%;height:auto}
+.ice-top{position:absolute;top:8px;right:10px;display:flex;flex-direction:column;gap:4px}
+.ice-top span{background:#fff;border-radius:9px;padding:3px 9px;font-size:13.5px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.ice-low{position:absolute;top:30%;right:8px;left:8px;display:flex;flex-direction:column;gap:5px;align-items:center}
+.ice-low span{background:rgba(255,255,255,.93);border-radius:9px;padding:4px 10px;font-size:14px;font-weight:700;color:#1b2d55}
+.ice-cap{position:absolute;bottom:0;right:0;left:0;background:rgba(15,27,51,.85);color:#fff;font-size:13.5px;line-height:1.4;padding:7px 10px}
+.l5-roi{padding:10px 12px;font-size:15px}.l5-roi svg{width:100%;height:auto;display:block;margin-top:4px}
+.l5-roi .roi-p{stroke-dasharray:700;stroke-dashoffset:700}.l5-roi.show .roi-p{animation:l5draw 2s .3s ease-out forwards}
+@keyframes l5draw{to{stroke-dashoffset:0}}
+.l5-sm2{font-size:14.5px;line-height:1.45;padding:10px 12px}
+
+/* case wall with flip cards */
+.l5-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+.wl-card{perspective:900px;height:215px;cursor:pointer}
+.wl-in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.wl-card.flip .wl-in{transform:rotateY(180deg)}
+.wl-f,.wl-b{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;padding:11px 13px;box-shadow:0 2px 0 #d9d2bd,0 12px 26px rgba(22,33,58,.13)}
+.wl-f{background:#fffdf6;border:1px solid #d9d2bd;display:flex;flex-direction:column;gap:3px}
+.wl-flag{font-size:30px;line-height:1}.wl-f small{color:var(--mut);font-weight:700;font-size:13px}.wl-f b{font-size:19px;direction:ltr;text-align:right}
+.wl-f h4{font-family:Georgia,"David","Times New Roman",serif;font-size:22px;line-height:1.3;flex:1}.wl-f em{font-style:normal;font-size:12.5px;color:#3f6fe0;font-weight:700}
+.wl-b{background:#1b2d55;color:#fff;transform:rotateY(180deg);display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.42}
+.wl-num{background:#ffc04d;color:#1b2d55;border-radius:8px;padding:3px 8px;font-weight:800;font-size:13px}
+.wl-tag{background:rgba(255,255,255,.14);border-radius:8px;padding:3px 8px;font-weight:700;font-size:13px}
+.wl-b a{color:#9fd8ff;font-size:12.5px;font-weight:700;margin-top:auto}
+.l5-src{font-size:13px;color:var(--mut);margin-top:6px}
+
+/* deployment options */
+.l5-deps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+.l5-dep{display:flex;flex-direction:column;gap:5px;padding:14px 16px}.l5-dep>i{font-style:normal;font-size:44px;line-height:1.1}.l5-dep b{font-size:20px}.l5-dep small{color:var(--mut);font-weight:700}
+.l5-dep p{font-size:16px;line-height:1.45}.pm{display:flex;flex-direction:column;gap:4px;margin-top:4px}.pm span{border-radius:9px;padding:4px 9px;font-size:14.5px;font-weight:700}
+.pm .p{background:#e7f7ef;color:#167a43}.pm .m{background:#ffe9ea;color:#8f1826}
+
+/* job ad */
+.l5-jobw{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:4px}
+.l5-job{background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 2px 0 var(--line),0 12px 28px rgba(22,33,58,.1);font-size:15.5px;line-height:1.5}
+.jb-h{display:flex;gap:12px;align-items:center;border-bottom:2px solid #eef1f8;padding-bottom:8px;margin-bottom:6px}
+.jb-logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#6d4df2,#0f9d90);display:grid;place-items:center;font-size:28px}
+.jb-h b{display:block;font-size:19px}.jb-h small{color:var(--mut)}.jb-h .mk-tag{margin-inline-start:auto}
+.jb-s{display:block;font-size:15.5px;color:#1b2d55;margin-top:6px}.l5-job ul{padding-inline-start:20px}
+mark{border-radius:5px;padding:0 4px;font-weight:700}mark.c0{background:#ece8ff;color:#4f33c9}mark.c3{background:#fff0d2;color:#7a4c00}mark.c4{background:#ffe2da;color:#a83a20}mark.c5{background:#dde7ff;color:#2b53b8}
+.l5-map2{font-size:15px}.l5-map2>b{display:block;margin-bottom:6px}.l5-map2 p{display:flex;justify-content:space-between;gap:8px;margin-bottom:5px}
+
+/* capstone case and closing summary */
+.l5-case{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.l5-case .card{padding:14px 14px;font-size:15.5px;line-height:1.5;position:relative}
+.l5-case .card>i{font-style:normal;font-size:28px;color:#ff6a4d;font-weight:800;display:block;line-height:1}
+.l5-case .card>b{display:block;font-size:18px;margin:4px 0}
+.l5-sum4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.l5-sum4 .card{padding:12px 14px}.l5-sum4 b{font-size:18px}.l5-sum4 p{font-size:15.5px;line-height:1.5;margin-top:6px}
+
+/* games of lesson 5: use the height of the slide */
+#s-caps .gcard,#s-chal .gcard,#s-cve .gcard{min-height:230px}
+#s-caps .gcard .nm,#s-chal .gcard .nm,#s-cve .gcard .nm{font-size:27px!important}
+#s-caps .gamecat button,#s-chal .gamecat button,#s-cve .gamecat button{padding:18px 8px;font-size:19px}
+
+/* long case questions: keep the stem, the claims and five options inside the slide */
+#s-case-q .qz-stem,#s-prac-erp .qz-stem,#s-mc5a .qz-stem,#w5-warm .qz-stem{font-size:17px;line-height:1.42}
+#s-case-q .qz .claims,#s-prac-erp .qz .claims,#s-mc5a .qz .claims{font-size:15.5px;line-height:1.4}
+#s-case-q .qz .opt,#s-prac-erp .qz .opt,#s-mc5a .qz .opt{font-size:15.5px;padding:6px 11px}
+#s-case-q .qz .opts,#s-prac-erp .qz .opts{gap:5px}
 </style>
 </head>
 <body>
@@ -1658,8 +1818,8 @@ tr.st{transform:none}
   <div style="position:relative;max-width:900px;margin-top:40px">
     <div class="kick" style="color:#ffb199">מבוא למערכות מידע וניהול נתונים · שיעור 5 · טיוטה</div>
     <h1><span>מערכת אחת:</span> <span style="color:#c9bfff">מההטמעה ועד התעשייה</span></h1>
-    <p class="sub" style="font-size:24px;margin-top:18px">ממשיכים בנושא המערכת לתכנון משאבי הארגון (<span class="ltr">ERP: Enterprise Resource Planning</span>): מדוע ההטמעה קשה, מי מוכר מערכות כאלה, ומה היחס בינן לבין מערכת לניהול קשרי לקוחות.</p>
-    <div class="chipbar" style="margin-top:26px"><span class="chip">🔁 תזכורת: ERP עד כאן</span><span class="chip">🗺️ שלוש שאלות לפני היישום</span><span class="chip">🧱 אתגרי הטמעה</span><span class="chip">📰 פרויקטים שהסתבכו</span><span class="chip">⚖️ CRM מול ERP</span><span class="chip">🧩 CRM כמודול בתוך ERP</span></div>
+    <p class="sub" style="font-size:24px;margin-top:18px">ממשיכים בנושא המערכת לתכנון משאבי הארגון (<span class="ltr">ERP: Enterprise Resource Planning</span>): מה מערכת כזו יודעת לעשות, מדוע הטמעתה קשה, ומה היחס בינה לבין מערכת לניהול קשרי לקוחות.</p>
+    <div class="chipbar" style="margin-top:26px"><span class="chip">🔁 תזכורת וחימום</span><span class="chip">🧰 חמש יכולות בסיסיות</span><span class="chip">🛒 מהקטלוג ועד התשלום</span><span class="chip">🗺️ מיפוי תהליך</span><span class="chip">📰 שישה מקרים אמיתיים</span><span class="chip">🧑‍🤝‍🧑 30 הימים הראשונים</span><span class="chip">🔌 CRM ו-ERP בממשק</span></div>
     <p class="sub" style="font-size:18px;margin-top:36px"><b style="color:#fff">ד״ר שי צבאן</b> · המרכז האקדמי פרס · סמסטר א׳ תשפ״ז · <span class="ltr">27.11.2026</span></p>
   </div>
 </section>
@@ -1677,48 +1837,207 @@ tr.st{transform:none}
   <div class="card ez-bot st">📝 <b>ניסוח למבחן:</b> ״מאפשרת״, ״יכולה״ ו״עשויה״ נכונות בדרך כלל. ״מבטיחה״ ו״כל התהליכים אוטומטיים״ שגויות בדרך כלל.</div>
 </section>
 
-<section class="slide" id="s-route" data-title="מסלול השיעור">
-  <div class="kick">מסלול השיעור · ממשיכים ב-ERP</div>
-  <h2>ארבעה חלקים: שניים נלמדו, ושניים בשיעור הזה</h2>
-  <div class="route" style="grid-template-columns:repeat(4,1fr)">
-    <div class="rcard" style="opacity:.55;cursor:default"><div class="n">1</div><b>מהי ERP <small style="display:inline-block;background:#ff6a4d;color:#fff;border-radius:99px;padding:1px 9px;font-size:13px;font-weight:800;vertical-align:middle">נלמד בשיעור 4</small></b><span>הזמנה אחת בחמש מחלקות, ההגדרה, אינטגרציה של מידע, מודולים ומיכון. הדמיה: הזמנה שעוברת בשישה מודולים</span></div>
-    <div class="rcard" style="opacity:.55;cursor:default"><div class="n">2</div><b>מה הארגון מרוויח <small style="display:inline-block;background:#ff6a4d;color:#fff;border-radius:99px;padding:1px 9px;font-size:13px;font-weight:800;vertical-align:middle">נלמד בשיעור 4</small></b><span>פחות הקלדה, פחות טעויות, זמני אספקה קצרים, והיתרון הלוגיסטי. הדמיה: מלאי בזמן אמת</span></div>
-    <button class="rcard" data-go="p-e3"><div class="n">3</div><b>הטמעה ואתגרים</b><span>שלוש שאלות לפני היישום, ארבעה אתגרים, ושלושה פרויקטים שהסתבכו</span></button>
-    <button class="rcard" data-go="p-e4"><div class="n">4</div><b>ERP בתעשייה, ומול CRM</b><span>ספקיות ומוצרים, התפתחות, תפקידים, ההשוואה ל-CRM, מלכודות ותרגול מסכם</span></button>
-  </div>
-  <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55"><b>שאלת המפתח:</b> מה משתנה בארגון כאשר כל המחלקות עובדות על אותם נתונים, ומה נדרש כדי להגיע לכך?<div class="hint" style="font-size:16px;margin-top:6px">כל נושא נפתח בדוגמה, ורק אחריה מוצג הכלל. חלקים 1 ו-2 נלמדו בשיעור 4. בשיעור הזה: חלקים 3 ו-4.</div></div>
+<section class="slide" id="w5-warm" data-title="חימום: שלוש שאלות על שיעור 4">
+  <div class="kick">חימום · שיעור 4</div>
+  <h2>לפני שממשיכים: שלוש שאלות על מה שלמדנו</h2>
+  <div class="qz" id="qw"></div>
 </section>
 
-<section class="slide dark pd" id="p-e3" data-title="פתיחת חלק 3: הטמעה ואתגרים" style="--pc:#ff6a4d">
+<section class="slide" id="s-route" data-title="מסלול השיעור">
+  <div class="kick">מסלול השיעור · ממשיכים ב-ERP</div>
+  <h2>חמישה חלקים: שניים נלמדו, ושלושה בשיעור הזה</h2>
+  <div class="route" style="grid-template-columns:repeat(5,1fr)">
+    <div class="rcard" style="opacity:.5;cursor:default"><div class="n">1</div><b>מהי ERP <small class="l5-rt">נלמד בשיעור 4</small></b><span>ההגדרה, אינטגרציה של מידע, מודולים ומיכון</span></div>
+    <div class="rcard" style="opacity:.5;cursor:default"><div class="n">2</div><b>מה הארגון מרוויח <small class="l5-rt">נלמד בשיעור 4</small></b><span>פחות הקלדה ופחות טעויות, והיתרון הלוגיסטי</span></div>
+    <button class="rcard" data-go="p-e3"><div class="n">3</div><b>מה המערכת יודעת לעשות</b><span>חמש יכולות בסיסיות של תוכנת מדף. הדמיה: מהקטלוג ועד התשלום. מסך המנהל, תפקידים והרשאות</span></button>
+    <button class="rcard" data-go="p-e4"><div class="n">4</div><b>הטמעה ואתגרים</b><span>ארבע שאלות ומיפוי תהליך, ארבעה אתגרים, העלות הכוללת, שישה מקרים אמיתיים, ו-30 הימים הראשונים</span></button>
+    <button class="rcard" data-go="p-e5"><div class="n">5</div><b>ERP בתעשייה, ומול CRM</b><span>ספקיות, היכן המערכת מותקנת, CRM ו-ERP בממשק אחד, תפקידים ומלכודות</span></button>
+  </div>
+  <div class="card" style="margin-top:20px;font-size:19px;line-height:1.55"><b>שאלת המפתח:</b> מה בדיוק מקבל ארגון שרוכש מערכת ERP, ומדוע פרויקטים רבים כל כך מסתבכים בדרך?<div class="hint" style="font-size:16px;margin-top:6px">חלק 3 נוסף לפי ספר הקורס. בסוף השיעור: מקרה מסכם עם שש שאלות, ו-15 שאלות על ERP כולו.</div></div>
+</section>
+
+<section class="slide dark pd" id="p-e3" data-title="פתיחת חלק 3: מה המערכת יודעת לעשות" style="--pc:#e8960c">
   <div class="pd-num">3</div>
   <div class="pd-in">
-    <div class="kick" style="color:#ffb199">ERP · חלק 3 מתוך 4</div>
+    <div class="kick" style="color:#ffb199">ERP · חלק 3 מתוך 5</div>
+    <h1 class="pd-h">מה המערכת יודעת לעשות</h1>
+    <p class="pd-q"><b>שאלת החלק:</b> מה מקבל ארגון שרוכש מערכת ERP מוכנה, ומה רואים בה המנהלים?</p><p class="pd-prev">בשיעור 4 ראינו מה ERP היא, ומה הארגון מרוויח ממנה. עכשיו: מה יש בתוך המערכת שנרכשת.</p>
+    <div class="pd-cols">
+      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>תוכנת מדף: מה יש בה לכל הפחות</li><li>הדמיה: הזמנת רכש, מהקטלוג ועד התשלום</li><li>ניהול נכסים וניהול הוצאות</li><li>מסך המנהל, תפקידים והרשאות</li></ul></div>
+      <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="offshelf">תוכנת מדף</span><span class="term" data-t="procauto">אוטומציה של תהליכי רכש</span><span class="term" data-t="invoice">ניהול חשבוניות</span><span class="term" data-t="scm">ניהול שרשרת אספקה</span><span class="term" data-t="asset">ניהול נכסים</span><span class="term" data-t="expense">ניהול הוצאות</span><span class="term" data-t="costdrv">מחולל עלות</span><span class="term" data-t="respz">תחומי אחריות</span><span class="term" data-t="perm">הרשאה</span></div></div>
+    </div>
+  </div>
+  <div class="pd-rail l5-rail"><div class="pd-st past"><i>1</i><span>מהי ERP</span></div><div class="pd-st past"><i>2</i><span>מה הארגון מרוויח</span></div><div class="pd-st cur"><i>3</i><span>מה המערכת יודעת לעשות</span></div><div class="pd-st "><i>4</i><span>הטמעה ואתגרים</span></div><div class="pd-st "><i>5</i><span>ERP בתעשייה, ומול CRM</span></div></div>
+</section>
+
+<section class="slide" id="e5-shelf" data-title="הסבר: מה יש בתוכנת מדף">
+  <div class="kick">ERP · חלק 3 · הסבר</div>
+  <h2>מפעל ״אלון״ רוכש ERP מוכנה: מה יש בקופסה?</h2>
+  <div class="l5-shelf">
+    <div class="l5-box st"><div class="l5-lid">📦</div><b><span class="term" data-t="offshelf">תוכנת מדף</span></b><p>תוכנה מוכנה, שנמכרת לארגונים רבים באותה גרסה בסיסית, ומותאמת לכל ארגון לפי צרכיו.</p><div class="l5-spec"><span>כללית ביותר</span><i></i><span>נתפרת ממודולים לבקשת הלקוח</span></div></div>
+    <div class="l5-tiles">
+      <div class="l5-tile st"><i>🛒</i><b><span class="term" data-t="procauto">אוטומציה של תהליכי רכש</span></b><p>קישור לקטלוגים של ספקים, רכישה לפי כללים ובתעריפים שסוכמו, אישור מהיר, הנחות לפי הסכמים.</p><div class="l5-eg">🪑 לוחות עץ מוזמנים מהקטלוג של הספק, במחיר החוזה.</div></div>
+      <div class="l5-tile st"><i>🧾</i><b><span class="term" data-t="invoice">ניהול חשבוניות</span></b><p>הנפקה, קבלה ותשלום. קריאת חשבונית סרוקה או אלקטרונית, ושליפת הסכום ותנאי התשלום.</p><div class="l5-eg">🪑 חשבונית הספק נסרקת, ומשולמת במועד.</div></div>
+      <div class="l5-tile st"><i>🚚</i><b><span class="term" data-t="scm">ניהול שרשרת אספקה</span></b><p>אוטומציה של האחסון והמשלוח של חלקים, חומרי גלם ומוצרים מוגמרים.</p><div class="l5-eg">🪑 השולחנות המוכנים יוצאים לפי סדר ההזמנות.</div></div>
+      <div class="l5-tile st"><i>🏗️</i><b><span class="term" data-t="asset">ניהול נכסים</span></b><p>מכונות וציוד: מועד רכישה, אחריות, תחזוקה, שווי ומיקום.</p><div class="l5-eg">🪑 מסור CNC: מתי נרכש, ומתי הטיפול הבא.</div></div>
+      <div class="l5-tile st"><i>💳</i><b><span class="term" data-t="expense">ניהול הוצאות</span></b><p>נסיעות, כנסים, ייעוץ ושיווק, עם אישור לפי מדרג הסמכויות.</p><div class="l5-eg">🪑 נסיעה לתערוכת עץ, באישור סמנכ״לית הכספים.</div></div>
+    </div>
+  </div>
+  <div class="card ez-bot st">📝 <b>לפי ספר הקורס:</b> מערכת ERP כללית כוללת לכל הפחות את חמש היכולות האלה, ואפשר להוסיף עליהן לפי דרישות החברה. כולן פועלות על <span class="term" data-t="integ">אותו מאגר נתונים</span>.</div>
+</section>
+
+<section class="slide" id="sim-8" data-title="הדמיה: מהקטלוג ועד התשלום">
+  <div class="kick">ERP · חלק 3 · מבט מבפנים</div>
+  <h2>המסך של רינה: הזמנת רכש, מהקטלוג ועד התשלום</h2>
+  <div class="sim"><div class="sim-host"></div><ol class="sim-cap"></ol></div>
+</section>
+
+<section class="slide" id="e5-asset" data-title="הסבר: ניהול נכסים וניהול הוצאות">
+  <div class="kick">ERP · חלק 3 · שני מסכים</div>
+  <h2>ניהול נכסים וניהול הוצאות: כך זה נראה במערכת</h2>
+  <div class="l5-docs">
+    <div class="l5-doc st"><div class="l5-dh">🏗️ כרטיס נכס 1007 · מסור CNC <span class="mk-tag">הדמיה</span></div>
+      <table class="sim-tb"><tr><td>תאריך רכישה</td><td>12.3.2024 · חשבונית 4410</td></tr><tr><td>עלות</td><td>480,000 ש״ח</td></tr><tr><td>אחריות</td><td>עד 12.3.2027</td></tr><tr><td>מיקום</td><td>אולם הנגרות, קו 2</td></tr><tr><td>טיפול אחרון</td><td>2.10.2026 · החלפת להב · 3,200 ש״ח</td></tr><tr class="l5-hl"><td>טיפול הבא</td><td>2.1.2027 · תזכורת ליוסי, אחראי האחזקה</td></tr><tr><td>פחת (ירידת ערך) לשנה</td><td>48,000 ש״ח</td></tr></table>
+      <div class="l5-links">🔗 מקושר ל: חשבונית הרכישה · הזמנות התחזוקה · מודול הכספים</div></div>
+    <div class="l5-doc st"><div class="l5-dh">💳 דוח הוצאות 3127 · תערוכת עץ, מילאנו <span class="mk-tag">הדמיה</span></div>
+      <table class="sim-tb"><tr><td>טיסה</td><td>1,850</td></tr><tr><td>מלון, 3 לילות</td><td>2,760 <small class="l5-g">8% מתחת לממוצע ההוצאות בחברה</small></td></tr><tr><td>מוניות</td><td>240</td></tr><tr><td>ארוחות</td><td>580</td></tr><tr class="l5-hl"><td><b>סך הכול</b></td><td><b>5,430 ש״ח</b></td></tr></table>
+      <div class="l5-flow"><span class="ok">✓ הוגש · אבי, מנהל הרכש</span><i>←</i><span class="ok">✓ הממונה הישיר</span><i>←</i><span class="wait">⏳ סמנכ״לית הכספים</span></div>
+      <div class="l5-links">📏 מדרג הסמכויות: עד 2,000 ש״ח הממונה הישיר · עד 10,000 סמנכ״לית הכספים · מעל 10,000 המנכ״ל</div></div>
+  </div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> מדוע כרטיס הנכס מקושר לחשבונית הרכישה ולמודול הכספים? מה היה מתרחש אילו נוהל בגיליון נפרד? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>זו אינטגרציה של מידע.</b> הרכישה, התחזוקה והשווי מגיעים מאותו מאגר, ולכן הנתונים עקביים. בגיליון נפרד היה צורך להקליד שוב כל טיפול, והשווי בספרים היה עלול שלא להתאים למצב בפועל.</div></div>
+</section>
+
+<section class="slide" id="s-caps" data-title="משחק: איזו יכולת בסיסית?">
+  <div class="kick">ERP · חלק 3 · משחק</div>
+  <h2>איזו יכולת בסיסית של ERP? 10 פעולות</h2>
+  <div class="row" style="margin-top:12px;gap:22px;align-items:flex-start">
+    <div style="flex:1.3">
+      <div class="gcard" style="min-height:150px"><div class="nm" style="font-size:23px;line-height:1.4"></div></div>
+      <div class="gamecat l2-cat"></div>
+      <div class="fb"></div>
+    </div>
+    <div style="flex:.7" class="col">
+      <div class="stats"><div class="stat"><b class="cn">1/10</b><span>פעולה</span></div><div class="stat"><b class="cok">0</b><span>נכונות</span></div><div class="stat"><b class="cst2">0</b><span>רצף</span></div></div>
+      <div class="card" style="font-size:16.5px;line-height:1.5"><b>שאלו על כל פעולה:</b><br>ספק, קטלוג, הנחה? ⟵ רכש<br>חשבונית או תשלום קבוע? ⟵ חשבוניות<br>אחסון ומשלוח של פריטים? ⟵ שרשרת אספקה<br>מכונה או ציוד לאורך שנים? ⟵ נכסים<br>נסיעה, כנס, אישור ממונה? ⟵ הוצאות</div>
+      <div class="row" style="gap:8px"><button class="btn cnext">הבא ←</button><button class="btn ghost cre">↺ מהתחלה</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="e5-mgr" data-title="הסבר: מסך המנהל">
+  <div class="kick">ERP · חלק 3 · מסך המנהל</div>
+  <h2>כאשר כל המידע במקום אחד: מה רואה סמנכ״לית הכספים</h2>
+  <p class="sub st" style="font-size:17.5px">דנה, סמנכ״לית הכספים של ״אלון״, פותחת את לוח הבקרה של ה-ERP. כל המספרים מגיעים מאותה מערכת, ומתעדכנים בזמן אמת. <span class="mk-tag">הדמיה</span></p>
+  <div class="l5-dash">
+    <div class="card st l5-w"><b>💰 תקציב מול ביצוע, לפי מחלקה</b><div class="l5-bar "><span>ייצור</span><i style="--v:70%"></i><em>98%</em></div><div class="l5-bar a"><span>רכש</span><i style="--v:74%"></i><em>103%</em></div><div class="l5-bar r"><span>שיווק</span><i style="--v:94%"></i><em>131%</em></div><div class="l5-bar "><span>משאבי אנוש</span><i style="--v:69%"></i><em>96%</em></div><div class="l5-drill">🔎 <b>שיווק, 131%:</b> שלושה כנסים שלא תוקצבו. האחראית לתקציב: מנהלת השיווק.</div></div>
+    <div class="card st l5-w"><b>⏱️ היכן ההזמנה מתעכבת (ימים, בממוצע)</b><div class="l5-steps"><div><span>קבלת הזמנה ← אישור</span><em>0.5</em></div><div class="r"><span>אישור ← ייצור</span><em>6.2</em></div><div><span>ייצור ← משלוח</span><em>2.1</em></div><div><span>משלוח ← חשבונית</span><em>0.3</em></div></div><div class="l5-drill">🔎 קו הנגרות מחכה לעץ: 70% מהעיכוב אצל ספק אחד.</div></div>
+    <div class="card st l5-w"><b>🧮 <span class="term" data-t="costdrv">מחוללי העלות</span> העיקריים</b><div class="l5-stack"><i style="--w:54%;--c:#6d4df2">חומרי גלם 54%</i><i style="--w:28%;--c:#0f9d90">שכר 28%</i><i style="--w:9%;--c:#e8960c">9%</i><i style="--w:9%;--c:#9aa3b8">9%</i></div><p class="l5-sm">הובלה 9% · אחר 9%. עלייה של 10% במחיר העץ משפיעה על הרווח יותר מכל שינוי אחר.</p></div>
+  </div>
+  <div class="l5-ben st"><span>⚙️ <b>ניהול יעיל יותר:</b> היכן נוצר עיכוב, ומה מחולל את העלות</span><span>🎯 <b>הגדרה טובה יותר של <span class="term" data-t="respz">תחומי אחריות</span>:</b> מי אחראי לחריגה</span><span>💳 <b>ניהול נכון יותר של ההוצאות:</b> רכישה ואישור מסודרים</span><span>🏁 <b>יתרון תחרותי:</b> באופן עקיף, כתוצאה מיתר התועלות</span></div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> השלב ״אישור ← ייצור״ נמשך 6.2 ימים. מה מאפשר לדנה לדעת זאת, ומה היא יכולה לעשות? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>המידע של המכירות, הייצור והרכש נמצא באותה מערכת</b>, ולכן אפשר לראות באיזה שלב נוצר העיכוב, ומי אחראי לו. דנה יכולה לפנות לספק, להחליף ספק, או להגדיל את מלאי הביטחון של העץ.</div></div>
+</section>
+
+<section class="slide" id="e5-roles" data-title="הסבר: כניסה אחת, מסך לפי תפקיד">
+  <div class="kick">ERP · חלק 3 · תפקידים והרשאות</div>
+  <h2>כניסה אחת למערכת אחת, ומסך שונה לכל תפקיד</h2>
+  <p class="sub st" style="font-size:17.5px">כל עובד נכנס לאותה מערכת עם שם משתמש וסיסמה, ומקבל גישה לפי <span class="term" data-t="perm">הרשאתו</span>. לחצו על תפקיד. <span class="mk-tag">הדמיה</span></p>
+  <div class="l5-roles st" id="roles">
+    <div class="rl-tabs"></div>
+    <div class="rl-body">
+      <div class="rl-screen"><div class="rl-bar">🔐 מחובר/ת: <b class="rl-who"></b> · מפעל ״אלון״ · מסך הבית</div><div class="rl-pad"></div></div>
+      <div class="rl-side"><b>מה מותר לתפקיד הזה לבצע</b><ul class="rl-can"></ul></div>
+    </div>
+  </div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> מדוע הקניינית אינה מורשית לשלם לספק, אף שהיא זו שהזמינה ממנו? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>הפרדת תפקידים.</b> מי שמזמין אינו מי שמשלם, כדי למנוע טעויות וניצול לרעה. ספר הקורס: המערכת משייכת תפקידים והרשאות ביצוע לפי דרגים, וכך מוגדרים בבירור <b>תחומי האחריות</b>.</div></div>
+</section>
+
+<section class="slide" id="s-mc5a" data-title="בדיקת הבנה">
+  <div class="kick">ERP · חלק 3 · שאלה אמריקאית</div>
+  <h2>בדיקת הבנה: אילו טענות נכונות?</h2>
+  <div class="qz" id="mc5a"></div>
+</section>
+
+<section class="slide memes" id="s-meme-e5" data-title="רגע של הומור">
+  <div class="kick">הפסקת מם · יכולות</div>
+  <h2>ERP, מאחורי הקלעים</h2>
+  <div class="meme-row">
+    <div class="meme drake st"><div class="dr"><span>🙅</span><p>״נשלח לספק מייל, ונחכה שיענה מה המחיר״</p></div><div class="dr st"><span>😎👉</span><p>״ההזמנה יוצאת מהקטלוג, במחיר החוזה״</p></div></div>
+    <div class="meme st"><div class="mt">החשבונית של הספק: ״200 ליטר״</div><div class="ma">🧾🔍📦</div><div class="mb st">המערכת, שבודקת שבמחסן אכן נקלטו 200<small>הזמנה, קבלה וחשבונית: שלושה מסמכים, מערכת אחת</small></div></div>
+    <div class="meme st"><div class="mt">מנהלת השיווק, אחרי עוד כנס שלא תוקצב</div><div class="ma">📊🔴😬</div><div class="mb st">לוח הבקרה: ״131% מהתקציב. נדבר?״<small>תחומי אחריות ברורים</small></div></div>
+  </div>
+</section>
+
+<section class="slide xs" id="x-e3" data-title="סיכום חלק 3: מה המערכת יודעת לעשות" style="--pc:#e8960c">
+  <div class="kick">📌 סיכום חלק 3 · מה המערכת יודעת לעשות</div>
+  <h2>מה לקחת מחלק 3</h2>
+  <div class="xs-grid">
+    <ol class="xs-pts"><li style="--i:0"><div><b>תוכנת מדף</b> כוללת לכל הפחות: אוטומציה של תהליכי רכש, ניהול חשבוניות, ניהול שרשרת אספקה, ניהול נכסים וניהול הוצאות.</div></li><li style="--i:1"><div><b>אוטומציה של תהליכי רכש:</b> קטלוג ספק, כללים ותעריפים שסוכמו, אישור מהיר, הנחות לפי הסכם, וחיבור לחשבוניות ולתשלום.</div></li><li style="--i:2"><div><b>ניהול נכסים:</b> רכישה, אחריות, תחזוקה, שווי ומיקום. <b>ניהול הוצאות:</b> אישור לפי מדרג הסמכויות.</div></li><li style="--i:3"><div><b>מסך המנהל:</b> מחוללי עלות, עיכובים ותחומי אחריות. התפקידים וההרשאות מוגדרים לפי דרגים.</div></li><li style="--i:4"><div><b>יתרון תחרותי:</b> ERP יכולה לתרום לו, באופן עקיף, כתוצאה מיתר התועלות.</div></li></ol>
+    <div class="xs-side">
+      <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="offshelf">תוכנת מדף</span><span class="term" data-t="procauto">אוטומציה של תהליכי רכש</span><span class="term" data-t="invoice">ניהול חשבוניות</span><span class="term" data-t="asset">ניהול נכסים</span><span class="term" data-t="expense">ניהול הוצאות</span><span class="term" data-t="costdrv">מחולל עלות</span><span class="term" data-t="respz">תחומי אחריות</span></div></div>
+      <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״מערכת ERP כללית עוסקת בייצור בלבד, ולכן אינה כוללת ניהול חשבוניות או ניהול הוצאות.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> ניהול חשבוניות וניהול הוצאות הם שתיים מהיכולות הבסיסיות של מערכת ERP כללית.</div></div>
+    </div>
+  </div>
+  <div class="xs-next">➜ בחלק הבא: אם המערכת יודעת לעשות כל כך הרבה, מדוע הטמעתה קשה?</div>
+</section>
+
+<section class="slide dark pd" id="p-e4" data-title="פתיחת חלק 4: הטמעה ואתגרים" style="--pc:#ff6a4d">
+  <div class="pd-num">4</div>
+  <div class="pd-in">
+    <div class="kick" style="color:#ffb199">ERP · חלק 4 מתוך 5</div>
     <h1 class="pd-h">הטמעה ואתגרים</h1>
     <p class="pd-q"><b>שאלת החלק:</b> מדוע פרויקטים של ERP מסתבכים, ומה חייבים לשאול לפני שמתחילים?</p>
     <div class="pd-cols">
-      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>שלוש שאלות שחייבים לשאול לפני היישום</li><li>האתגרים: מורכבות, עלויות, אפיון וניהול שינוי</li><li>מהעיתונות: שלושה פרויקטים שהסתבכו</li><li>מה אינו אתגר, לפי הנלמד</li></ul></div>
-      <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="impl">הטמעה</span><span class="term" data-t="charz">אפיון</span><span class="term" data-t="chgm">ניהול שינוי</span><span class="term" data-t="bproc">תהליך עסקי</span></div></div>
+      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>ארבע שאלות לפני היישום, ומיפוי של תהליך אמיתי</li><li>ארבעה אתגרים, והעלות הכוללת של פרויקט</li><li>שישה מקרים מהעולם ומישראל</li><li>ניהול שינוי: 30 הימים הראשונים</li></ul></div>
+      <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="bproc">תהליך עסקי</span><span class="term" data-t="charz">אפיון</span><span class="term" data-t="impl">הטמעה</span><span class="term" data-t="chgm">ניהול שינוי</span><span class="term" data-t="golive">עלייה לאוויר</span><span class="term" data-t="keyuser">משתמש מפתח</span><span class="term" data-t="tco">עלות כוללת</span></div></div>
     </div>
   </div>
-  <div class="pd-rail"><div class="pd-st past"><i>1</i><span>מהי ERP</span></div><div class="pd-st past"><i>2</i><span>מה הארגון מרוויח</span></div><div class="pd-st cur"><i>3</i><span>הטמעה ואתגרים</span></div><div class="pd-st "><i>4</i><span>ERP בתעשייה, ומול CRM</span></div></div>
+  <div class="pd-rail l5-rail"><div class="pd-st past"><i>1</i><span>מהי ERP</span></div><div class="pd-st past"><i>2</i><span>מה הארגון מרוויח</span></div><div class="pd-st past"><i>3</i><span>מה המערכת יודעת לעשות</span></div><div class="pd-st cur"><i>4</i><span>הטמעה ואתגרים</span></div><div class="pd-st "><i>5</i><span>ERP בתעשייה, ומול CRM</span></div></div>
 </section>
 
 <section class="slide ted" id="s-t-impl" data-title="פתיח: אותה תוכנה"><div class="tedin" data-ted="impl"></div></section>
 
 <section class="slide" id="e-ask" data-title="הסבר: שלוש שאלות לפני היישום">
-  <div class="kick">ERP · חלק 3 · הסבר</div>
-  <h2>לפני שמיישמים ERP: שלוש שאלות שחייבים לשאול</h2>
+  <div class="kick">ERP · חלק 4 · הסבר</div>
+  <h2>לפני שמיישמים ERP: שלוש שאלות, ושאלה רביעית</h2>
   <p class="sub st" style="font-size:18.5px">רשת בתי מרקחת שוקלת ERP. לפני שבוחרים תוכנה, ממפים את <span class="term" data-t="bproc">התהליכים העסקיים</span>.</p>
   <div class="erp-q3">
     <div class="card st" style="--c:#6d4df2"><div class="n">1</div><b>מהם התהליכים העסקיים?</b><p>אילו רצפים של פעולות הארגון מבצע, ואילו מחלקות משתתפות בכל אחד.</p><div class="eg">״מהזמנה מספק ועד מדף״, ״ממרשם ועד חיוב״, ״מגיוס עובד ועד שכר״.</div></div>
     <div class="card st" style="--c:#0f9d90"><div class="n">2</div><b>מה מאפיין אותם?</b><p>מי מבצע כל שלב, באיזה סדר, מי מאשר, ומה ייחודי לארגון.</p><div class="eg">תרופות בקירור, תאריכי תפוגה, ורוקח שחייב לאשר כל ניפוק.</div></div>
     <div class="card st" style="--c:#e8960c"><div class="n">3</div><b>כיצד זורם המידע?</b><p>איזה מידע נוצר בכל שלב, היכן הוא מתועד, ולמי הוא עובר.</p><div class="eg">המרשם יוצר ניפוק, הניפוק מעדכן מלאי, והמלאי יוצר הזמנה מהספק.</div></div>
   </div>
+  <div class="card st l5-q4"><b>4. ➕ ובספר הקורס, שאלה רביעית: כיצד ניתן לשפר את התהליך?</b> בודקים היכן קיימות כפילויות, ומחליפים הזנה ידנית ובקרה ידנית בתהליך אוטומטי, היכן שהדבר אפשרי. בשקף הבא: כך זה נראה בתרשים אמיתי.</div>
   <div class="card ez-bot st">📏 <b>למבחן:</b> כאשר שוקלים ליישם ERP, השאלה המרכזית אינה מחיר התוכנה ואינה החומרה. היא תמיד <b>תהליכית</b>: תהליכים, מאפיינים וזרימת מידע.</div>
 </section>
 
+<section class="slide" id="e5-map" data-title="דוגמה: מיפוי תהליך">
+  <div class="kick">ERP · חלק 4 · דוגמה</div>
+  <h2>מיפוי תהליך: ״מהזמנה מספק ועד מדף״ ברשת ״מרווה״</h2>
+  <p class="sub st" style="font-size:17px">כך מתעדים תהליך לפני היישום: כל שורה היא מחלקה, וכל תיבה היא שלב. רשת ״מרווה״ מפעילה 42 בתי מרקחת.</p>
+  <div class="l5-swim">
+    <div class="sw-lab" style="grid-row:1">🏪<b>סניף</b></div><div class="sw-bg" style="grid-row:1"></div><div class="sw-lab" style="grid-row:2">🛒<b>רכש</b></div><div class="sw-bg" style="grid-row:2"></div><div class="sw-lab" style="grid-row:3">🚚<b>ספק</b></div><div class="sw-bg" style="grid-row:3"></div><div class="sw-lab" style="grid-row:4">📦<b>מחסן מרכזי</b></div><div class="sw-bg" style="grid-row:4"></div><div class="sw-lab" style="grid-row:5">💰<b>כספים</b></div><div class="sw-bg" style="grid-row:5"></div>
+    <div class="sw-step st" style="grid-row:1;grid-column:2"><i>1</i><p>הרוקחת סופרת את המלאי, ורושמת בגיליון</p><small>↳ הגיליון נשלח במייל לרכש</small><em class="w">⚠️ כפילות</em></div>
+    <div class="sw-step st" style="grid-row:2;grid-column:3"><i>2</i><p>הקניין מקליד את הגיליון מחדש למערכת הרכש</p><small>↳ דרישת רכש</small><em class="w">⚠️ כפילות</em></div>
+    <div class="sw-step st" style="grid-row:2;grid-column:4"><i>3</i><p>מנהל הרכש מאשר ידנית כל הזמנה, גם של 200 ש״ח</p><small>↳ הזמנה לספק</small><em class="w">⚠️ אישור ידני</em></div>
+    <div class="sw-step st" style="grid-row:3;grid-column:5"><i>4</i><p>הספק שולח תרופות, וחשבונית מודפסת</p><small>↳ משלוח למחסן, חשבונית לכספים</small></div>
+    <div class="sw-step st" style="grid-row:4;grid-column:6"><i>5</i><p>קליטה: בדיקת טמפרטורה לתרופות בקירור, ותאריך תפוגה</p><small>↳ ניפוק לסניף</small><em class="g">✳️ מאפיין ייחודי</em></div>
+    <div class="sw-step st" style="grid-row:5;grid-column:7"><i>6</i><p>הנהלת החשבונות מקלידה את החשבונית, ומשלמת</p><em class="w">⚠️ הקלדה ידנית</em></div>
+  </div>
+  <div class="l5-q4row">
+    <div class="st"><b>1. התהליכים</b>התיבות: שישה שלבים, חמש מחלקות.</div>
+    <div class="st"><b>2. המאפיינים</b>מי מבצע, באיזה סדר, ומה ייחודי: קירור ותפוגה.</div>
+    <div class="st"><b>3. זרימת המידע</b>החיצים ↳: גיליון, מייל, חשבונית מודפסת.</div>
+    <div class="st hl"><b>4. השיפור</b>ספירה ישירות למערכת · כלל אוטומטי להזמנה עד 2,000 ש״ח · חשבונית סרוקה.</div>
+  </div>
+</section>
+
+<section class="slide" id="s-mce3" data-title="בדיקת הבנה">
+  <div class="kick">ERP · חלק 4 · שאלה אמריקאית</div>
+  <h2>בדיקת הבנה: מה מבררים תחילה?</h2>
+  <div class="qz" id="mce3"></div>
+</section>
+
 <section class="slide" id="e-chal" data-title="הסבר: האתגרים בהטמעה">
-  <div class="kick">ERP · חלק 3 · הסבר</div>
+  <div class="kick">ERP · חלק 4 · הסבר</div>
   <h2>מדוע ההטמעה קשה: ארבעה אתגרים, ומקור אחד</h2>
   <div class="erp-ch">
     <div class="card st"><span>🧱</span><b>מערכת גדולה ומורכבת</b><p>מודולים רבים, שכל אחד תלוי באחרים.</p></div>
@@ -1733,19 +2052,47 @@ tr.st{transform:none}
   </div>
 </section>
 
-<section class="slide" id="n-erp" data-title="מהעיתונות: שלושה פרויקטים שהסתבכו">
-  <div class="kick">ERP · חלק 3 · מהעיתונות</div>
-  <h2>שלושה פרויקטים של ERP שהסתבכו: מה השתבש?</h2>
-  <div class="l3-news three">
-    <div class="l3-clip st l2-nolink" data-news="lidl"></div>
-    <div class="l3-clip st l2-nolink" data-news="haribo"></div>
-    <div class="l3-clip st l2-nolink" data-news="hershey"></div>
+<section class="slide" id="e5-tco" data-title="העשרה: העלות הכוללת והתועלת">
+  <div class="kick">ERP · חלק 4 · להעשרה, לא למבחן</div>
+  <h2>מה רואים בהצעת המחיר, ומה מתגלה בפרויקט</h2>
+  <div class="l5-tco">
+    <div class="l5-ice st">
+      <svg viewBox="0 0 520 400" class="ice"><rect x="0" y="0" width="520" height="96" fill="#e9f3ff"/><rect x="0" y="96" width="520" height="304" fill="#1b3f73"/>
+        <polygon points="210,96 240,30 262,14 290,40 318,96" fill="#fff" stroke="#9ec5f0" stroke-width="2"/>
+        <polygon points="120,96 318,96 400,170 430,260 380,350 260,388 150,340 90,250 80,160" fill="#8fc1f0" opacity=".55"/></svg>
+      <div class="ice-top"><span>🔑 רישיון התוכנה</span><span>🔧 דמי תחזוקה</span></div>
+      <div class="ice-low"><span class="st">🗺️ אפיון התהליכים העסקיים</span><span class="st">🔍 בחירת מערכת מתאימה</span><span class="st">🎓 הכשרת העובדים</span><span class="st">🐞 תקלות וטעויות בשלבי ההטמעה הראשונים</span><span class="st">📉 עלויות למידה בתקופת ההסתגלות</span></div>
+      <div class="ice-cap"><b><span class="term" data-t="tco">עלות כוללת של בעלות</span></b> <span class="ltr">(Total Cost of Ownership, TCO)</span>: בפרויקטים רבים, עלות התוכנה היא החלק הקטן.</div>
+    </div>
+    <div class="col" style="gap:10px">
+      <div class="card st l5-roi"><b>📈 <span class="term" data-t="roi">תשואה על ההשקעה</span> <span class="ltr">(ROI)</span>: מתי מגיעה התועלת?</b>
+        <svg viewBox="0 0 440 170"><line x1="30" y1="80" x2="430" y2="80" stroke="#9aa3b8" stroke-dasharray="4 4"/><text x="425" y="74" font-size="12" fill="#5d6a86" text-anchor="end">0</text>
+          <path class="roi-p" d="M30 80 C 80 82, 100 150, 150 150 S 230 118, 270 80 S 360 20, 430 10" fill="none" stroke="#6d4df2" stroke-width="4"/>
+          <text x="150" y="168" font-size="13" fill="#c4472d" text-anchor="middle">ההשקעה וההטמעה</text><text x="300" y="40" font-size="13" fill="#087469" text-anchor="middle">התועלת מצטברת</text></svg>
+        <p class="l5-sm">נקודת האיזון עשויה להגיע אחרי שנה, שנתיים או עשר שנים.</p></div>
+      <div class="card st l5-sm2">📦 <b>התועלת הקלה יחסית למדידה: צמצום המלאי.</b> פחות מלאי, פחות פגמים ופגי תוקף, פחות שטחי אחסון, ופחות חוסרים שפירושם מכירות אבודות.</div>
+      <div class="card st l5-sm2">⏱️ <b>קשה יותר למדוד:</b> זמני הקלדה, בירורי מלאי, אישורים במיילים, הזמנות ״חירום״ יקרות ותיקוני טעויות.</div>
+    </div>
   </div>
-  <div class="card l2-chk st" style="margin-top:14px"><b>💬 בצ׳אט:</b> מה משותף לשלושת המקרים? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans">באף אחד מהם הבעיה לא הייתה מחשבים חלשים. בכולם הקושי היה בהתאמה בין התהליכים של הארגון לבין המערכת: אפיון, מיפוי ולוח זמנים.</div></div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> רישיון התוכנה של ״מרווה״ עלה 1.1 מיליון ש״ח. האם זו עלות הפרויקט? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>לא.</b> הפרויקט כולו עלה 5 מיליון ש״ח: אפיון והתאמות 2.6, העברת נתונים 0.5, והדרכה וליווי 0.8. זה בדיוק האתגר ״עלויות גבוהות באפיון ובהטמעה״.</div></div>
+</section>
+
+<section class="slide" id="n5-wall" data-title="מהעולם ומישראל: שישה פרויקטים">
+  <div class="kick">ERP · חלק 4 · מהעיתונות ומדוחות</div>
+  <h2>שישה פרויקטים מהעולם ומישראל: לחצו על כרטיס</h2>
+  <div class="l5-wall st" id="wall"></div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> מה משותף לששת המקרים? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans">באף אחד מהם הבעיה לא הייתה מחשבים חלשים. בכולם הקושי היה ארגוני ותהליכי: אפיון חסר, נתונים שגויים, מועד עלייה לאוויר, או עובדים שלא לוו בשינוי.</div></div>
+  <p class="l5-src st">תקצירים שלנו. מקורות: CIO, 3.7.2025; מבקר המדינה, דוח שנתי 55ב (2005), פרק ״פרויקט המרכב״ה ותקצובו״.</p>
+</section>
+
+<section class="slide" id="sim-9" data-title="הדמיה: 30 הימים הראשונים">
+  <div class="kick">ERP · חלק 4 · מבט מבפנים</div>
+  <h2>ניהול שינוי: 30 הימים הראשונים אחרי העלייה לאוויר</h2>
+  <div class="sim"><div class="sim-host"></div><ol class="sim-cap"></ol></div>
 </section>
 
 <section class="slide" id="s-chal" data-title="משחק: אתגר שנלמד, או לא?">
-  <div class="kick">ERP · חלק 3 · משחק</div>
+  <div class="kick">ERP · חלק 4 · משחק</div>
   <h2>אתגר בהטמעת ERP, או לא? 8 טענות</h2>
   <div class="row" style="margin-top:12px;gap:22px;align-items:flex-start">
     <div style="flex:1.3">
@@ -1761,12 +2108,6 @@ tr.st{transform:none}
   </div>
 </section>
 
-<section class="slide" id="s-mce3" data-title="בדיקת הבנה">
-  <div class="kick">ERP · חלק 3 · שאלה אמריקאית</div>
-  <h2>בדיקת הבנה: מה מבררים תחילה?</h2>
-  <div class="qz" id="mce3"></div>
-</section>
-
 <section class="slide memes" id="s-meme-e3" data-title="רגע של הומור">
   <div class="kick">הפסקת מם · הטמעה</div>
   <h2>פרויקט ERP, בלי פילטרים</h2>
@@ -1777,49 +2118,61 @@ tr.st{transform:none}
   </div>
 </section>
 
-<section class="slide xs" id="x-e3" data-title="סיכום חלק 3: הטמעה ואתגרים" style="--pc:#ff6a4d">
-  <div class="kick">📌 סיכום חלק 3 · הטמעה ואתגרים</div>
-  <h2>מה לקחת מחלק 3</h2>
+<section class="slide xs" id="x-e4" data-title="סיכום חלק 4: הטמעה ואתגרים" style="--pc:#ff6a4d">
+  <div class="kick">📌 סיכום חלק 4 · הטמעה ואתגרים</div>
+  <h2>מה לקחת מחלק 4</h2>
   <div class="xs-grid">
-    <ol class="xs-pts"><li style="--i:0"><div><b>שלוש שאלות לפני היישום:</b> מהם התהליכים העסקיים, מה מאפיין אותם, וכיצד זורם המידע הנוצר והמתועד במסגרתם.</div></li><li style="--i:1"><div><b>האתגרים:</b> מערכת גדולה ומורכבת, עלויות גבוהות בהקמה, עלויות גבוהות באפיון ובהטמעה, וצורך בניהול שינוי.</div></li><li style="--i:2"><div><b>מקור האתגרים:</b> יש לאפיין היטב את כל התהליך הארגוני, ולשקף אותו דרך מערכת אחת.</div></li><li style="--i:3"><div><b>מה אינו נכון:</b> ההטמעה אינה הליך פשוט, והאתגר אינו חומרתי.</div></li></ol>
+    <ol class="xs-pts"><li style="--i:0"><div><b>ארבע שאלות לפני היישום:</b> מהם התהליכים העסקיים, מה מאפיין אותם, כיצד זורם המידע הנוצר והמתועד במסגרתם, ובספר הקורס גם: כיצד ניתן לשפר.</div></li><li style="--i:1"><div><b>מיפוי תהליך</b> חושף כפילויות ואישורים ידניים שאפשר להחליף בתהליך אוטומטי.</div></li><li style="--i:2"><div><b>האתגרים:</b> מערכת גדולה ומורכבת, עלויות גבוהות בהקמה, עלויות גבוהות באפיון ובהטמעה, וצורך בניהול שינוי. מקורם: יש לאפיין היטב את כל התהליך הארגוני, ולשקף אותו דרך מערכת אחת.</div></li><li style="--i:3"><div><b>מהמקרים:</b> אינטגרציה מעבירה גם טעות. מועד העלייה לאוויר חשוב. ניהול שינוי שמתחיל באיחור פוגע בפרויקט.</div></li><li style="--i:4"><div><b>ניהול שינוי:</b> הסברה, הדרכה, שיתוף ותמיכה. התוכנה אינה משתנה; העובדים משתנים.</div></li></ol>
     <div class="xs-side">
-      <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="impl">הטמעה</span><span class="term" data-t="charz">אפיון</span><span class="term" data-t="chgm">ניהול שינוי</span><span class="term" data-t="bproc">תהליך עסקי</span></div></div>
-      <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״האתגר המרכזי ביישום ERP הוא הצורך לצייד כל עובד במחשב חזק מהדור החדש.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> האתגר הוא ארגוני ותהליכי: אפיון התהליך כולו ושיקופו במערכת אחת.</div></div>
+      <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="bproc">תהליך עסקי</span><span class="term" data-t="charz">אפיון</span><span class="term" data-t="impl">הטמעה</span><span class="term" data-t="chgm">ניהול שינוי</span><span class="term" data-t="golive">עלייה לאוויר</span><span class="term" data-t="keyuser">משתמש מפתח</span></div></div>
+      <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״כאשר רישיון התוכנה זול, הטמעת ERP היא הליך פשוט וזול.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> עיקר העלות והקושי הם באפיון, בהטמעה ובניהול השינוי, ולא ברישיון.</div></div>
     </div>
   </div>
-  <div class="xs-next">➜ בחלק הבא: מי מוכר ERP, היכן פוגשים אותה, ובמה היא שונה מ-CRM.</div>
+  <div class="xs-next">➜ בחלק הבא: מי מוכר ERP, היכן היא מותקנת, וכיצד היא מתחברת ל-CRM.</div>
 </section>
 
-<section class="slide dark pd" id="p-e4" data-title="פתיחת חלק 4: ERP בתעשייה, ומול CRM" style="--pc:#3f6fe0">
-  <div class="pd-num">4</div>
+<section class="slide dark pd" id="p-e5" data-title="פתיחת חלק 5: ERP בתעשייה, ומול CRM" style="--pc:#3f6fe0">
+  <div class="pd-num">5</div>
   <div class="pd-in">
-    <div class="kick" style="color:#ffb199">ERP · חלק 4 מתוך 4</div>
+    <div class="kick" style="color:#ffb199">ERP · חלק 5 מתוך 5</div>
     <h1 class="pd-h">ERP בתעשייה, ומול CRM</h1>
-    <p class="pd-q"><b>שאלת החלק:</b> מי מוכר ERP, היכן אתם נכנסים לתמונה, ובמה היא שונה מ-CRM?</p>
+    <p class="pd-q"><b>שאלת החלק:</b> מי מוכר ERP, היכן היא מותקנת, וכיצד היא מתחברת ל-CRM?</p>
     <div class="pd-cols">
-      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>ספקיות ומוצרים, לארגונים גדולים ולעסקים קטנים</li><li>שישים שנה של התפתחות, מהמפעל אל הארגון כולו</li><li>CRM מול ERP, ומדוע CRM נלמד בנפרד</li><li>תפקידים של בוגרי מערכות מידע, ומלכודות בבחינה</li></ul></div>
-      <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="saas">תוכנה כשירות</span></div></div>
+      <div class="pd-box"><b>מה נלמד בחלק הזה</b><ul><li>ספקיות ומוצרים, בעולם ובישראל</li><li>היכן המערכת מותקנת: בארגון, בענן או בשילוב</li><li>CRM ו-ERP: השוואה, מודול, וממשק</li><li>תפקידים, מודעת דרושים ומלכודות בבחינה</li></ul></div>
+      <div class="pd-box" style="flex:.7"><b>המושגים של החלק (לחצו להגדרה)</b><div class="pd-terms"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="onprem">במחשבי הארגון</span><span class="term" data-t="saas">תוכנה כשירות</span><span class="term" data-t="iface">ממשק</span><span class="term" data-t="module">מודול</span></div></div>
     </div>
   </div>
-  <div class="pd-rail"><div class="pd-st past"><i>1</i><span>מהי ERP</span></div><div class="pd-st past"><i>2</i><span>מה הארגון מרוויח</span></div><div class="pd-st past"><i>3</i><span>הטמעה ואתגרים</span></div><div class="pd-st cur"><i>4</i><span>ERP בתעשייה, ומול CRM</span></div></div>
+  <div class="pd-rail l5-rail"><div class="pd-st past"><i>1</i><span>מהי ERP</span></div><div class="pd-st past"><i>2</i><span>מה הארגון מרוויח</span></div><div class="pd-st past"><i>3</i><span>מה המערכת יודעת לעשות</span></div><div class="pd-st past"><i>4</i><span>הטמעה ואתגרים</span></div><div class="pd-st cur"><i>5</i><span>ERP בתעשייה, ומול CRM</span></div></div>
 </section>
 
 <section class="slide" id="i-vend-erp" data-title="מהתעשייה: ספקיות ומוצרים">
-  <div class="kick">ERP · חלק 4 · מהתעשייה</div>
+  <div class="kick">ERP · חלק 5 · מהתעשייה</div>
   <h2>מי מוכר ERP: ספקיות ומוצרים</h2>
   <div id="vendbox"></div>
-  <div class="card ez-bot st">📝 <b>להעשרה ולקריירה.</b> בבחינה, הדוגמאות שנלמדו לספקיות ERP הן <b>SAP</b> ו-<b>Oracle</b>. הדוגמה שנלמדה ל-CRM היא <b>Salesforce</b>.</div>
+  <div class="card ez-bot st">📝 <b>להעשרה ולקריירה.</b> בבחינה, הדוגמאות שנלמדו לספקיות ERP הן <b>SAP</b> ו-<b>Oracle</b>. הדוגמה שנלמדה ל-CRM היא <b>Salesforce</b>. ספר הקורס מונה ספקיות נוספות: Microsoft Dynamics, Infor, Sage, Syspro, NetSuite, Acumatica ו-Plex.</div>
+</section>
+
+<section class="slide" id="e5-deploy" data-title="הסבר: היכן המערכת מותקנת">
+  <div class="kick">ERP · חלק 5 · הסבר</div>
+  <h2>היכן המערכת מותקנת: בארגון, בענן, או בשילוב</h2>
+  <div class="l5-deps">
+    <div class="card st l5-dep"><i>🏢</i><b><span class="term" data-t="onprem">במחשבי הארגון</span></b><small><span class="ltr">On-premises</span></small><p>התוכנה והנתונים בשרתים שהארגון מחזיק ומתחזק.</p><div class="l5-eg">🏢 מפעל בתעשייה הביטחונית, ששומר את הנתונים בתוך המפעל.</div><div class="pm"><span class="p">✓ שליטה מלאה בנתונים</span><span class="m">✗ הארגון נושא בחומרה, בתחזוקה ובאבטחה</span></div></div>
+    <div class="card st l5-dep"><i>☁️</i><b><span class="term" data-t="saas">בענן</span></b><small><span class="ltr">Cloud, SaaS</span></small><p>נכנסים בדפדפן, ומשלמים דמי מנוי. הספק מתחזק את המערכת.</p><div class="l5-eg">🏢 רשת חנויות בינונית, ללא צוות שרתים.</div><div class="pm"><span class="p">✓ הקמה מהירה, ללא שרתים</span><span class="m">✗ תלות בספק ובחיבור לאינטרנט</span></div></div>
+    <div class="card st l5-dep"><i>🔀</i><b><span class="term" data-t="iface">בשילוב</span></b><small><span class="ltr">Hybrid</span></small><p>חלק מהמערכת בארגון, וחלק בענן, עם ממשק ביניהם.</p><div class="l5-eg">🏢 בנק: הכספים בשרתי הבנק, וניהול ההוצאות של העובדים בענן.</div><div class="pm"><span class="p">✓ גמישות</span><span class="m">✗ נדרש ממשק בין החלקים</span></div></div>
+  </div>
+  <div class="card ez-bot st">📝 <b>לפי ספר הקורס:</b> מערכת ERP יכולה להיות מיושמת במחשבי הארגון, בענן או באופן משולב, וניתנת להתאמה לדרישות העסק.</div>
+  <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> קופת חולים מחזיקה מידע רפואי רגיש, וגם מנהלת הוצאות נסיעה של אלפי עובדים. איזו אפשרות מתאימה לה, ומדוע? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans">ייתכן ש<b>שילוב</b>: המידע הרגיש בשרתי הארגון, וניהול ההוצאות בענן. השיקול הוא רגישות הנתונים מול עלות ותחזוקה.</div></div>
 </section>
 
 <section class="slide" id="t-time-erp" data-title="ציר זמן: מהמפעל אל הארגון כולו">
-  <div class="kick">ERP · חלק 4 · התפתחות</div>
+  <div class="kick">ERP · חלק 5 · התפתחות</div>
   <h2>שישים שנה: מחישוב חומרי גלם ועד מערכת לכל הארגון</h2>
   <div id="tlbox" class="l2-nolink"></div>
   <div class="card ez-bot st">🧭 <b>מה השתנה:</b> ההיקף. תחילה חומרי הגלם, אחר כך המפעל כולו, ולבסוף הארגון כולו. <b>מה לא השתנה:</b> הרעיון של חישוב ותכנון על בסיס נתונים משותפים. הציר להעשרה בלבד.</div>
 </section>
 
 <section class="slide" id="e-cmp" data-title="הסבר: CRM מול ERP">
-  <div class="kick">ERP · חלק 4 · השוואה</div>
+  <div class="kick">ERP · חלק 5 · השוואה</div>
   <h2>CRM מול ERP: שתי מערכות ליבה, שני תחומים</h2>
   <table class="l2-tbl l2-cmp">
     <tr><th></th><th>CRM</th><th>ERP</th></tr>
@@ -1834,7 +2187,7 @@ tr.st{transform:none}
 </section>
 
 <section class="slide" id="e-crm-in-erp" data-title="הסבר: CRM כמודול בתוך ERP">
-  <div class="kick">ERP · חלק 4 · הערה חשובה</div>
+  <div class="kick">ERP · חלק 5 · הערה חשובה</div>
   <h2>אם ERP יכולה לכלול גם CRM, מדוע למדנו CRM בנפרד?</h2>
   <p class="sub st" style="font-size:18px">ראינו שמערכת ERP בנויה ממודולים, ושהארגון בוחר אילו מהם להפעיל. אחד המודולים האפשריים הוא <b>מודול לניהול קשרי לקוחות</b>. כלומר, ERP יכולה להקיף גם את התחום של CRM.</p>
   <div class="row" style="margin-top:10px;gap:14px;align-items:stretch">
@@ -1843,6 +2196,12 @@ tr.st{transform:none}
   </div>
   <div class="card st" style="margin-top:10px;font-size:18px;line-height:1.5;background:#fff7e0">📏 <b>הכלל:</b> יש ארגונים שמפעילים CRM בלבד, ללא ERP, ולכן CRM נלמד כנושא נפרד. לעומת זאת, ארגון שדרישותיו חורגות מניהול קשרי הלקוחות יפעיל בדרך כלל מערכת ERP שלמה, שיכולה לכלול גם CRM.</div>
   <div class="card l2-chk st" style="margin-top:10px"><b>💬 בצ׳אט:</b> מדוע לא נהוג להפעיל מודול מלאי בלבד, כפי שמפעילים CRM בלבד? <button class="btn l2-rev" style="margin-inline-start:10px">🔍 חשיפה</button><div class="l2-ans"><b>משום שניהול מלאי תלוי בתהליכים אחרים:</b> הזמנות, רכש, ייצור וכספים. ללא אינטגרציה של מידע עמם, המספר שבמחסן אינו משרת את הארגון. שירות ללקוחות, לעומת זאת, יכול להיות תחום העיסוק כולו.</div></div>
+</section>
+
+<section class="slide" id="sim-10" data-title="הדמיה: עסקה עוברת בממשק">
+  <div class="kick">ERP · חלק 5 · מבט מבפנים</div>
+  <h2>ממשק: עסקה שנסגרה ב-CRM ממשיכה ב-ERP</h2>
+  <div class="sim"><div class="sim-host"></div><ol class="sim-cap"></ol></div>
 </section>
 
 <section class="slide" id="x-int" data-title="סיכום אינטגרטיבי: CRM ו-ERP">
@@ -1862,13 +2221,13 @@ tr.st{transform:none}
 </section>
 
 <section class="slide" id="s-prac-int" data-title="תרגול עצמי: CRM בתוך ERP">
-  <div class="kick">ERP · חלק 4 · תרגול עצמי</div>
+  <div class="kick">ERP · חלק 5 · תרגול עצמי</div>
   <h2>שש שאלות על היחס בין CRM ל-ERP, עם משוב לכל אפשרות</h2>
   <div class="qz" id="qi"></div>
 </section>
 
 <section class="slide" id="s-cve" data-title="משחק: CRM, ERP או שתיהן?">
-  <div class="kick">ERP · חלק 4 · משחק</div>
+  <div class="kick">ERP · חלק 5 · משחק</div>
   <h2>CRM, ERP, או שתיהן? 12 מאפיינים</h2>
   <div class="row" style="margin-top:12px;gap:22px;align-items:flex-start">
     <div style="flex:1.3">
@@ -1885,14 +2244,39 @@ tr.st{transform:none}
 </section>
 
 <section class="slide" id="i-jobs-erp" data-title="תפקידים סביב ERP">
-  <div class="kick">ERP · חלק 4 · קריירה</div>
+  <div class="kick">ERP · חלק 5 · קריירה</div>
   <h2>היכן אתם נכנסים: תפקידים סביב ERP</h2>
   <div id="jobbox"></div>
   <div class="card ez-bot st">🎓 <b>מה מהתואר משרת זאת:</b> ניתוח מערכות ואפיון תהליכים, בסיסי נתונים, והבנה של התהליך העסקי. שלוש השאלות שלפני היישום הן עבודתו של מנתח המערכות.</div>
 </section>
 
+<section class="slide" id="e5-job" data-title="מהתעשייה: מודעת דרושים">
+  <div class="kick">ERP · חלק 5 · קריירה</div>
+  <h2>כך נראית מודעת דרושים בתחום: מה מהשיעור מופיע בה?</h2>
+  <div class="l5-jobw">
+    <div class="l5-job st"><div class="jb-h"><div class="jb-logo">🧩</div><div><b>מיישם/ת ERP, תחום רכש ומלאי</b><small>חברת ייעוץ ומערכות מידע · מרכז הארץ · משרה מלאה · היברידי</small></div><span class="mk-tag">הדמיה</span></div>
+      <b class="jb-s">תיאור התפקיד</b><ul>
+        <li><mark class="c4">אפיון</mark> <mark class="c0">תהליכים עסקיים</mark> של רכש ומלאי אצל לקוחות מהתעשייה ומהקמעונאות</li>
+        <li>הגדרת המערכת: <mark class="c3">הרשאות</mark>, כללי אישור ו<mark class="c3">מדרג סמכויות</mark></li>
+        <li>הדרכת <mark class="c4">משתמשי מפתח</mark> וליווי <mark class="c4">העלייה לאוויר</mark></li>
+        <li>עבודה מול צוות הפיתוח על <mark class="c5">ממשקים</mark> למערכות CRM</li></ul>
+      <b class="jb-s">דרישות</b><ul>
+        <li>תואר במערכות מידע, בתעשייה וניהול, או בתחום דומה</li>
+        <li>הבנה של תהליך ״מהזמנה ועד תשלום״</li>
+        <li>שליטה ב-Excel. היכרות עם SQL, יתרון</li>
+        <li>יכולת הדרכה ועבודה מול לקוחות</li></ul>
+    </div>
+    <div class="col" style="gap:10px">
+      <div class="card st l5-map2"><b>מה מהקורס מופיע במודעה</b>
+        <p><mark class="c0">תהליכים עסקיים</mark> שיעור 4</p><p><mark class="c3">הרשאות, מדרג סמכויות</mark> חלק 3</p><p><mark class="c4">אפיון, משתמשי מפתח, עלייה לאוויר</mark> חלק 4</p><p><mark class="c5">ממשקים ל-CRM</mark> חלק 5</p></div>
+      <div class="card st l5-sm2">🎓 <b>שימו לב:</b> המודעה אינה מבקשת ״מומחה למחשבים״. היא מבקשת מי שמבין תהליך עסקי, ויודע להעביר אנשים לדרך עבודה חדשה.</div>
+    </div>
+  </div>
+  <p class="l5-src st">מודעה שכתבנו, על בסיס דרישות נפוצות במודעות בתחום. אינה מודעה של חברה מסוימת.</p>
+</section>
+
 <section class="slide" id="e-traps-erp" data-title="מלכודות ERP בבחינה">
-  <div class="kick">ERP · חלק 4 · הסבר</div>
+  <div class="kick">ERP · חלק 5 · הסבר</div>
   <h2>שש מלכודות ERP שחוזרות בבחינה</h2>
   <div class="l2-traps" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
     <div class="card st" style="font-size:17px;line-height:1.5"><b>1. החלפת שמות.</b> ״CRM מקיפה את כל התהליך הארגוני, כולל שכר ומלאי.״<br>✓ זו ההגדרה של ERP.</div>
@@ -1914,17 +2298,35 @@ tr.st{transform:none}
   </div>
 </section>
 
-<section class="slide xs" id="x-e4" data-title="סיכום חלק 4: ERP בתעשייה, ומול CRM" style="--pc:#3f6fe0">
-  <div class="kick">📌 סיכום חלק 4 · ERP בתעשייה, ומול CRM</div>
-  <h2>מה לקחת מחלק 4</h2>
+<section class="slide xs" id="x-e5" data-title="סיכום חלק 5: ERP בתעשייה, ומול CRM" style="--pc:#3f6fe0">
+  <div class="kick">📌 סיכום חלק 5 · ERP בתעשייה, ומול CRM</div>
+  <h2>מה לקחת מחלק 5</h2>
   <div class="xs-grid">
-    <ol class="xs-pts"><li style="--i:0"><div><b>ספקיות:</b> SAP ו-Oracle הן הדוגמאות שנלמדו ל-ERP. Salesforce היא הדוגמה ל-CRM.</div></li><li style="--i:1"><div><b>CRM מול ERP:</b> CRM עוסקת בלקוחות. ERP מקיפה את התהליך הארגוני כולו.</div></li><li style="--i:2"><div><b>CRM בתוך ERP:</b> ERP יכולה לכלול מודול CRM. יש ארגונים, למשל בתחום השירות, שמפעילים CRM בלבד, ולכן CRM נלמד בנפרד.</div></li><li style="--i:3"><div><b>המשותף:</b> שתיהן מאפשרות אוטומציה של חלק מהתהליכים, ובשתיהן ההצלחה תלויה גם בארגון עצמו.</div></li><li style="--i:4"><div><b>בבחינה:</b> בודקים אם ההגדרה הוצמדה למערכת הנכונה, ונזהרים ממילים כמו ״מבטיחה״, ״פשוט״ ו״כל״.</div></li></ol>
+    <ol class="xs-pts"><li style="--i:0"><div><b>ספקיות:</b> SAP ו-Oracle הן הדוגמאות שנלמדו ל-ERP. Salesforce היא הדוגמה ל-CRM.</div></li><li style="--i:1"><div><b>היכן מותקנת:</b> במחשבי הארגון, בענן, או באופן משולב.</div></li><li style="--i:2"><div><b>CRM מול ERP:</b> CRM עוסקת בלקוחות. ERP מקיפה את התהליך הארגוני כולו, ויכולה לכלול גם מודול CRM.</div></li><li style="--i:3"><div><b>ממשק:</b> חיבור בין שתי מערכות נפרדות. כאשר CRM היא מודול ב-ERP, אין צורך בממשק.</div></li><li style="--i:4"><div><b>בבחינה:</b> בודקים אם ההגדרה הוצמדה למערכת הנכונה, ונזהרים ממילים כמו ״מבטיחה״, ״פשוט״, ״כל״ ו״מחייבת״.</div></li></ol>
     <div class="xs-side">
-      <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="erp">ERP</span><span class="term" data-t="crm">CRM</span></div></div>
-      <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״מערכת ERP מיועדת לניהול קשרי לקוחות.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> ניהול קשרי לקוחות הוא CRM. ERP היא מערכת לתכנון משאבי הארגון.</div></div>
+      <div class="card xs-terms"><b>המושגים של החלק</b><div class="xs-tl"><span class="term" data-t="sap">SAP</span><span class="term" data-t="oracle">Oracle</span><span class="term" data-t="salesforce">Salesforce</span><span class="term" data-t="iface">ממשק</span><span class="term" data-t="erp">ERP</span><span class="term" data-t="crm">CRM</span></div></div>
+      <div class="card xs-chk"><b>✔ בדקו את עצמכם</b><p class="xs-st">״כאשר CRM היא מודול בתוך ERP, נדרש ממשק כדי להעביר עסקה מה-CRM להזמנה ב-ERP.״</p><p class="hint" style="font-size:15px;margin:6px 0 8px">כתבו בצ׳אט: נכון או לא נכון?</p><button class="btn xs-rev">🔍 חשיפת התשובה</button><div class="xs-ans"><b>לא נכון.</b> מודול הוא חלק מאותה מערכת, על אותו מאגר נתונים. ממשק נדרש רק בין שתי מערכות נפרדות.</div></div>
     </div>
   </div>
-  <div class="xs-next">➜ עכשיו: תרגול מסכם. סקר בצ׳אט ו-15 שאלות, מהקל אל הכבד.</div>
+  <div class="xs-next">➜ עכשיו: מקרה מסכם, ואחריו תרגול על ERP כולו.</div>
+</section>
+
+<section class="slide" id="cs5-case" data-title="מקרה מסכם: רשת ״מרווה״">
+  <div class="kick">מקרה מסכם · ERP כולו</div>
+  <h2>רשת ״מרווה״: מהאפיון, דרך העלייה לאוויר, ועד שנה אחרי</h2>
+  <div class="l5-case">
+    <div class="card st"><i>①</i><b>לפני</b><p>42 בתי מרקחת. גיליון מלאי בכל סניף, הקלדה חוזרת ברכש, אישור ידני לכל הזמנה, וחשבוניות שמוקלדות ידנית.</p></div>
+    <div class="card st"><i>②</i><b>הפרויקט</b><p>7 חודשי אפיון. תקציב של 5 מיליון ש״ח:</p><div class="l5-stack sm"><i style="--w:22%;--c:#6d4df2">1.1</i><i style="--w:52%;--c:#ff6a4d">2.6</i><i style="--w:10%;--c:#e8960c"></i><i style="--w:16%;--c:#0f9d90">0.8</i></div><p class="l5-sm"><b style="color:#6d4df2">■</b> רישיון 1.1 · <b style="color:#ff6a4d">■</b> אפיון והתאמות 2.6 · <b style="color:#e8960c">■</b> העברת נתונים 0.5 · <b style="color:#0f9d90">■</b> הדרכה וליווי 0.8 (מיליוני ש״ח)</p></div>
+    <div class="card st"><i>③</i><b>העלייה לאוויר, 1.3.2026</b><p>ביום הראשון: 41% מהניפוקים במערכת, ו-23 גיליונות בשימוש. ביום 30: 97%, אחרי הדרכה, משתמשי מפתח והחלטת הנהלה.</p></div>
+    <div class="card st"><i>④</i><b>שנה אחרי</b><p>המלאי ירד ב-18%. פגי התוקף ירדו בחצי. חשבונית ספק מטופלת ביום אחד במקום שישה. הרווח עדיין לא השתנה.</p></div>
+  </div>
+  <div class="card ez-bot st">🧭 <b>בשקף הבא: שש שאלות על המקרה.</b> כל שאלה מציגה את הנתונים שהיא צריכה, כך שאין צורך לחזור לשקף הזה.</div>
+</section>
+
+<section class="slide" id="s-case-q" data-title="מקרה מסכם: שש שאלות">
+  <div class="kick">מקרה מסכם · שש שאלות</div>
+  <h2>רשת ״מרווה״: שש שאלות, מהבינוני אל הקשה</h2>
+  <div class="qz" id="qc"></div>
 </section>
 
 <section class="slide" id="s-poll" data-title="סקר בצ׳אט">
@@ -1938,29 +2340,31 @@ tr.st{transform:none}
 
 <section class="slide" id="s-prac-erp" data-title="תרגול מסכם: 15 שאלות על ERP">
   <div class="kick">תרגול מסכם · ERP</div>
-  <h2>15 שאלות על ERP: חמש קלות, חמש בינוניות, חמש קשות</h2>
+  <h2>15 שאלות על ERP כולו: ארבע קלות, חמש בינוניות, שש קשות</h2>
   <div class="qz" id="qe"></div>
 </section>
 
 <section class="slide" id="s-sum" data-title="ERP בשקף אחד">
   <div class="kick">סיכום השיעור</div>
   <h2>ERP כולו בשקף אחד</h2>
-  <div class="card st" style="margin-top:12px;font-size:20px;line-height:1.55;background:#ece8ff"><b>ERP, מערכת לתכנון משאבי הארגון,</b> היא מערכת אחת שיש לה היכולת להקיף את כל התהליך הארגוני והניהולי: ייזום פרויקט, אישור תקציבי, ניהול מלאי, הקצאת עובדים וטיפול בשכר. דוגמאות לספקיות: SAP ו-Oracle.</div>
-  <div class="row" style="margin-top:12px;gap:14px">
-    <div class="card st" style="flex:1;border-top:6px solid #6d4df2"><b style="font-size:20px;color:#4f33c9">🔗 מה מאפיין אותה</b><p style="font-size:18px;line-height:1.55;margin-top:8px">אינטגרציה של מידע בין התהליכים העסקיים, הרכיב החיוני ביותר. מיכון של חלק מהתהליכים, לפי שיקול דעת ההנהלה.</p></div>
-    <div class="card st" style="flex:1;border-top:6px solid var(--asset)"><b style="font-size:20px;color:#087469">📦 מה היא מאפשרת</b><p style="font-size:18px;line-height:1.55;margin-top:8px">פחות הקלדה ופחות טעויות. יכולה להקטין עלויות ולקצר זמני אספקה. שליטה במלאים, באופן שקוף למחלקות ובזמן אמת.</p></div>
-    <div class="card st" style="flex:1;border-top:6px solid var(--coral)"><b style="font-size:20px;color:#c4472d">🧱 מה קשה בה</b><p style="font-size:18px;line-height:1.55;margin-top:8px">מערכת מורכבת, עלויות הקמה, אפיון והטמעה, וניהול שינוי. לפני היישום שואלים: מהם התהליכים, מה מאפיין אותם, וכיצד זורם המידע.</p></div>
+  <div class="card st" style="margin-top:8px;font-size:19px;line-height:1.5;background:#ece8ff"><b>ERP, מערכת לתכנון משאבי הארגון,</b> היא מערכת אחת שיש לה היכולת להקיף את כל התהליך הארגוני והניהולי: ייזום פרויקט, אישור תקציבי, ניהול מלאי, הקצאת עובדים וטיפול בשכר. דוגמאות לספקיות: SAP ו-Oracle.</div>
+  <div class="l5-sum4">
+    <div class="card st" style="border-top:6px solid #6d4df2"><b style="color:#4f33c9">🔗 מה מאפיין אותה</b><p>אינטגרציה של מידע, הרכיב החיוני ביותר. מיכון של חלק מהתהליכים, לפי שיקול דעת ההנהלה.</p></div>
+    <div class="card st" style="border-top:6px solid #e8960c"><b style="color:#a86500">🧰 מה יש בה</b><p>רכש, חשבוניות, שרשרת אספקה, נכסים והוצאות. מסך לפי תפקיד, והרשאות לפי דרגים.</p></div>
+    <div class="card st" style="border-top:6px solid var(--asset)"><b style="color:#087469">📦 מה היא מאפשרת</b><p>פחות הקלדה ופחות טעויות. יכולה להקטין עלויות ולקצר זמני אספקה. מלאים בשקיפות ובזמן אמת. תחומי אחריות ברורים.</p></div>
+    <div class="card st" style="border-top:6px solid var(--coral)"><b style="color:#c4472d">🧱 מה קשה בה</b><p>מורכבות, עלויות הקמה, אפיון והטמעה, וניהול שינוי. לפני היישום: תהליכים, מאפיינים, זרימת מידע ושיפור.</p></div>
   </div>
-  <div class="card st" style="margin-top:12px;font-size:18.5px;line-height:1.55">⚖️ <b>ומול CRM:</b> CRM עוסקת בלקוחות, ו-ERP בתהליך הארגוני כולו. ERP יכולה לכלול גם מודול CRM, אך יש ארגונים שמפעילים CRM בלבד. שתיהן מאפשרות אוטומציה, ובשתיהן התוכנה לבדה אינה מספיקה.</div>
+  <div class="card st" style="margin-top:10px;font-size:17.5px;line-height:1.5">⚖️ <b>ומול CRM:</b> CRM עוסקת בלקוחות, ו-ERP בתהליך הארגוני כולו. ERP יכולה לכלול מודול CRM, ואם הן נפרדות, ממשק מחבר ביניהן. ☁️ <b>היכן:</b> בארגון, בענן, או בשילוב.</div>
 </section>
 
 <section class="slide" id="s-hw" data-title="עד השיעור הבא">
   <div class="kick">עד השיעור הבא</div>
-  <h2>שלוש משימות לשבוע הקרוב</h2>
-  <div class="route" style="grid-template-columns:repeat(3,1fr)">
-    <div class="rcard"><div class="n">1</div><b>לקרוא</b><span>את סיכום שיעור 5 (PDF באתר), ולוודא שכל מושג במילון ברור.</span></div>
-    <div class="rcard"><div class="n">2</div><b>לשחק</b><span>״אתגר שנלמד, או לא?״ (שקף 9) ו״CRM, ERP או שתיהן?״ (שקף 20). בכל טעות: מה במשפט הטעה אתכם?</span></div>
-    <div class="rcard"><div class="n">3</div><b>לתרגל</b><span>שש השאלות על היחס בין CRM ל-ERP (שקף 19) ו-15 שאלות התרגול המסכם (שקף 26). קוראים את ההסבר לכל אפשרות.</span></div>
+  <h2>ארבע משימות לשבוע הקרוב</h2>
+  <div class="route" style="grid-template-columns:repeat(4,1fr)">
+    <div class="rcard"><div class="n">1</div><b>לקרוא</b><span>את סיכום שיעור 5 (PDF באתר), ולוודא שכל מושג במילון ברור, כולל חמש היכולות הבסיסיות.</span></div>
+    <div class="rcard"><div class="n">2</div><b>לחזור על ההדמיות</b><span>מהקטלוג ועד התשלום (שקף 7), 30 הימים הראשונים (שקף 23) והממשק בין CRM ל-ERP (שקף 33). בכל לחיצה: איזה מושג מוצג כאן?</span></div>
+    <div class="rcard"><div class="n">3</div><b>לשחק</b><span>״איזו יכולת בסיסית?״ (שקף 9), ״אתגר שנלמד, או לא?״ (שקף 24) ו״CRM, ERP או שתיהן?״ (שקף 36).</span></div>
+    <div class="rcard"><div class="n">4</div><b>לתרגל</b><span>המקרה המסכם (שקף 43), שש השאלות על CRM ו-ERP (שקף 35) ו-15 השאלות על ERP כולו (שקף 45). קוראים את ההסבר לכל אפשרות.</span></div>
   </div>
   <div class="card" style="margin-top:22px;font-size:19px;line-height:1.55;background:var(--navy2);color:#fff">👋 <b>בשיעור הבא:</b> מסחר אלקטרוני ויישומיו. המודלים העסקיים ברשת, והמערכות שמאחורי חנות מקוונת.</div>
 </section>
@@ -2880,6 +3284,188 @@ const QP=[
   o:['הקטנת הזמן המוקדש להקלדת נתונים','מיכון של תהליכים עסקיים','היתרון הלוגיסטי: המלאי אינו שקוף למחלקות בזמן אמת','כל היתרונות ממומשים: עדכון שבועי הוא זמן אמת','ניהול קשרי הלקוחות'],a:2,
   ex:['היתרון הזה דווקא ממומש: הזנה אחת במקום הקלדה חוזרת.','המקרה אינו עוסק בפעילות אוטומטית, אלא במועד שבו הנתון מתעדכן.','נכונה. היתרון הלוגיסטי דורש שלושה דברים: שליטה במלאים, שקיפות למחלקות, וזמן אמת. עדכון שבועי אינו זמן אמת, ולכן הטבחים אינם יכולים לסמוך על המספר.','זמן אמת פירושו עדכון מיד עם האירוע. עדכון בסוף השבוע אינו כזה.','ניהול קשרי לקוחות הוא CRM, ואינו אחד היתרונות של ERP שנלמדו.'],fb:'🔎',tip:'מערכת אחת אינה מספיקה: הנתון חייב להתעדכן בזמן אמת כדי שיהיה שקוף למחלקות.'}
 ];
+/* ===== lesson 5 (27.11.2026, draft): ERP parts 3 to 5. Loaded after data_erp.js.
+   Content source: the course book (Coursebook Intro IT 2026 C, ERP chapter): basic capabilities of off-the-shelf ERP,
+   further benefits, the fourth question before implementation, TCO and ROI (enrichment). Cases: CIO (3.7.2025) and
+   the State Comptroller annual report 55b (2005), chapter on מרכב"ה. Numbers in the simulators are illustrative. ===== */
+
+Object.assign(G,{
+offshelf:{h:'תוכנת מדף',en:'Off-the-shelf software',p:'תוכנה מוכנה, שנמכרת לארגונים רבים באותה גרסה בסיסית, ומותאמת לכל ארגון לפי צרכיו.',f:'מערכת ERP כללית שספק התוכנה מוכר לארגונים רבים. היא כוללת את התהליכים העסקיים המרכזיים, ולכל הפחות: אוטומציה של תהליכי רכש, ניהול חשבוניות, ניהול שרשרת אספקה, ניהול נכסים וניהול הוצאות. בקצה השני עומדת מערכת שנתפרת ממודולים ספציפיים לבקשת הלקוח.',ex:'מפעל ״אלון״ רוכש מערכת ERP מוכנה. כבר ביום הראשון יש בה מסכים לרכש, לחשבוניות ולמלאי. ההתאמה לתהליכי המפעל נעשית אחר כך.',tr:'תוכנת מדף אינה מוכנה לעבודה ביום הראשון: עדיין נדרשים אפיון והתאמה.'},
+procauto:{h:'אוטומציה של תהליכי רכש',en:'Procurement automation',p:'הזמנות מספקים שנוצרות ומאושרות לפי כללים, מתוך הקטלוג של הספק.',f:'יכולת בסיסית של מערכות ERP: קישור ישיר לקטלוגים של ספקים, ביצוע רכישות לפי כללים מוגדרים ובתעריפים שסוכמו, ייעול תהליך האישור, ניצול הנחות לפי ההסכמים, וחיבור לניהול החשבוניות, לתשלום ולמשלוח.',ex:'כאשר מלאי הלכה יורד מתחת ל-50 ליטר, המערכת מזמינה 200 ליטר מהספק שעימו נחתם הסכם מסגרת, ומנכה את ההנחה שסוכמה.',tr:'אוטומציה של הרכש אינה מחייבת אוטומציה של כל התהליכים. ההנהלה קובעת אילו שלבים יתבצעו באופן אוטומטי.'},
+invoice:{h:'ניהול חשבוניות',en:'Invoice management',p:'הנפקה, קבלה ותשלום של חשבוניות, באופן אוטומטי.',f:'יכולת בסיסית של מערכות ERP: הנפקת חשבוניות ללקוחות, קליטת חשבוניות מספקים בכל פורמט (סרוקה או אלקטרונית), שליפת הסכום ותנאי התשלום, וניהול התשלום עד להשלמתו, כולל תשלומים תקופתיים כמו דמי שכירות.',ex:'חשבונית סרוקה של ספק נקלטת. המערכת שולפת ממנה סכום של 9,317 ש״ח ותנאי תשלום של 30 יום, ומתזמנת את התשלום.',tr:'ניהול חשבוניות אינו רק הפקת חשבונית ללקוח. הוא כולל גם קליטה ותשלום של חשבוניות מספקים.'},
+scm:{h:'ניהול שרשרת אספקה',en:'Supply chain management',p:'אוטומציה של האחסון והמשלוח של פריטי המלאי.',f:'יכולת בסיסית של מערכות ERP: ניהול האחסון והמשלוח של חלקים, חומרי גלם, מוצרים מוגמרים וחומרי צריכה. היכולת משפרת את השליטה במלאי, את זמני האספקה ואת התמיכה בלקוחות.',ex:'השולחנות המוכנים במפעל ״אלון״ מוקצים להזמנות לפי סדר קבלתן, ותעודת המשלוח מופקת מהמערכת.',tr:'ניהול שרשרת אספקה עוסק בפריטים פיזיים: אחסון ומשלוח. ניהול הלקוחות עצמם הוא CRM.'},
+asset:{h:'ניהול נכסים',en:'Asset management',p:'מעקב אחר המכונות, הציוד והרכוש של הארגון.',f:'יכולת בסיסית של מערכות ERP: תיעוד הרכישה של רכוש קבוע, מכונות, ציוד ונכסים פיננסיים, כולל מועד הרכישה, אחריות, תחזוקה, שווי, הפחתה (הירידה בערך הנכס) ומיקום, כך שמצבת הנכסים ידועה בכל עת.',ex:'כרטיס הנכס של מסור CNC מציג מתי נרכש, עד מתי האחריות, מתי הטיפול הבא והיכן הוא מוצב.',tr:'נכס אינו פריט מלאי: מכונה משמשת את הארגון לאורך שנים, ואינה נמכרת ללקוח.'},
+expense:{h:'ניהול הוצאות',en:'Expense management',p:'הגשה, אישור ומעקב של הוצאות, כמו נסיעות וכנסים.',f:'יכולת בסיסית של מערכות ERP: ניהול הוצאות על נסיעות, מחקר, ייעוץ, כנסים ומהלכים שיווקיים, כולל השוואת מחירים ואישור מול הממונים לפי מדרג הסמכויות שקבעה החברה.',ex:'דוח הוצאות על נסיעה לתערוכה בסך 5,430 ש״ח עובר לאישור סמנכ״לית הכספים, משום שהוא גבוה מ-2,000 ש״ח.',tr:'המערכת אינה קובעת את מדרג הסמכויות. החברה קובעת אותו, והמערכת אוכפת אותו.'},
+costdrv:{h:'מחולל עלות',en:'Cost driver',p:'הגורם העיקרי שמשפיע על גובה העלויות.',f:'גורם שהשינוי בו משנה את העלות של פעילות או של מוצר. כאשר המידע הכספי של כל המחלקות מרוכז במערכת אחת, מנהלים יכולים לזהות את מחוללי העלות העיקריים, ולבחון היכן נדרש בירור.',ex:'במפעל ״אלון״ חומרי הגלם הם 54% מהעלות, ולכן עלייה במחיר העץ משפיעה על הרווח יותר מכל שינוי אחר.',tr:'מחולל עלות אינו בהכרח הסעיף שחרג מהתקציב. הוא הגורם שהעלות תלויה בו יותר מכול.'},
+respz:{h:'תחומי אחריות',en:'Areas of responsibility',p:'מי אחראי לכל שלב בתהליך.',f:'הגדרה ברורה של בעל התפקיד האחראי לכל שלב בתהליך הארגוני. מערכת ERP מאפשרת נגישות לכל המידע, ומשייכת תפקידים והרשאות ביצוע לפי דרגים. לכן מנהלים יכולים לראות אילו מחלקות הובילו לחריגה תקציבית, והיכן נוצרו עיכובים, עודפי מלאי או חוסרים.',ex:'לוח הבקרה מראה שהשיווק ניצל 131% מתקציבו. החריגה משויכת למנהלת השיווק, האחראית לתקציב זה.',tr:'המערכת אינה ״מלמדת אחריות״. היא משייכת תפקידים והרשאות, ומציגה מי ביצע כל שלב.'},
+perm:{h:'הרשאה',en:'Permission',p:'מה מותר לבעל תפקיד לראות ולבצע במערכת.',f:'כלל במערכת שקובע אילו מסכים בעל תפקיד רואה, ואילו פעולות הוא רשאי לבצע. המשתמש נכנס למערכת אחת עם שם משתמש וסיסמה, ומקבל גישה לפי הרשאתו.',ex:'הקניינית רשאית ליצור הזמנת רכש ולאשר הזמנה עד 10,000 ש״ח, אך אינה רשאית לשלם לספק.',tr:'מערכת אחת אינה פירושה שכל עובד רואה הכול. כל עובד רואה את מה שהרשאתו מתירה.'},
+golive:{h:'עלייה לאוויר',en:'Go-live',p:'היום שבו הארגון מתחיל לעבוד בפועל במערכת החדשה.',f:'המועד שבו המערכת הישנה מפסיקה לשמש לעבודה השוטפת, והעובדים מתחילים לבצע את פעולותיהם במערכת החדשה. התקופה שאחריו דורשת ליווי צמוד, משום שבה מתגלות רוב התקלות.',ex:'רשת ״מרווה״ עלתה לאוויר ב-1.3.2026. בשבוע הראשון נפתחו 180 פניות לצוות התמיכה.',tr:'העלייה לאוויר אינה סוף הפרויקט. ניהול השינוי נמשך גם אחריה.'},
+keyuser:{h:'משתמש מפתח',en:'Key user',p:'עובד שמקבל הדרכה מעמיקה, ומסייע לעמיתיו במחלקה.',f:'עובד מתוך המחלקה, שמשתתף באפיון, מקבל הדרכה מעמיקה, ומשמש כתובת ראשונה לשאלות של עמיתיו. זהו כלי מקובל בניהול שינוי.',ex:'בכל סניף של ״מרווה״ נבחר רוקח אחד כמשתמש מפתח. עמיתיו פונים אליו לפני שהם פונים לצוות התמיכה.',tr:'משתמש מפתח אינו איש מחשבים. הוא עובד מהמחלקה, שמכיר את התהליך.'},
+tco:{h:'עלות כוללת של בעלות',en:'Total Cost of Ownership, TCO',p:'כל מה שהמערכת עולה לאורך חייה, ולא רק הרישיון.',f:'סך העלויות של מערכת לאורך תקופת השימוש: רישיון ותחזוקה, ובנוסף אפיון התהליכים, בחירת המערכת, הכשרת העובדים, טיפול בתקלות ובטעויות בשלבי ההטמעה הראשונים, ועלויות הלמידה בתקופת ההסתגלות. להעשרה, לא למבחן.',ex:'הרישיון של ״מרווה״ עלה 1.1 מיליון ש״ח, אך הפרויקט כולו עלה 5 מיליון ש״ח.',tr:'בפרויקטים רבים, עלות התוכנה היא החלק הקטן של העלות הכוללת.'},
+roi:{h:'תשואה על ההשקעה',en:'Return on Investment, ROI',p:'כמה תועלת מתקבלת ביחס להשקעה, ומתי.',f:'היחס בין התועלת שהמערכת מייצרת לבין ההשקעה בה. ב-ERP התועלת עשויה להגיע אחרי שנה, שנתיים או עשר שנים. צמצום המלאי הוא מהתועלות הקלות יחסית למדידה. להעשרה, לא למבחן.',ex:'אם המלאי ירד ב-2 מיליון ש״ח בזכות המערכת, זו תועלת שנמדדת ישירות בספרים.',tr:'תועלת שמגיעה אחרי שנים אינה ״כישלון״. כך נראית עקומת התועלת של פרויקטים רבים.'},
+threeway:{h:'התאמה משולשת',en:'Three-way match',p:'השוואה בין ההזמנה, הקבלה במחסן והחשבונית, לפני התשלום.',f:'בדיקה אוטומטית שמשווה את הכמות ואת המחיר בהזמנת הרכש, בקבלת הסחורה ובחשבונית הספק. רק כאשר שלושתם תואמים, החשבונית מאושרת לתשלום. להעשרה: כך פועל ניהול החשבוניות בפועל.',ex:'הוזמנו 200 ליטר ב-39.48 ש״ח לליטר, נקלטו 200 ליטר, והחשבונית היא על 200 ליטר באותו מחיר: התשלום מאושר.',tr:'ההתאמה המשולשת היא אינטגרציה בפעולה: שלושה מסמכים משלוש מחלקות, באותה מערכת.'},
+iface:{h:'ממשק',en:'Interface',p:'חיבור בין שתי מערכות, שמעביר ביניהן נתונים באופן אוטומטי.',f:'רכיב שמחבר בין שתי מערכות מידע נפרדות, כך שנתונים שנוצרו באחת עוברים לשנייה ללא הקלדה חוזרת. כאשר CRM היא מודול בתוך ERP, אין צורך בממשק, משום ששתיהן עובדות על אותו מאגר נתונים.',ex:'עסקה שסומנה ב-CRM כ״נסגרה בהצלחה״ יוצרת הזמנת לקוח ב-ERP, וסטטוס החשבונית חוזר לתיק הלקוח.',tr:'ממשק מחבר שתי מערכות נפרדות. מודול הוא חלק של אותה מערכת.'},
+onprem:{h:'התקנה במחשבי הארגון',en:'On-premises',p:'המערכת מותקנת על שרתים של הארגון עצמו.',f:'אופן התקנה שבו התוכנה והנתונים נמצאים בשרתים שהארגון מחזיק ומתחזק. הארגון שולט בנתונים, ונושא בעלויות החומרה, התחזוקה והאבטחה.',ex:'מפעל בתעשייה הביטחונית מחזיק את מערכת ה-ERP בשרתים בתוך המפעל.',tr:'במחשבי הארגון אינו פירושו ״במחשב של כל עובד״. המערכת נמצאת בשרתים של הארגון.'}
+});
+
+/* ---------- part 3 game: which basic capability? ---------- */
+const CAPS={keys:[['buy','רכש','קטלוג, כללים, הנחות'],['inv','חשבוניות','הנפקה, קליטה, תשלום'],['scm','שרשרת אספקה','אחסון ומשלוח'],['ast','נכסים','מכונות, ציוד, אחריות'],['exp','הוצאות','נסיעות, כנסים, אישורים']],
+ items:[
+ ['הזמנה של 5,000 ברגים נשלחת לספק מתוך הקטלוג שלו, במחיר שנקבע בהסכם','buy','קישור לקטלוג הספק ורכישה בתעריף שסוכם: אוטומציה של תהליכי רכש.'],
+ ['חשבונית סרוקה של ספק נקלטת, והמערכת שולפת ממנה סכום ותנאי תשלום','inv','קליטת חשבונית בכל פורמט ושליפת הסכום: ניהול חשבוניות.'],
+ ['מעקב אחר מועד הטיפול הבא במלגזה, ואחר תקופת האחריות שלה','ast','אחריות ותחזוקה של ציוד: ניהול נכסים.'],
+ ['עובדת מגישה קבלות על מונית ועל מלון מכנס מקצועי, לאישור הממונה','exp','הוצאות נסיעה וכנסים, ואישור הממונה: ניהול הוצאות.'],
+ ['הקצאת מוצרים מוגמרים מהמחסן להזמנות, ותיאום המשלוח ללקוחות','scm','אחסון ומשלוח של פריטי מלאי: ניהול שרשרת אספקה.'],
+ ['ניצול הנחת כמות שסוכמה עם הספק, כאשר ההזמנה עוברת 1,000 יחידות','buy','ניצול הנחות לפי ההסכמים: אוטומציה של תהליכי רכש.'],
+ ['תשלום דמי השכירות של המשרדים בכל חודש, לפי החוזה','inv','תשלומים תקופתיים, כמו דמי שכירות: ניהול חשבוניות.'],
+ ['רישום הרכישה של מכונת אריזה חדשה, מיקומה במפעל ושוויה','ast','רכישה, מיקום ושווי של מכונה: ניהול נכסים.'],
+ ['אחסון חומרי גלם בשלושה מחסנים, ומעקב אחר תנועתם ביניהם','scm','אחסון ותנועה של פריטי מלאי: ניהול שרשרת אספקה.'],
+ ['אישור תקציב לכנס שיווקי, לפי מדרג הסמכויות בחברה','exp','כנסים ומהלכים שיווקיים, באישור לפי מדרג הסמכויות: ניהול הוצאות.']
+ ]};
+
+/* ---------- part 4: six real cases (our own summary, source and link) ---------- */
+const MRK_URL='https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/1950-2008/2005-55b/2005-55b-205-Merkava.pdf';
+const WALL=[
+ {flag:'🇩🇪',co:'Lidl',yr:'2011 עד 2018',h:'שבע שנים, ופרויקט שבוטל',what:'רשת המזון ניהלה את המלאי לפי מחיר הקנייה, ודרשה להתאים לכך את תוכנת המדף. ההתאמות גררו בעיות נוספות, והפרויקט בוטל.',num:'כ-500 מיליון אירו הושקעו לפני הביטול',tag:'אפיון והתאמה · עלויות גבוהות',src:'CIO, 3.7.2025',url:CIO_URL},
+ {flag:'🇩🇪',co:'Haribo',yr:'2018',h:'דובוני הגומי נעלמו מהמדפים',what:'החברה העבירה 16 מפעלים ב-10 מדינות למערכת אחת. התהליכים הישנים לא מופו כראוי, והחברה התקשתה לעקוב אחר חומרי הגלם והמלאי.',num:'ירידה של 25% במכירות דובוני הזהב ב-2018',tag:'אפיון: מיפוי התהליכים',src:'CIO, 3.7.2025',url:CIO_URL},
+ {flag:'🇺🇸',co:'Hershey',yr:'1999',h:'ממתקים במלאי, והזמנות שלא סופקו',what:'החברה קבעה פרויקט של 30 חודשים, אף שהספקים המליצו על 48. היא קיצרה את הבדיקות, ועלתה לאוויר בעונת השיא שלפני החגים.',num:'הזמנות של יותר מ-100 מיליון דולר שלא עובדו',tag:'מערכת מורכבת · קיצור האפיון והבדיקות',src:'CIO, 3.7.2025',url:CIO_URL},
+ {flag:'🇨🇦',co:'Target Canada',yr:'2013',h:'מדפים ריקים, ומחסנים מלאים',what:'נתוני המוצרים הוקלדו ידנית, עם מידות, מחירים ויצרנים שגויים. המערכת המשולבת העבירה את הטעויות לכל שרשרת האספקה.',num:'לפי הדיווח, רק כ-30% מהנתונים היו נכונים',tag:'הטמעה: העברת נתונים · אינטגרציה מעבירה גם טעות',src:'CIO, 3.7.2025',url:CIO_URL},
+ {flag:'🇺🇸',co:'National Grid',yr:'2012',h:'עלייה לאוויר, שבוע אחרי סופה',what:'חברת החשמל והגז עלתה לאוויר פחות משבוע אחרי סופת ההוריקן סנדי. היו טעויות בשכר, חשבוניות ספקים לא עובדו, והדיווח הכספי השתבש.',num:'15,000 חשבוניות ספקים שלא עובדו',tag:'מערכת מורכבת · מועד העלייה לאוויר',src:'CIO, 3.7.2025',url:CIO_URL},
+ {flag:'🇮🇱',co:'מרכב״ה, משרדי הממשלה',yr:'2001 עד 2004',h:'מבקר המדינה: ניהול השינוי החל באיחור',what:'מערכת ERP אחת לכספים, ללוגיסטיקה, לכוח האדם ולניהול נכסי המדינה, על בסיס תוכנת SAP. לפי הדוח, ניהול השינויים הארגוניים החל רק ביולי 2004, כשנה וחצי אחרי תחילת ההטמעה במשרדים.',num:'הוצאות מדווחות של כ-58 מיליון ש״ח עד יוני 2004',tag:'צורך בניהול שינוי · מהלך מורכב ועתיר משאבים',src:'מבקר המדינה, דוח שנתי 55ב, 2005',url:MRK_URL}
+];
+
+/* ---------- simulators: purchase to payment, go-live, CRM to ERP through an interface ---------- */
+const SIM8={who:'רינה, קניינית במפעל הרהיטים ״אלון״',app:'ERP · רכש וחשבוניות',
+ steps:[
+  {cap:'<b>״השוואה בקטלוגים״.</b> המערכת מציגה את הקטלוגים המקושרים של שני ספקים, ובוחרת לפי הכלל שקבעה ההנהלה: ספק עם הסכם מסגרת, אם האספקה בתוך 5 ימים. ההנחה שסוכמה מנוכה מהמחיר.',tag:'קטלוג ספק · כלל מוגדר · הנחה לפי הסכם'},
+  {cap:'<b>״יצירת הזמנה״.</b> ההזמנה בסך 7,896 ש״ח נמוכה מ-10,000 ש״ח, ולכן היא מאושרת ונשלחת לספק באופן אוטומטי.',tag:'ייעול תהליך האישור'},
+  {cap:'<b>״קבלת סחורה״.</b> 200 ליטר לכה נקלטים במחסן. המלאי מתעדכן לכל המחלקות.',tag:'אינטגרציה עם המלאי'},
+  {cap:'<b>״קליטת חשבונית״.</b> חשבונית הספק נסרקת. המערכת שולפת ממנה את הסכום ואת תנאי התשלום, ומשווה אותה להזמנה ולקבלה.',tag:'ניהול חשבוניות · התאמה משולשת'},
+  {cap:'<b>״תזמון תשלום״.</b> התשלום נקבע לפי תנאי התשלום, והרישום בהנהלת החשבונות מתבצע באופן אוטומטי.',tag:'מהרכש ועד התשלום, במערכת אחת'}
+ ]};
+const SIM9={who:'חדר הבקרה של ההטמעה, רשת בתי המרקחת ״מרווה״',app:'ERP · 30 הימים הראשונים',
+ steps:[
+  {cap:'<b>״הדרכה בסניפים״.</b> הדרכה מעשית לכל תפקיד, על תהליכי העבודה של הסניף עצמו, ולא הדרכה כללית על התוכנה.',tag:'הדרכה'},
+  {cap:'<b>״משתמשי מפתח״.</b> בכל סניף נבחר רוקח אחד, שמקבל הדרכה מעמיקה ועונה לעמיתיו. הפניות לצוות התמיכה יורדות.',tag:'שיתוף ותמיכה'},
+  {cap:'<b>״החלטת הנהלה״.</b> המנכ״לית מסבירה לעובדים מדוע עוברים למערכת, וקובעת שגיליונות האקסל הישנים נועלים לקריאה בלבד.',tag:'הסברה · מחויבות ההנהלה'},
+  {cap:'<b>יום 30.</b> כמעט כל הניפוקים נרשמים במערכת, ודיוק המלאי עולה. התוכנה לא השתנתה בכל 30 הימים. העובדים השתנו.',tag:'ניהול שינוי: אותה תוכנה, תוצאה אחרת'}
+ ]};
+const SIM10={who:'יואב, איש מכירות, ומפעל הרהיטים ״אלון״',app:'CRM ◂ ממשק ◂ ERP',
+ steps:[
+  {cap:'<b>״נסגרה בהצלחה״.</b> יואב מסמן ב-CRM שהעסקה עם רשת המלונות נסגרה. הממשק יוצר ב-ERP הזמנת לקוח, ללא הקלדה חוזרת.',tag:'ממשק: מ-CRM ל-ERP'},
+  {cap:'<b>הזמנה 1077 ב-ERP.</b> המערכת בודקת זמינות: 80 כיסאות במלאי, ו-40 נשלחים לייצור. נקבע מועד אספקה.',tag:'ERP: התהליך הפנימי'},
+  {cap:'<b>״משלוח וחשבונית״.</b> תעודת המשלוח מפיקה חשבונית ללקוח, ורישום בהנהלת החשבונות.',tag:'ERP: כספים'},
+  {cap:'<b>חזרה ל-CRM.</b> בתיק הלקוח מופיעים עכשיו ההזמנה, המשלוח והחשבונית. יואב עונה ללקוח מבלי לפנות להנהלת החשבונות.',tag:'ממשק: מ-ERP ל-CRM'}
+ ]};
+
+/* ---------- role-based home screens (part 3, slide e5-roles) ---------- */
+const ROLES=[
+ {k:'buy',ic:'🛒',t:'רינה, קניינית',tiles:[['📝','דרישות רכש פתוחות','7'],['🚚','ספקים באיחור','2'],['🏷️','הסכמי מסגרת שפגים החודש','1'],['📈','חיסכון מהנחות, השנה','38,400 ש״ח']],
+  can:[['יצירת הזמנת רכש',1],['אישור הזמנה עד 10,000 ש״ח',1],['אישור הזמנה מעל 10,000 ש״ח',0],['קליטת סחורה במחסן',0],['תשלום לספק',0]]},
+ {k:'wh',ic:'📦',t:'שלומי, מחסנאי',tiles:[['📥','משלוחים צפויים היום','3'],['⚠️','פריטים מתחת למינימום','5'],['🔢','ספירות מלאי פתוחות','1'],['📤','ניפוקים לייצור','12']],
+  can:[['יצירת הזמנת רכש',0],['אישור הזמנה עד 10,000 ש״ח',0],['אישור הזמנה מעל 10,000 ש״ח',0],['קליטת סחורה במחסן',1],['תשלום לספק',0]]},
+ {k:'fin',ic:'💰',t:'דנה, סמנכ״לית כספים',tiles:[['✅','הזמנות לאישור','4'],['🧾','חשבוניות לתשלום השבוע','19'],['🔴','מחלקות בחריגה','1'],['🏦','יתרת מזומנים','1.2 מ׳ ש״ח']],
+  can:[['יצירת הזמנת רכש',0],['אישור הזמנה עד 10,000 ש״ח',1],['אישור הזמנה מעל 10,000 ש״ח',1],['קליטת סחורה במחסן',0],['תשלום לספק',1]]}
+];
+
+/* ---------- questions ---------- */
+/* warm-up on lesson 4 (new questions, not the lesson 4 self-practice) */
+const QW=[
+ {lv:1,pic:'📚',topic:'אינטגרציה',stem:'בחנות ספרים מקוונת פועלת מערכת ERP. לקוחה רוכשת באתר עותק של ספר.',claims:[],ask:'מה צפוי להתרחש במערכת באותו רגע, ללא הקלדה נוספת?',
+  o:['המחסנאי מקבל דואר אלקטרוני, ומעדכן את המלאי בסוף היום','המלאי במחסן יורד בעותק אחד, והנהלת החשבונות רואה את המכירה','הנהלת החשבונות מקלידה את המכירה בסוף החודש','שום דבר: המכירה נשמרת באתר בלבד','המערכת מזמינה מהספק 100 עותקים, ללא קשר למלאי'],a:1,
+  ex:['זהו המצב שלפני ERP: מידע שעובר במייל, ומתעדכן באיחור.','נכונה. המכירה הוזנה פעם אחת, והמידע עבר בין התהליכים: מכירה, מלאי וכספים. זו אינטגרציה של מידע.','הקלדה חוזרת היא בדיוק מה ש-ERP חוסכת.','באתר נוצרת הזמנה, וב-ERP היא ממשיכה לכל המחלקות.','מיכון פועל לפי כללים שקבעה ההנהלה, ולא ״ללא קשר למלאי״.'],fb:'📚',tip:'הזנה אחת, כל המחלקות: אינטגרציה של מידע.'},
+ {lv:1,pic:'🤖',topic:'מיכון או אינטגרציה',stem:'במפעל ״אלון״, כל חשבונית ספק עד 1,000 ש״ח משולמת באופן אוטומטי. חשבונית גבוהה יותר עוברת לאישור מנהלת הכספים.',claims:[],ask:'איזה מושג מתואר כאן בעיקר?',
+  o:['אינטגרציה של מידע','מיכון (אוטומציה) של חלק מהתהליכים, לפי שיקול דעת ההנהלה','היתרון הלוגיסטי','מודול הייצור','תיק לקוח של 360 מעלות'],a:1,
+  ex:['אינטגרציה עוסקת במעבר המידע בין התהליכים. כאן הדגש הוא על שלב שמתבצע ללא מעורבות אנושית, ועל שלב שנשאר בטיפול אנושי.','נכונה. חלק מהתשלומים אוטומטיים, וחלק מאושרים בידי אדם, לפי כלל שקבעה ההנהלה.','היתרון הלוגיסטי עוסק במלאים.','המקרה עוסק בכספים, ולא בייצור.','זהו מושג של CRM.'],fb:'🤖',tip:'מיכון: חלק מהתהליכים, לפי כלל שקבעה ההנהלה.'},
+ {lv:2,pic:'🗂️',topic:'מה הופך מערכת ל-ERP',stem:'ספק תוכנה מציע לחברה ״מודול שכר בלבד״. המודול שומר את הנתונים במאגר נפרד, ואינו מקבל מידע ממערכת הנוכחות או מהכספים.',claims:[],ask:'מה חסר כדי שהפתרון יתאים להגדרה של ERP?',
+  o:['מחשבים חזקים יותר במחלקת השכר','אינטגרציה של מידע: שילוב עם יתר התהליכים העסקיים, על מאגר נתונים אחד','מודול לניהול קמפיינים','אפליקציה לעובדים','לא חסר דבר: מודול שכר הוא ERP'],a:1,
+  ex:['האתגר ב-ERP אינו חומרתי.','נכונה. ERP היא מערכת אחת, שבה המודולים עובדים על מאגר אחד, והמידע עובר ביניהם. מודול מבודד אינו מקיים זאת.','ניהול קמפיינים הוא רכיב של CRM.','אפליקציה אינה תנאי בהגדרה.','מודול מבודד, על מאגר נפרד, אינו מקיף את התהליך הארגוני.'],fb:'🗂️',tip:'מודול לכל תחום, מאגר אחד לכולם.'}
+];
+
+/* part 3 check (claims, exam style of 2026C) */
+MCI.push(
+ {id:'mc5a',pic:'🍞🛒🧾',topic:'יכולות בסיסיות',stem:'בחברת ״קייטרינג גליל״ פועלת מערכת ERP. כאשר מלאי הקמח יורד מתחת ל-300 ק״ג, נשלחת הזמנה לספק מתוך הקטלוג שלו, במחיר שסוכם בהסכם המסגרת. חשבונית הספק נסרקת, והמערכת משלמת אותה בתום 30 יום, אם הכמות והמחיר תואמים את ההזמנה ואת הקבלה במחסן.',claims:['התיאור תואם את יכולת ״אוטומציה של תהליכי רכש״, שנלמדה כאחת היכולות הבסיסיות של מערכות ERP.','קליטת החשבונית הסרוקה ותשלומה לפי תנאי התשלום שייכים ליכולת ״ניהול חשבוניות״.','מאחר שההזמנה נשלחת באופן אוטומטי, המערכת מחייבת שגם כל הוצאה אחרת בחברה, כגון נסיעה לכנס, תאושר באופן אוטומטי.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-2','טענות 2 ו-3','כל הטענות נכונות','כל יתר האפשרויות שגויות'],a:1,
+  ex:['גם טענה 2 נכונה: ניהול חשבוניות כולל קליטה של חשבוניות ספקים ותשלומן.','נכונה. טענה 3 שגויה: ההנהלה קובעת אילו תהליכים ימוכנו, ואין חובה למכן את כולם. הוצאות כמו נסיעה מאושרות לפי מדרג הסמכויות.','טענה 3 שגויה, וטענה 1 נכונה.','טענה 3 שגויה: אוטומציה בתהליך אחד אינה מחייבת אוטומציה בכל התהליכים.','אחת האפשרויות האחרות נכונה.'],
+  fb:'🛒',tip:'״מחייבת״ ו״כל״ בהקשר של מיכון: כמעט תמיד שגוי.'}
+);
+
+/* closing practice: 15 questions on all of ERP, rebuilt for lesson 5 (sharper level 2 and 3) */
+QE.length=0;QE.push(
+ /* level 1 */
+ {lv:1,pic:'🧰',topic:'יכולות בסיסיות',stem:'אילו מהבאות נלמדו כיכולות בסיסיות של מערכת ERP כללית (תוכנת מדף)?',claims:[],ask:'',
+  o:['ניהול קמפיינים, טירגוט ותיק לקוח של 360 מעלות','אוטומציה של תהליכי רכש, ניהול חשבוניות, ניהול שרשרת אספקה, ניהול נכסים וניהול הוצאות','עיבוד תנועות בקופה בלבד','הפקת דוחות שוטפים למנהלי הביניים בלבד','בניית אתר מסחר אלקטרוני'],a:1,
+  ex:['אלה רכיבים ומושגים של CRM.','נכונה. אלה חמש היכולות הבסיסיות שמערכת ERP כללית כוללת לכל הפחות.','זו TPS, וגם היא אינה ״בלבד״ ב-ERP.','זו MIS.','מסחר אלקטרוני הוא נושא נפרד.'],fb:'🧰',tip:'רכש, חשבוניות, שרשרת אספקה, נכסים והוצאות.'},
+ {lv:1,pic:'🏷️',topic:'ספקיות',stem:'סטודנט כתב בבחינה: ״SAP, Oracle ו-Salesforce הן שלוש הדוגמאות שנלמדו לספקיות של מערכות ERP.״',claims:[],ask:'מה נכון לגבי המשפט?',
+  o:['המשפט נכון','המשפט שגוי: Salesforce היא הדוגמה שנלמדה ל-CRM. הדוגמאות ל-ERP הן SAP ו-Oracle','המשפט שגוי: SAP היא הדוגמה ל-CRM','המשפט שגוי: Oracle אינה עוסקת בתוכנה','המשפט שגוי: לא נלמדו דוגמאות לספקיות'],a:1,
+  ex:['Salesforce אינה הדוגמה ל-ERP.','נכונה.','SAP היא דוגמה לספקית ERP.','Oracle היא דוגמה לספקית ERP.','נלמדו דוגמאות.'],fb:'🏷️',tip:'SAP ו-Oracle: ERP. Salesforce: CRM.'},
+ {lv:1,pic:'☁️',topic:'היכן מותקנת',stem:'לפי ספר הקורס, היכן יכולה להיות מיושמת מערכת ERP?',claims:[],ask:'',
+  o:['רק בשרתים של הארגון','רק בענן','במחשבי הארגון, בענן, או באופן משולב','רק במחשב האישי של כל עובד','רק אצל ספק התוכנה, ללא גישה מהארגון'],a:2,
+  ex:['זו אפשרות אחת מתוך שלוש.','זו אפשרות אחת מתוך שלוש.','נכונה. שלוש האפשרויות נלמדו.','המערכת אינה מותקנת בנפרד אצל כל עובד: זו מערכת אחת.','בענן, הארגון ניגש למערכת דרך הדפדפן.'],fb:'☁️',tip:'בארגון, בענן, או בשילוב.'},
+ {lv:1,pic:'❓',topic:'לפני היישום',stem:'כאשר שוקלים ליישם מערכת ERP, אילו שאלות חייבים לשאול, לפי הנלמד?',claims:[],ask:'',
+  o:['מהו מחיר הרישיון, ומהו מחיר המחשבים','מהם התהליכים העסקיים, מה מאפיין אותם, וכיצד זורם המידע הנוצר והמתועד במסגרתם','כמה לקוחות חדשים תביא המערכת','איזו מערכת רכשו המתחרים','כמה עובדים יפוטרו אחרי ההטמעה'],a:1,
+  ex:['השאלה המרכזית אינה כספית ואינה חומרתית.','נכונה. ובספר הקורס נוספת שאלה רביעית: כיצד ניתן לשפר את התהליך.','איתור לקוחות הוא תועלת של CRM.','הבחירה נגזרת מהתהליכים של הארגון עצמו.','זו אינה אחת השאלות שנלמדו.'],fb:'❓',tip:'השאלה המרכזית ב-ERP תמיד תהליכית.'},
+ /* level 2 */
+ {lv:2,pic:'🏗️',topic:'נכס או מלאי',stem:'חברת בנייה רכשה מנוף ב-1.2 מיליון ש״ח. במערכת ה-ERP נרשמים מועד הרכישה, תקופת האחריות, הטיפולים, המיקום באתרי הבנייה, ושווי המנוף בכל שנה.',claims:[],ask:'איזו יכולת בסיסית של ERP מתוארת כאן?',
+  o:['ניהול שרשרת אספקה','ניהול נכסים','ניהול הוצאות','ניהול חשבוניות','ניהול קמפיינים'],a:1,
+  ex:['שרשרת אספקה עוסקת באחסון ובמשלוח של פריטי מלאי. המנוף אינו נמכר ואינו מאוחסן לצורך משלוח.','נכונה. רכישה, אחריות, תחזוקה, מיקום ושווי של ציוד: ניהול נכסים.','ניהול הוצאות עוסק בהוצאות כמו נסיעות וכנסים, ובאישורן.','הרכישה עצמה כוללת חשבונית, אך המעקב לאורך השנים הוא ניהול נכסים.','זהו רכיב של CRM.'],fb:'🏗️',tip:'מכונה שמשמשת את הארגון לאורך שנים: נכס. פריט שנמכר: מלאי.'},
+ {lv:2,pic:'💳',topic:'מדרג סמכויות',stem:'בחברת ״אור״ נקבע: הוצאה עד 2,000 ש״ח מאושרת בידי הממונה הישיר, הוצאה של 2,000 עד 10,000 ש״ח בידי סמנכ״לית הכספים, והוצאה גבוהה יותר בידי המנכ״ל. עובד הגיש דוח הוצאות של 5,430 ש״ח על נסיעה לתערוכה.',claims:[],ask:'מה צפוי לעשות מערכת ה-ERP?',
+  o:['לאשר את הדוח באופן אוטומטי, משום שזו מערכת ERP','להעביר את הדוח לאישור סמנכ״לית הכספים, לפי מדרג הסמכויות שקבעה החברה','להעביר את הדוח למנכ״ל, משום שכל נסיעה לחו״ל מאושרת בידיו','לדחות את הדוח, משום שהמערכת אינה מטפלת בהוצאות','לשלוח את הדוח למחלקת השיווק'],a:1,
+  ex:['ERP אינה מחייבת אישור אוטומטי. היא פועלת לפי הכללים שקבעה החברה.','נכונה. ניהול הוצאות כולל אישור מול הממונים לפי מדרג הסמכויות. 5,430 ש״ח נמצא בטווח של סמנכ״לית הכספים.','הכלל בחברה תלוי בסכום, ולא ביעד הנסיעה.','ניהול הוצאות הוא אחת היכולות הבסיסיות של ERP.','אין לכך בסיס בתיאור.'],fb:'💳',tip:'החברה קובעת את מדרג הסמכויות. המערכת אוכפת אותו.'},
+ {lv:2,pic:'🗺️',topic:'השאלה הרביעית',stem:'יועצת ממפה ברשת בתי מרקחת את התהליך ״מהזמנה מספק ועד מדף״. היא מגלה שהרוקחת סופרת מלאי ורושמת בגיליון, והקניין מקליד את אותו גיליון מחדש. היא ממליצה שהספירה תוזן פעם אחת, ישירות למערכת.',claims:[],ask:'על איזו שאלה היא עונה בהמלצה זו?',
+  o:['מהם התהליכים העסקיים?','מה מאפיין את התהליכים?','כיצד זורם המידע?','כיצד ניתן לשפר את התהליך, למשל באיתור כפילויות?','מהו מחיר הרישיון?'],a:3,
+  ex:['התהליך כבר ידוע: ״מהזמנה מספק ועד מדף״.','המאפיינים (מי מבצע, באיזה סדר) כבר תועדו. ההמלצה היא שינוי.','זרימת המידע תועדה כשמצאה את הגיליון שעובר לקניין. ההמלצה עצמה היא שיפור.','נכונה. ספר הקורס מוסיף לשלוש השאלות שאלה רביעית: כיצד ניתן לשפר. איתור כפילויות והחלפתן הם שיפור.','זו אינה אחת השאלות.'],fb:'🗺️',tip:'שלוש השאלות מתארות את המצב. השאלה הרביעית משפרת אותו.'},
+ {lv:2,pic:'🔌',topic:'ממשק או מודול',stem:'בחברה א׳, מערכת CRM של ספק אחד ומערכת ERP של ספק אחר מחוברות כך שעסקה שנסגרה ב-CRM יוצרת הזמנה ב-ERP. בחברה ב׳, ניהול קשרי הלקוחות הוא מודול בתוך מערכת ה-ERP.',claims:[],ask:'איזה משפט נכון?',
+  o:['בשתי החברות נדרש ממשק','בחברה א׳ החיבור הוא ממשק בין שתי מערכות נפרדות. בחברה ב׳ אין צורך בממשק, משום שהמודולים עובדים על אותו מאגר','בחברה ב׳ נדרש ממשק, ובחברה א׳ לא','ERP אינה יכולה לכלול מודול CRM','ממשק הוא שם נוסף למודול'],a:1,
+  ex:['בחברה ב׳ מדובר במערכת אחת.','נכונה. ממשק מחבר שתי מערכות. מודול הוא חלק של אותה מערכת.','הסדר הפוך.','ERP יכולה לכלול מודול CRM.','ממשק מחבר מערכות נפרדות. מודול הוא חלק ממערכת אחת.'],fb:'🔌',tip:'שתי מערכות: ממשק. מערכת אחת עם מודולים: מאגר משותף.'},
+ {lv:2,pic:'🧑‍🤝‍🧑',topic:'ניהול שינוי',stem:'חברת הפצה עלתה לאוויר עם ERP. אחרי שבועיים, 60% מהקליטות במחסן עדיין נרשמות בגיליון אקסל, ומוקלדות למערכת בסוף השבוע. התוכנה עובדת ללא תקלות.',claims:[],ask:'איזה צעד מתאים ביותר, לפי מה שנלמד על אתגרי ההטמעה?',
+  o:['להחליף ספקית תוכנה','לרכוש מחשבים חזקים יותר למחסן','ניהול שינוי: הדרכה מעשית, משתמשי מפתח במחסן, והחלטת הנהלה שהגיליון אינו משמש עוד לעבודה','להוסיף מודול לניהול קמפיינים','לבטל את המיכון של תהליכי הרכש'],a:2,
+  ex:['התוכנה עובדת. הבעיה אינה בספקית.','האתגר אינו חומרתי.','נכונה. העובדים לא עברו לדרך העבודה החדשה. זהו האתגר ״צורך בניהול שינוי״.','ניהול קמפיינים שייך ל-CRM.','המיכון אינו הגורם לבעיה.'],fb:'🧑‍🤝‍🧑',tip:'כשהתוכנה עובדת והעובדים לא: ניהול שינוי.'},
+ /* level 3 */
+ {lv:3,pic:'⚖️',topic:'טענות',stem:'לפניכם מספר טענות לגבי מערכות ERP:',claims:['מתן גישה לנתונים מעודכנים מכלל המחלקות באמצעות ERP מאפשר למנהלים לזהות את מחוללי העלות העיקריים, ולהגדיר בצורה ברורה יותר תחומי אחריות.','המערכת משייכת תפקידים והרשאות ביצוע לפי דרגים, ולכן כל עובד רואה ומבצע בה כל פעולה.','ERP יכולה לתרום ליתרון התחרותי של הארגון, לאו דווקא באופן ישיר, אלא כתוצאה מיתר התועלות שלה.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-3','טענות 2 ו-3','כל הטענות נכונות','כל יתר האפשרויות שגויות'],a:1,
+  ex:['גם טענה 3 נכונה.','נכונה. טענה 2 שגויה: הרשאות לפי דרגים פירושן שכל עובד רואה ומבצע רק את מה שהרשאתו מתירה.','טענה 2 שגויה.','טענה 2 שגויה: היא סותרת את עצמה. הרשאות קיימות כדי להגביל.','אחת האפשרויות האחרות נכונה.'],fb:'⚖️',tip:'קראו כל טענה עד הסוף: ״ולכן כל עובד...״ הפך טענה נכונה לשגויה.'},
+ {lv:3,pic:'🧱',topic:'טענות',stem:'לפניכם מספר טענות לגבי הטמעת ERP:',claims:['האתגר המרכזי בהטמעה אינו התקנת התוכנה, אלא הצורך לאפיין היטב את כל התהליך הארגוני ולשקף אותו באמצעות מערכת אחת.','כאשר רישיון התוכנה נרכש במחיר נמוך, האתגר ״עלויות גבוהות באפיון ובהטמעה״ אינו רלוונטי.','בפרויקט שבו העובדים ממשיכים לעבוד בדרך הישנה אחרי העלייה לאוויר, לא טופל כראוי הצורך בניהול שינוי.'],ask:CLQ,
+  o:['טענות 1 ו-3','טענה 1 בלבד','טענות 2 ו-3','כל הטענות נכונות','כל הטענות שגויות'],a:0,
+  ex:['נכונה. טענה 2 שגויה: עלויות האפיון וההטמעה נפרדות ממחיר הרישיון, ולעיתים גבוהות ממנו בהרבה.','גם טענה 3 נכונה.','טענה 2 שגויה.','טענה 2 שגויה.','טענות 1 ו-3 נכונות.'],fb:'🧱',tip:'מחיר התוכנה הוא רק חלק מהעלות. האפיון, ההטמעה והאנשים הם עיקר העבודה.'},
+ {lv:3,pic:'🧾',topic:'טענות',stem:'במפעל פועלת מערכת ERP. לפניכם מספר טענות:',claims:['כאשר הכמות בחשבונית הספק אינה תואמת את הכמות שנקלטה במחסן, המערכת יכולה לעכב את התשלום עד לבירור, משום שההזמנה, הקבלה והחשבונית נמצאות באותה מערכת.','קליטה של חשבוניות סרוקות ושליפת תנאי התשלום מהן שייכות לניהול שרשרת האספקה.','אוטומציה של תהליכי רכש כוללת ניצול הנחות לפי ההסכמים עם הספקים.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-2','טענות 1 ו-3','טענות 2 ו-3','כל הטענות נכונות'],a:2,
+  ex:['גם טענה 3 נכונה.','טענה 2 שגויה.','נכונה. טענה 2 שגויה: קליטת חשבוניות ושליפת תנאי התשלום שייכות לניהול חשבוניות.','טענה 2 שגויה, וטענה 1 נכונה.','טענה 2 שגויה.'],fb:'🧾',tip:'השוואת הזמנה, קבלה וחשבונית אפשרית רק כאשר המידע משולב.'},
+ {lv:3,pic:'🔎',topic:'הסקה',stem:'רשת קמעונאית עלתה לאוויר עם ERP. נתוני 60,000 המוצרים הוקלדו ידנית מקבצים ישנים. אחרי העלייה לאוויר, מערכת הרכש הזמינה כמויות שגויות, והמחסנים לא הצליחו לאחסן משטחים שמידותיהם הוזנו בטעות. חשבוניות הספקים לא תאמו את ההזמנות.',claims:[],ask:'איזו מסקנה נתמכת בצורה הטובה ביותר?',
+  o:['הבעיה היא האינטגרציה עצמה, ולכן עדיף שכל מחלקה תעבוד במערכת נפרדת','שגיאות בנתונים שהוזנו פעם אחת עברו, בזכות האינטגרציה, לכל התהליכים. העברת הנתונים היא חלק מההטמעה, ודורשת בקרה','הבעיה נובעת ממחשבים חלשים במחסנים','מערכת ERP אינה מתאימה לרשתות קמעונאיות','הבעיה תיפתר אם כל התהליכים יהפכו לאוטומטיים'],a:1,
+  ex:['בלי אינטגרציה אין ERP, וגם אין את יתרונותיה. הבעיה היא באיכות הנתונים שהוזנו.','נכונה. אינטגרציה מעבירה מידע בין התהליכים, ולכן גם טעות עוברת לכל מקום. כך קרה ל-Target Canada.','האתגר אינו חומרתי.','ERP מתאימה לארגונים שתהליכיהם חורגים מניהול קשרי לקוחות, כמו רשתות קמעונאיות.','אוטומציה של נתונים שגויים מגדילה את הנזק.'],fb:'🔎',tip:'אינטגרציה מעבירה מידע. מידע שגוי עובר באותה מהירות.'},
+ {lv:3,pic:'🧠',topic:'הסקה',stem:'חברת שירותי ניקיון מעסיקה 40 עובדים, אין לה מלאי משמעותי, והיא משתמשת ב-CRM לניהול הלקוחות, החוזים והפניות. היא שוקלת לרכוש ERP שלמה, ״כי כך עושות חברות גדולות״. לעומתה, מפעל לאריזות מנהל מלאי, רכש, ייצור, שכר לעובדי משמרות ונכסים כמו מכונות.',claims:[],ask:'איזו מסקנה נתמכת בצורה הטובה ביותר, לפי הנלמד?',
+  o:['שתי החברות זקוקות ל-ERP שלמה באותה מידה','חברת הניקיון זקוקה ל-ERP, והמפעל יכול להסתפק ב-CRM','ייתכן ש-CRM מספקת את רוב צורכי חברת הניקיון. המפעל, שתהליכיו חורגים מניהול קשרי לקוחות, זקוק בדרך כלל ל-ERP שלמה, שיכולה לכלול גם CRM','אף אחת מהחברות אינה זקוקה למערכת מידע','המפעל זקוק לכמה מערכות ERP נפרדות, אחת לכל תחום'],a:2,
+  ex:['הצרכים שונים: לחברת הניקיון אין מלאי, ייצור או רכש משמעותיים.','הסדר הפוך.','נכונה. יש ארגונים שמספיקה להם CRM. ארגון שדרישותיו חורגות מניהול קשרי הלקוחות יפעיל בדרך כלל ERP שלמה, שיכולה לכלול גם מודול CRM.','לשתיהן יש תהליכים שמערכת מידע תומכת בהם.','ERP היא מערכת אחת. כמה מערכות נפרדות הן ההפך מאינטגרציה.'],fb:'🧠',tip:'השאלה היא אילו תהליכים הארגון מנהל, ולא כמה הוא גדול.'}
+);
+
+/* capstone case: the pharmacy chain ״מרווה״. Every question repeats the data it needs (no paging back). */
+const QC=[
+ {lv:2,pic:'💰',topic:'עלות הפרויקט',stem:'רשת ״מרווה״ (42 בתי מרקחת) הטמיעה ERP. עלויות הפרויקט: רישיון 1.1 מיליון ש״ח, אפיון והתאמות 2.6 מיליון, העברת נתונים 0.5 מיליון, הדרכה וליווי 0.8 מיליון ש״ח. המנכ״לית אמרה לדירקטוריון: ״המערכת עלתה לנו 1.1 מיליון ש״ח.״',claims:[],ask:'מה נכון לגבי דבריה, לפי הנלמד?',
+  o:['היא צודקת: עלות הפרויקט היא מחיר הרישיון','היא טועה: עלות הפרויקט 5 מיליון ש״ח, ועיקרה אפיון, התאמות, העברת נתונים והדרכה. אלה האתגרים ״עלויות גבוהות בהקמה, ובאפיון ובהטמעה״','היא טועה: עלות הפרויקט 2.6 מיליון ש״ח בלבד','היא צודקת, משום שעלויות ההדרכה אינן חלק מהפרויקט','אי אפשר לדעת מהנתונים'],a:1,
+  ex:['הרישיון הוא 22% בלבד מהעלות.','נכונה. 1.1 + 2.6 + 0.5 + 0.8 = 5 מיליון ש״ח. החלק הגדול הוא אפיון והטמעה.','2.6 מיליון הם רכיב אחד.','הדרכה היא חלק מההטמעה ומניהול השינוי.','הנתונים מלאים.'],fb:'💰',tip:'הרישיון הוא קצה הקרחון.'},
+ {lv:3,pic:'🗺️',topic:'אפיון',stem:'לפני הפרויקט ב״מרווה״, כל סניף ניהל מלאי בגיליון, הקניין הקליד מחדש את הגיליונות, ומנהל הרכש אישר ידנית כל הזמנה, גם של 200 ש״ח. תרופות בקירור חייבות בדיקת טמפרטורה בקליטה, ורוקח חייב לאשר כל ניפוק. לפניכם טענות:',claims:['בדיקת הטמפרטורה ואישור הרוקח הם מאפיינים של התהליך, ויש לתעד אותם לפני היישום.','הקלדת הגיליונות מחדש היא כפילות. לפי ספר הקורס, יש לבדוק היכן קיימות כפילויות כדי לייעל את התהליך.','אישור ידני של כל הזמנה הוא דרישה של ERP, ולכן אין לשנות אותו.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-2','טענות 2 ו-3','כל הטענות נכונות','כל יתר האפשרויות שגויות'],a:1,
+  ex:['גם טענה 2 נכונה.','נכונה. טענה 3 שגויה: ERP מאפשרת להחליף אישור ידני של הזמנות קטנות בכלל אוטומטי, לפי שיקול דעת ההנהלה.','טענה 3 שגויה.','טענה 3 שגויה.','אחת האפשרויות האחרות נכונה.'],fb:'🗺️',tip:'מאפיינים מתעדים. כפילויות משפרים.'},
+ {lv:3,pic:'🧑‍🤝‍🧑',topic:'ניהול שינוי',stem:'ב״מרווה״, ביום העלייה לאוויר נרשמו במערכת 41% מהניפוקים, ו-23 גיליונות אקסל עדיין שימשו לעבודה. אחרי הדרכה מעשית, משתמש מפתח בכל סניף, והחלטת הנהלה לנעול את הגיליונות, הגיע השיעור ל-97% ביום 30. התוכנה לא שונתה בתקופה זו.',claims:[],ask:'איזו מסקנה נתמכת בצורה הטובה ביותר?',
+  o:['הבעיה הייתה בתוכנה, והיא נפתרה מעצמה','השיפור נבע מניהול שינוי: הדרכה, שיתוף, תמיכה ומחויבות ההנהלה, ולא משינוי בתוכנה','השיפור נבע מרכישת מחשבים חדשים','השיפור מוכיח שהטמעת ERP היא הליך פשוט','השיפור נבע מכך שהמערכת הפכה את כל התהליכים לאוטומטיים'],a:1,
+  ex:['התוכנה לא שונתה.','נכונה. זו בדיוק הסיבה שניהול שינוי נלמד כאתגר.','אין לכך בסיס בתיאור.','ההפך: נדרשו 30 ימים של עבודה עם העובדים.','לא נאמר שהתהליכים הפכו לאוטומטיים. העובדים הם שהחלו לרשום במערכת.'],fb:'🧑‍🤝‍🧑',tip:'אותה תוכנה, תוצאה אחרת: ניהול שינוי.'},
+ {lv:2,pic:'📦',topic:'יתרון לוגיסטי',stem:'שנה אחרי העלייה לאוויר, כל סניף של ״מרווה״ רואה בזמן אמת את המלאי בסניפים הסמוכים ובמחסן המרכזי. המלאי הכולל ירד ב-18%, ומספר התרופות שפג תוקפן ירד בחצי.',claims:[],ask:'איזה יתרון של ERP מתואר כאן בעיקר?',
+  o:['אוטומציה של ניהול קמפיינים','היתרון הלוגיסטי: שליטה וניהול טובים יותר של מלאים, באופן שקוף למחלקות ובזמן אמת','ניהול נכסים','ניהול הוצאות','תיק לקוח של 360 מעלות'],a:1,
+  ex:['קמפיינים הם רכיב של CRM.','נכונה. צמצום עודפי מלאי והקטנת פגי תוקף הם תוצאה של שליטה במלאי, שקיפות וזמן אמת.','ניהול נכסים עוסק במכונות ובציוד, ולא בתרופות למכירה.','ניהול הוצאות עוסק בנסיעות, כנסים ואישורים.','זו גישה של CRM.'],fb:'📦',tip:'מלאי, שקיפות למחלקות, זמן אמת: היתרון הלוגיסטי.'},
+ {lv:3,pic:'📊',topic:'טענות',stem:'מנהלת הכספים של ״מרווה״ רואה בלוח הבקרה של ה-ERP שהשלב ״מאישור הזמנה ועד קליטה בסניף״ נמשך 6 ימים בממוצע, וש-70% מהעיכוב נוצר אצל ספק אחד. לפניכם טענות:',claims:['זוהי דוגמה ל״ניהול יעיל יותר״: המנהלת מזהה באיזה שלב בתהליך העסקי נוצרו עיכובים.','המידע מאפשר להגדיר בצורה ברורה יותר מי אחראי לטיפול בעיכוב.','מאחר שהעיכוב אצל ספק, אין למערכת ה-ERP כל תרומה לטיפול בו.'],ask:CLQ,
+  o:['טענה 1 בלבד','טענות 1 ו-2','טענות 2 ו-3','כל הטענות נכונות','כל יתר האפשרויות שגויות'],a:1,
+  ex:['גם טענה 2 נכונה.','נכונה. טענה 3 שגויה: עצם הזיהוי, המבוסס על מידע משולב, מאפשר לטפל בבעיה, למשל לפנות לספק או להחליפו.','טענה 3 שגויה.','טענה 3 שגויה.','אחת האפשרויות האחרות נכונה.'],fb:'📊',tip:'ERP אינה פותרת בעיות בעצמה. היא מראה היכן הן נמצאות, ומי אחראי להן.'},
+ {lv:3,pic:'🎯',topic:'הסקה',stem:'הדירקטוריון של ״מרווה״ שואל אם הפרויקט הצליח. בשנה הראשונה: עלות של 5 מיליון ש״ח, ירידה של 18% במלאי, חשבוניות ספקים שמטופלות ביום אחד במקום שישה, אבל רווח שלא השתנה עדיין.',claims:[],ask:'איזו מסקנה זהירה מתאימה ביותר, לפי הנלמד?',
+  o:['הפרויקט נכשל, משום שהרווח לא גדל בשנה הראשונה','הפרויקט הצליח, משום ש-ERP מבטיחה הגדלת רווח','ERP יכולה להקטין עלויות ולשפר את הפריון, אך התועלת עשויה להגיע אחרי שנה, שנתיים ואף יותר. המדדים התפעוליים משתפרים, ויש להמשיך למדוד','יש לבטל את המערכת ולחזור לגיליונות','אין קשר בין המלאי לבין הרווח'],a:2,
+  ex:['תועלת של ERP עשויה להגיע אחרי זמן רב. שנה אחת אינה מספיקה כדי לקבוע כישלון.','ERP אינה מבטיחה הגדלת רווח: ״יכולה״, ולא ״מבטיחה״.','נכונה. זו מסקנה זהירה: המערכת ״יכולה״ ו״עשויה״, והתועלת נמדדת לאורך זמן. צמצום המלאי הוא מהתועלות הקלות יחסית למדידה.','המדדים התפעוליים השתפרו.','מלאי נמוך יותר פירושו פחות כסף כלוא במחסן ופחות פגי תוקף.'],fb:'🎯',tip:'״יכולה״ ו״עשויה״, לאורך זמן. לא ״מבטיחה״, ולא מיד.'}
+];
+
+/* move the correct option to a chosen position (swap with the option there), so the keys are spread over א to ה */
+function mvAns(qs,t){qs.forEach((q,i)=>{const a=q.a,b=t[i];if(b===undefined||a===b)return;[q.o[a],q.o[b]]=[q.o[b],q.o[a]];[q.ex[a],q.ex[b]]=[q.ex[b],q.ex[a]];q.a=b;});}
+mvAns(QE,[2,0,3,4,0,3,1,4,2,3,0,4,2,1,3]);
+mvAns(QC,[3,0,2,4,1,2]);
+mvAns(QW,[1,3,0]);
 /* ---------- helpers ---------- */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -3370,6 +3956,72 @@ quizL3('qe',QE);quizL3('qi',QI);quizL3('qp',QP);
  draw();})();
 
 /* the menu path of the screen, shown at the top of the simulator windows like a breadcrumb */
+/* ===== lesson 5: simulators (purchase to payment, the first 30 days, CRM to ERP), role screens, case wall ===== */
+const money=n=>n.toLocaleString('he-IL',{minimumFractionDigits:2,maximumFractionDigits:2});
+const S8={
+ req:`<table class="sim-tb"><tr><th>פריט</th><th>כמות לרכישה</th><th>במלאי</th><th>מינימום</th></tr>
+  <tr class="l5-hl"><td><b>לכה שקופה למשטחים</b></td><td>200 ליטר</td><td class="l5-red">38</td><td>50</td></tr>
+  <tr><td>ברגי פליז 4 מ״מ</td><td>5,000 יח׳</td><td>1,200</td><td>2,000</td></tr>
+  <tr><td>לוחות עץ אלון</td><td>60</td><td>24</td><td>30</td></tr></table>`,
+ cat:sel=>`<table class="sim-tb l5-cat"><tr><th>ספק (קטלוג מקושר)</th><th>מחיר לליטר</th><th>הסכם מסגרת</th><th>אספקה</th></tr>
+  <tr class="${sel?'l5-ok':''}"><td><b>צבעי הגליל</b></td><td>42.00 ש״ח</td><td>6% הנחה מעל 150 ליטר</td><td>3 ימים ${sel?'✓':''}</td></tr>
+  <tr class="${sel?'l5-no':''}"><td>כימיקלים דרום</td><td>39.00 ש״ח</td><td>אין</td><td>9 ימים ${sel?'✗':''}</td></tr></table>`,
+ scr(k){
+  if(k==0)return crumb('ME57','לוגיסטיקה ◂ ניהול חומרים ◂ דרישות רכש פתוחות')+`<h5>דרישות רכש פתוחות · נוצרו באופן אוטומטי, כשהמלאי ירד מתחת למינימום</h5>`+this.req+`<div class="sim-f"><button data-t="cat">🔎 השוואה בקטלוגים: לכה שקופה</button></div>`;
+  if(k==1)return crumb('ME21N','לוגיסטיקה ◂ ניהול חומרים ◂ הזמנת רכש')+`<h5>לכה שקופה למשטחים · 200 ליטר</h5>`+this.cat(1)+`<div class="sim-kb"><b>📏 הכלל שקבעה ההנהלה</b>ספק עם הסכם מסגרת, אם האספקה בתוך 5 ימים. כימיקלים דרום זולה יותר, אך האספקה שלה ארוכה מדי.</div><div class="l5-calc"><span>42.00 × (1 − 6%) = <b>39.48 ש״ח לליטר</b></span><span>200 × 39.48 = <b>7,896 ש״ח</b></span></div><div class="sim-f"><button data-t="po">📝 יצירת הזמנה</button></div>`;
+  if(k==2)return crumb('ME21N','לוגיסטיקה ◂ ניהול חומרים ◂ הזמנת רכש')+`<h5>הזמנת רכש 4511 · 27.11.2026 · צבעי הגליל</h5><div class="sim-warn ok">✓ 7,896 ש״ח, נמוך מ-10,000 ש״ח: ההזמנה אושרה ונשלחה לספק באופן אוטומטי</div><div class="sim-note">✋ הזמנה מעל 10,000 ש״ח הייתה עוברת לאישור סמנכ״לית הכספים. כך קבעה ההנהלה.</div><div class="sim-f"><button data-t="gr">📦 קבלת סחורה במחסן</button></div>`;
+  if(k==3)return crumb('MIGO','לוגיסטיקה ◂ ניהול חומרים ◂ קבלת סחורה')+`<h5>קבלה 5002 · 30.11.2026 · הזמנה 4511</h5><div class="sim-cnt"><small>לכה שקופה במלאי (ליטר)</small><b data-from="38" data-to="238">238</b><u style="--w:100%"></u></div><div class="sim-note">📦 המחסנאי סרק את המשלוח. הכמות התעדכנה באותו רגע לרכש, לייצור ולכספים.</div><div class="sim-f"><button data-t="inv">🧾 קליטת חשבונית ספק</button></div>`;
+  const match=`<table class="sim-tb"><tr><th>מסמך</th><th>כמות</th><th>מחיר לליטר</th><th></th></tr><tr><td>הזמנה 4511</td><td>200</td><td>39.48</td><td>✓</td></tr><tr><td>קבלה 5002</td><td>200</td><td></td><td>✓</td></tr><tr><td>חשבונית 88231</td><td>200</td><td>39.48</td><td>✓</td></tr></table>`;
+  if(k==4)return crumb('MIRO','לוגיסטיקה ◂ אימות חשבוניות ◂ קליטת חשבונית')+`<div class="l5-inv"><div class="l5-scan"><b>צבעי הגליל בע״מ</b><small>חשבונית מס 88231 · 30.11.2026</small><p><i class="l5-x">לכה שקופה · 200 ליטר × 39.48</i></p><p>סכום: <i class="l5-x">7,896.00</i></p><p>מע״מ 18%: 1,421.28</p><p>לתשלום: <i class="l5-x">9,317.28 ש״ח</i></p><p>תנאי תשלום: <i class="l5-x">30 יום</i></p></div><div><h5>התאמה משולשת: הזמנה, קבלה וחשבונית</h5>${match}<div class="sim-warn ok" style="margin-top:6px">✓ שלושת המסמכים תואמים</div></div></div><div class="sim-f"><button data-t="pay">🗓️ תזמון תשלום</button></div>`;
+  return crumb('F110','חשבונאות ◂ ספקים ◂ הרצת תשלומים')+`<div class="sim-sms">🗓️ <b>התשלום נקבע ל-30.12.2026:</b> 9,317.28 ש״ח לצבעי הגליל</div><div class="sim-sms">📒 <b>נרשם בהנהלת החשבונות</b> באופן אוטומטי, בלי הקלדה</div><h5>מה ראינו: מהרכש ועד התשלום</h5><div class="sim-map"><span>🛒 קטלוג ספק, כלל מוגדר והנחה לפי הסכם</span><span>✅ אישור לפי כלל, ללא המתנה</span><span>🧾 חשבונית נקראת, ומושווית להזמנה ולקבלה</span><span>🔗 רכש, מלאי וכספים: מערכת אחת</span></div>`;
+ },
+ click:[null,'cat','po','gr','inv','pay']
+};
+const S9={
+ days:[['יום 1 · העלייה לאוויר',41,23,180,72,'״במערכת זה לוקח לי יותר זמן. אני רושמת בגיליון ומעדכנת אחר כך.״ (רוקחת, סניף חולון)','train','🎓 הדרכה בסניפים'],
+       ['יום 7',58,17,120,80,'״ההדרכה הייתה על הסניף שלנו, ולא על התוכנה באופן כללי. עכשיו זה ברור.״','keys','🧑‍🏫 משתמשי מפתח'],
+       ['יום 14',74,9,60,87,'״אני שואלת את רון, משתמש המפתח שלנו. אין צורך לחכות לתמיכה.״','mgmt','📣 החלטת הנהלה'],
+       ['יום 21',88,3,25,92,'״הגיליון נעול. בהתחלה כעסתי. היום כבר אין לי צורך בו.״','d30','📅 יום 30'],
+       ['יום 30',97,0,12,96,'','','']],
+ kpi(v,t,u,good,bad,inv){const c=inv?(v<=good?'g':v>=bad?'r':'a'):(v>=good?'g':v<=bad?'r':'a');return `<div class="l5-kpi ${c}"><small>${t}</small><b>${v}${u}</b><u style="--w:${inv?Math.max(4,100-v/2):v}%"></u></div>`;},
+ scr(k){const d=this.days[k];
+  const head=crumb('GO-LIVE','חדר הבקרה ◂ רשת ״מרווה״ ◂ 42 סניפים')+`<h5>${d[0]}</h5><div class="l5-kpis">${this.kpi(d[1],'ניפוקים שנרשמו במערכת','%',90,50)}${this.kpi(d[2],'גיליונות אקסל בשימוש','',2,15,1)}${this.kpi(d[3],'פניות תמיכה פתוחות','',30,100,1)}${this.kpi(d[4],'דיוק המלאי','%',90,75)}</div>`;
+  if(k<4)return head+`<div class="sim-note">💬 ${d[5]}</div>`+(k==0?`<div class="sim-warn">⚠️ התוכנה עובדת. העובדים ממשיכים בדרך הישנה.</div>`:'')+`<div class="sim-f"><button data-t="${d[6]}">${d[7]}</button></div>`;
+  return head+`<h5>מה ראינו: ניהול שינוי</h5><div class="sim-map"><span>📣 הסברה: מדוע עוברים</span><span>🎓 הדרכה מעשית לכל תפקיד</span><span>🧑‍🏫 שיתוף ותמיכה: משתמשי מפתח</span><span>🔒 מחויבות ההנהלה: הדרך הישנה נסגרת</span></div><div class="sim-kb"><b>🧩 התוכנה לא השתנתה בכל 30 הימים</b>מה שהשתנה הוא האופן שבו העובדים עובדים. לכן ״צורך בניהול שינוי״ נלמד כאחד מאתגרי ההטמעה.</div>`;
+ },
+ click:[null,'train','keys','mgmt','d30']
+};
+const S10={
+ crm:(st,btn)=>`<div class="l5-pane crm"><div class="l5-ph">🗂️ CRM · הזדמנות 2291</div><p>לקוח: <b>רשת המלונות ״גלים״</b></p><p>120 כיסאות אלון × 1,800 ש״ח</p><p>סכום: <b>216,000 ש״ח</b></p><p>שלב: <b class="l5-st">${st}</b></p>${btn||''}</div>`,
+ erp:(body)=>`<div class="l5-pane erp"><div class="l5-ph">🏭 ERP · מפעל ״אלון״</div>${body}</div>`,
+ scr(k){
+  if(k==0)return crumb('CRM','מכירות ◂ הזדמנויות ◂ 2291')+`<div class="l5-two">${this.crm('משא ומתן · הסתברות 70%',`<div class="sim-f"><button data-t="won">✅ נסגרה בהצלחה</button></div>`)}<div class="l5-arrow off">🔌</div>${this.erp('<p class="l5-mut">אין עדיין הזמנה ללקוח זה.</p>')}</div>`;
+  const ord=`<p><b>הזמנת לקוח 1077</b></p><p>נוצרה דרך הממשק · 27.11.2026</p><p>120 כיסאות אלון · 216,000 ש״ח</p>`;
+  if(k==1)return crumb('VA01','מכירות והפצה ◂ הזמנת לקוח ◂ 1077')+`<div class="l5-two">${this.crm('✓ נסגרה בהצלחה')}<div class="l5-arrow on">🔌<small>הממשק העביר את העסקה</small></div>${this.erp(ord+`<div class="sim-f"><button data-t="atp">🔎 בדיקת זמינות</button></div>`)}</div><div class="sim-note">⌨️ איש לא הקליד את ההזמנה מחדש.</div>`;
+  if(k==2)return crumb('CO09','מכירות והפצה ◂ בדיקת זמינות ◂ 1077')+`<h5>הזמנה 1077 · בדיקת זמינות</h5><table class="sim-tb"><tr><th>פריט</th><th>נדרש</th><th>במלאי</th><th>לייצור</th></tr><tr><td>כיסא אלון</td><td>120</td><td>80</td><td><b>40</b></td></tr></table><div class="sim-kb"><b>⚙️ פקודת ייצור ל-40 כיסאות נפתחה</b>מועד אספקה ללקוח: 14.12.2026.</div><div class="sim-f"><button data-t="ship">🚚 משלוח וחשבונית</button></div>`;
+  if(k==3)return crumb('VF01','מכירות והפצה ◂ חשבונית ללקוח')+`<h5>הזמנה 1077 · משלוח 8820 · חשבונית 5610</h5><table class="sim-tb"><tr><td>120 כיסאות × 1,800</td><td>216,000.00</td></tr><tr><td>מע״מ 18%</td><td>38,880.00</td></tr><tr><td><b>לתשלום</b></td><td><b>254,880.00 ש״ח</b></td></tr></table><div class="sim-note">📒 החשבונית נרשמה בהנהלת החשבונות באופן אוטומטי.</div><div class="sim-f"><button data-t="back">↩ לתיק הלקוח ב-CRM</button></div>`;
+  return crumb('CRM','לקוחות ◂ רשת המלונות ״גלים״ ◂ תיק לקוח')+`<h5>תיק הלקוח ב-CRM, אחרי שהמידע חזר מה-ERP</h5><div class="sim-q sim-tl"><p>🤝 הזדמנות 2291 נסגרה · 27.11</p><p class="new">🧾 הזמנה 1077 · נוצרה ב-ERP דרך הממשק</p><p class="new">🚚 משלוח 8820 · מועד אספקה 14.12</p><p class="new">💳 חשבונית 5610 · פתוחה · 254,880 ש״ח</p></div><div class="sim-map"><span>🗂️ CRM: הקשר עם הלקוח</span><span>🏭 ERP: התהליך הפנימי</span><span>🔌 ממשק: נתונים עוברים בין שתי מערכות</span><span>🧩 CRM כמודול בתוך ERP: מאגר אחד, ללא ממשק</span></div>`;
+ },
+ click:[null,'won','atp','ship','back']
+};
+simInit('sim-8',S8,SIM8,0);simInit('sim-9',S9,SIM9,0);simInit('sim-10',S10,SIM10,0);
+clsGame('s-caps',CAPS,8);
+quizL3('qw',QW);quizL3('qc',QC);
+
+/* role-based home screens: one system, one login, a screen and permissions per role */
+(function(){const root=$('#roles');if(!root)return;let cur=0;
+ function draw(){const r=ROLES[cur];
+  $('.rl-tabs',root).innerHTML=ROLES.map((x,i)=>`<button class="${i===cur?'on':''}" data-r="${i}">${x.ic} ${x.t}</button>`).join('');
+  $('.rl-pad',root).innerHTML=r.tiles.map((t,i)=>`<div class="rl-tile" style="--i:${i}"><i>${t[0]}</i><small>${t[1]}</small><b>${t[2]}</b></div>`).join('');
+  $('.rl-can',root).innerHTML=r.can.map((c,i)=>`<li class="${c[1]?'y':'n'}" style="--i:${i}"><i>${c[1]?'✓':'✗'}</i>${c[0]}</li>`).join('');
+  $('.rl-who',root).textContent=r.t;}
+ root.addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(b){cur=+b.dataset.r;draw();}});draw();})();
+
+/* six real cases: click a card to turn it over */
+(function(){const root=$('#wall');if(!root)return;
+ root.innerHTML=WALL.map((w,i)=>`<div class="wl-card" style="--i:${i}"><div class="wl-in"><div class="wl-f"><span class="wl-flag">${w.flag}</span><small>${w.yr}</small><b>${w.co}</b><h4>${w.h}</h4><em>לחצו לפרטים ↺</em></div>
+  <div class="wl-b"><p>${w.what}</p><div class="wl-num">${w.num}</div><div class="wl-tag">🧭 ${w.tag}</div><a href="${w.url}" target="_blank" rel="noopener">🔗 ${w.src}</a></div></div></div>`).join('');
+ root.addEventListener('click',e=>{if(e.target.closest('a'))return;const c=e.target.closest('.wl-card');if(c)c.classList.toggle('flip');});})();
 /* ---------- escape room (guarded) */
 try{
 (function(){const WORD='לקוחות';let k=0;const tried=ESC.map(()=>new Set());
